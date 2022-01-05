@@ -222,10 +222,6 @@ include "header.php";
                 <input type="date" name="date-7" id="date-7" class="form-control" value="" disabled>
               </div>
 
-
-               
-
-
               <h6>Marital Status (tick the appropriate)</h6>
 
                <div class="form-group mb-5 col-xl-12">
