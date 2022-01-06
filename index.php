@@ -68,7 +68,7 @@ include 'admin/connection.inc.php';
             </div>
 
             <div class="carousel-item">
-                <img src="assets/img/banner/Witness the Cultural Heritage-4.jpg" alt="shreejagannatha" width="1100" height="500">
+                <img src="assets/img/banner/Witness the Cultural Heritage.jpg" alt="shreejagannatha" width="1100" height="500">
 
             </div>
 

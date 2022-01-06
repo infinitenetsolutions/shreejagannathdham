@@ -32,7 +32,7 @@ include "header.php";
   <div class="" style="">
     <div class="">
       <div class="sigma_subheader-inner">       
-       <img src="./assets/img/banner/Be a member.jpg" style="width:100%;">
+       <img src="./assets/img/Be a member.jpg" style="width:100%;">
       </div>
     </div>
   </div>
