@@ -1,5 +1,53 @@
 <?php
 include "header.php";
+
+if (isset($_POST['button'])) {
+  $package = $_POST['package'];
+  $name = $_POST['name'];
+  $father_name = $_POST['father_name'];
+  $phone = $_POST['phone'];
+  $email = $_POST['email'];
+  $nationality = $_POST['nationality'];
+  $marital_status = $_POST['marital_status'];
+  $per_address = $_POST['per_address'];
+  $res_address = $_POST['res_address'];
+  $ofc_address = $_POST['ofc_address'];
+  $dob = $_POST['dob'];
+  $marriage_date = $_POST['marriage_date'];
+  $rashi = $_POST['rashi'];
+  $gotra = $_POST['gotra'];
+  $pdate1 = $_POST['pdate1'];
+  $pdate2 = $_POST['pdate2'];
+  $pdate3 = $_POST['pdate3'];
+  $pdate4 = $_POST['pdate4'];
+  $pdate5 = $_POST['pdate5'];
+  $pdate6 = $_POST['pdate6'];
+  $pdate7 = $_POST['pdate7'];
+  $pro_date = $_POST['pro_date'];
+  $spouse = $_POST['spouse'];
+  $child_no = $_POST['child_no'];
+  $member = $_POST['member'];
+  $member_detail = $_POST['member_detail'];
+  $amount = $_POST['amount'];
+// print_r($_POST);exit();
+      echo $sql = "INSERT INTO `jag_nirman_donation`(`package`, `name`, `father_name`, `phone`, `email`, `nationality`, `marital_status`, `per_address`, `res_address`, `ofc_address`, `dob`, `marriage_date`, `rashi`, `gotra`, `pdate1`, `pdate2`, `pdate3`, `pdate4`, `pdate5`, `pdate6`, `pdate7`, `pro_date`, `spouse`, `child_no`, `member`, `member_detail`, `amount`) 
+                                     VALUES ('$package','$name','$father_name','$phone','$email','$nationality','$marital_status','$per_address','$res_address','$ofc_address','$dob','$marriage_date','$rashi','$gotra','$pdate1','$pdate2','$pdate3','$pdate4','$pdate5','$pdate6','$pdate7','$pro_date','$spouse','$child_no','$member','$member_detail','$amount')";
+
+      $current_id = mysqli_query($connection, $sql); 
+      echo '<script> window.location.replace("easebuzz.php") </script>';
+      //if ($current_id) {
+
+       
+        /*echo "<script>
+              alert('Details submitted successfully');
+              window.location.replace('donation.php');
+              </script>";
+               }
+               else {
+          echo "<script>alert('Your data is not submitted. Please try again!!');</script>";
+      }*/
+    }
+
 ?>
 
 <!-- partial:partia/__subheader.html -->
@@ -32,34 +80,7 @@ include "header.php";
         </div>
         <div class="col-xl-12">
 
-          <!-- Login -->
-
-          <div class="sigma_notice-content">
-            <div class="row">
-
-
-
-
-              <div class="col-xl-6 form-group">
-                <label>Email Address</label>
-                <input type="text" class="form-control" name="login-email" placeholder="Email Address" value="">
-              </div>
-              <div class="col-xl-6 form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" name="login-pass" placeholder="Password" value="">
-              </div>
-              <div class="col-12 form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="rememberMe">
-                  <label class="custom-control-label" for="rememberMe">Remember Me</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="sigma_btn-custom" name="button">Login</button>
-              </div>
-            </div>
-          </div>
-          <!-- Coupon Code -->
+          
 
           <div class="sigma_notice-content">
             <p>If you have a coupon code, apply it below</p>
@@ -80,23 +101,23 @@ include "header.php";
                 <div class="d-flex align-items-center">
                 
                   <div class="d-flex align-items-center ms-4">
-                    <input type="radio" id="patron" name="member" value="patron" onchange="show1();">
+                    <input type="radio" id="patron" name="package" value="patron" onchange="show1();">
                       <label for="patron">PATRON</label>
                   </div>
                   <div class="d-flex align-items-center ms-4">
-                      <input type="radio" id="pious" name="member" value="pious" onchange="show2();">
+                      <input type="radio" id="pious" name="package" value="pious" onchange="show2();">
                       <label for="pious">PIOUS</label>
                   </div>
                   <div class="d-flex align-items-center ms-4">
-                      <input type="radio" id="devotee" name="member" value="devotee" onchange="show3();">
+                      <input type="radio" id="devotee" name="package" value="devotee" onchange="show3();">
                       <label for="devotee">DEVOTEE</label>
                   </div>
                   <div class="d-flex align-items-center ms-4">
-                    <input type="radio" id="family" name="member" value="family" onchange="show4();">
+                    <input type="radio" id="family" name="package" value="family" onchange="show4();">
                       <label for="family">FAMILY</label>
                   </div>
                   <div class="d-flex align-items-center ms-4">
-                    <input type="radio" id="life" name="member" value="life"  onchange="show5();">
+                    <input type="radio" id="life" name="package" value="life"  onchange="show5();">
                       <label for="life">LIFE</label>
                   </div>
 
@@ -108,11 +129,11 @@ include "header.php";
 
             <div class="form-group col-xl-4">
               <label>Full Name <span class="text-danger">*</span></label>
-              <input type="text" placeholder="Full Name" name="fname" class="form-control" value="" required="">
+              <input type="text" placeholder="Full Name" name="name" class="form-control" value="" required="">
             </div>
             <div class="form-group col-xl-4">
               <label>Father’s Name/Spouse Name <span class="text-danger">*</span></label>
-              <input type="text" placeholder="Father's Name" name="pname" class="form-control" value="" required="">
+              <input type="text" placeholder="Father's Name" name="father_name" class="form-control" value="" required="">
             </div>
             <div class="form-group col-xl-4">
               <label>Phone Number</label>
@@ -133,12 +154,12 @@ include "header.php";
               <div class="d-flex align-items-center">
 
                 <div class="d-flex align-items-center">
-                  <input type="radio" id="male" name="marital" value="unmarried">
+                  <input type="radio" id="male" name="marital_status" value="unmarried">
                   <label for="male" class="mb-0">Unmarried</label>
                 </div>
 
                 <div class="d-flex align-items-center ms-4">
-                  <input type="radio" id="female" name="marital" value="married">
+                  <input type="radio" id="female" name="marital_status" value="married">
                   <label for="female" class="mb-0">Married</label>
                 </div>
 
@@ -148,11 +169,11 @@ include "header.php";
 
             <div class="form-group col-xl-4 mb-0">
               <label>Permanent Address</label>
-              <textarea name="p_address" rows="5" class="form-control" placeholder="Permanent Address"></textarea>
+              <textarea name="per_address" rows="5" class="form-control" placeholder="Permanent Address"></textarea>
             </div>
             <div class="form-group col-xl-4 mb-0">
               <label>Residential Address</label>
-              <textarea name="r_address" rows="5" class="form-control" placeholder="Residential Address"></textarea>
+              <textarea name="res_address" rows="5" class="form-control" placeholder="Residential Address"></textarea>
             </div>
 
 
@@ -188,31 +209,31 @@ include "header.php";
 
             <div class="form-group col-xl-4">
               <label>Option - 1 </label>
-              <input type="date" name="date-1" id="date-1" class="form-control" value="" disabled>
+              <input type="date" name="pdate1" id="date-1" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 2 </label>
-              <input type="date" name="date-2" id="date-2" class="form-control" value="" disabled>
+              <input type="date" name="pdate2" id="date-2" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 3 </label>
-              <input type="date" name="date-3" id="date-3" class="form-control" value="" disabled>
+              <input type="date" name="pdate3" id="date-3" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 4 </label>
-              <input type="date" name="date-4" id="date-4" class="form-control" value="" disabled>
+              <input type="date" name="pdate4" id="date-4" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 5 </label>
-              <input type="date" name="date-5" id="date-5" class="form-control" value="" disabled>
+              <input type="date" name="pdate5" id="date-5" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 6 </label>
-              <input type="date" name="date-6" id="date-6" class="form-control" value="" disabled>
+              <input type="date" name="pdate6" id="date-6" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
               <label>Option - 7 </label>
-              <input type="date" name="date-7" id="date-7" class="form-control" value="" disabled>
+              <input type="date" name="pdate7" id="date-7" class="form-control" value="" readonly>
             </div>
 
 
@@ -220,17 +241,17 @@ include "header.php";
 
             <div class="form-group col-xl-4">
               <label>Importance of Proposed Dates</label>
-              <input type="text" placeholder="Proposed Date" name="cname" class="form-control" value="">
+              <input type="date" placeholder="Proposed Date" name="pro_date" class="form-control" value="">
             </div>
 
             <div class="form-group col-xl-4">
               <label>If Married (Name of Spouse)</label>
-              <input type="text" placeholder="Spouse Name" name="cname" class="form-control" value="">
+              <input type="text" placeholder="Spouse Name" name="spouse" class="form-control" value="">
             </div>
 
             <div class="form-group col-xl-4">
               <label>No. of Children</label>
-              <input type="text" placeholder="No. of Children" name="cname" class="form-control" value="">
+              <input type="text" placeholder="No. of Children" name="child_no" class="form-control" value="">
             </div>
   
 
@@ -238,14 +259,12 @@ include "header.php";
 
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
-                  <input type="radio" id="yes" name="sure" value="yes"
-                    onclick="document.getElementById('ex_member').disabled = false;">
+                  <input type="radio" id="yes" name="member" value="yes" onclick="document.getElementById('ex_member').readOnly = false;">
                   <label for="yes" class="mb-0">Yes</label>
                 </div>
 
                 <div class="d-flex align-items-center ms-4">
-                  <input type="radio" id="no" name="sure" value="no"
-                    onclick="document.getElementById('ex_member').disabled = true;">
+                  <input type="radio" id="no" name="member" value="no" onclick="document.getElementById('ex_member').readOnly = true;">
                   <label for="no" class="mb-0">No</label>
                 </div>
 
@@ -254,32 +273,17 @@ include "header.php";
 
             <div class="form-group col-xl-4">
               <label>If yes, specify the name, address of organisation and your designation (if any)</label>
-              <input type="text" placeholder="Specify Details" id="ex_member" name="cname" class="form-control" value="" disabled>
+              <input type="text" placeholder="Specify Details" id="ex_member" name="member_detail" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4" id="amount1">
               <label>Amount1</label>
               <input type="number" placeholder="Enter Amount" id="amount" name="amount" class="form-control" value="" onchange="TextChange(this)">
             </div>
-            <!-- <div class="form-group col-xl-4" style="display: none;" id="amount2">
-              <label>Amount2</label>
-              <input type="number" placeholder="Enter Amount" id="amount" name="amount" class="form-control" value="" >
-            </div>
-            <div class="form-group col-xl-4" style="display: none;" id="amount3">
-              <label>Amount3</label>
-              <input type="number" placeholder="Enter Amount" id="amount" name="amount" class="form-control" value="" >
-            </div>
-            <div class="form-group col-xl-4" style="display: none;" id="amount4">
-              <label>Amount4</label>
-              <input type="number" placeholder="Enter Amount" id="amount" name="amount" class="form-control" value="" >
-            </div>
-            <div class="form-group col-xl-4" style="display: none;" id="amount5">
-              <label>Amount5</label>
-              <input type="number" placeholder="Enter Amount" id="amount" name="amount" class="form-control" value="" min="1" max="3000" step="1" id="n" oninput="(validity.valid)||(value='');">
-            </div> -->
+            
             <hr>
 
             <div class="form-group col-xl-6">
-              <button type="submit" class="sigma_btn-custom primary d-block w-100">Pay</button>
+              <input type="submit" class="sigma_btn-custom primary d-block w-100" name="button" value="Pay">
             </div>
             <div class="form-group col-xl-6">
               <button type="reset" class="sigma_btn-custom primary d-block w-100">Reset</button>
@@ -341,53 +345,54 @@ function TextChange(tBox)
 function show1()
 {
   // var amt = document.getElementById('amount').value;
-  document.getElementById('date-1').disabled = false;
-  document.getElementById('date-2').disabled = false;
-  document.getElementById('date-3').disabled = false;
-  document.getElementById('date-4').disabled = false;
-  document.getElementById('date-5').disabled = false;
-  document.getElementById('date-6').disabled = false;
-  document.getElementById('date-7').disabled = false;
+  document.getElementById("date-1").readOnly = false;
+  document.getElementById('date-1').readOnly = false;
+  document.getElementById('date-2').readOnly = false;
+  document.getElementById('date-3').readOnly = false;
+  document.getElementById('date-4').readOnly = false;
+  document.getElementById('date-5').readOnly = false;
+  document.getElementById('date-6').readOnly = false;
+  document.getElementById('date-7').readOnly = false;
 }
 function show2()
 {
-  document.getElementById('date-1').disabled = false;
-  document.getElementById('date-2').disabled = false;
-  document.getElementById('date-3').disabled = false;
-  document.getElementById('date-4').disabled = false;
-  document.getElementById('date-5').disabled = false;
-  document.getElementById('date-6').disabled = true;
-  document.getElementById('date-7').disabled = true;
+  document.getElementById('date-1').readOnly = false;
+  document.getElementById('date-2').readOnly = false;
+  document.getElementById('date-3').readOnly = false;
+  document.getElementById('date-4').readOnly = false;
+  document.getElementById('date-5').readOnly = false;
+  document.getElementById('date-6').readOnly = true;
+  document.getElementById('date-7').readOnly = true;
  }
 function show3()
 {
-  document.getElementById('date-1').disabled = false;
-  document.getElementById('date-2').disabled = false;
-  document.getElementById('date-3').disabled = false;
-  document.getElementById('date-4').disabled = true;
-  document.getElementById('date-5').disabled = true;
-  document.getElementById('date-6').disabled = true;
-  document.getElementById('date-7').disabled = true;
+  document.getElementById('date-1').readOnly = false;
+  document.getElementById('date-2').readOnly = false;
+  document.getElementById('date-3').readOnly = false;
+  document.getElementById('date-4').readOnly = true;
+  document.getElementById('date-5').readOnly = true;
+  document.getElementById('date-6').readOnly = true;
+  document.getElementById('date-7').readOnly = true;
 }
 function show4()
 {
-  document.getElementById('date-1').disabled = false;
-  document.getElementById('date-2').disabled = false;
-  document.getElementById('date-3').disabled = true;
-  document.getElementById('date-4').disabled = true;
-  document.getElementById('date-5').disabled = true;
-  document.getElementById('date-6').disabled = true;
-  document.getElementById('date-7').disabled = true;
+  document.getElementById('date-1').readOnly = false;
+  document.getElementById('date-2').readOnly = false;
+  document.getElementById('date-3').readOnly = true;
+  document.getElementById('date-4').readOnly = true;
+  document.getElementById('date-5').readOnly = true;
+  document.getElementById('date-6').readOnly = true;
+  document.getElementById('date-7').readOnly = true;
 }
 function show5()
 {
-  document.getElementById('date-1').disabled = false;
-  document.getElementById('date-2').disabled = true;
-  document.getElementById('date-3').disabled = true;
-  document.getElementById('date-4').disabled = true;
-  document.getElementById('date-5').disabled = true;
-  document.getElementById('date-6').disabled = true;
-  document.getElementById('date-7').disabled = true;
+  document.getElementById('date-1').readOnly = false;
+  document.getElementById('date-2').readOnly = true;
+  document.getElementById('date-3').readOnly = true;
+  document.getElementById('date-4').readOnly = true;
+  document.getElementById('date-5').readOnly = true;
+  document.getElementById('date-6').readOnly = true;
+  document.getElementById('date-7').readOnlys = true;
 }
 
 
