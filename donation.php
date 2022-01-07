@@ -137,7 +137,7 @@ if (isset($_POST['button'])) {
             </div>
             <div class="form-group col-xl-4">
               <label>Phone Number</label>
-              <input type="text" placeholder="Phone Number" name="phone" class="form-control" value="">
+              <input type="number" placeholder="Phone Number" name="phone" class="form-control" value=""  min="1" max="9999999999" step="1" oninput="(validity.valid)||(value='');">
             </div>
             <div class="form-group col-xl-4">
               <label>Email</label>
@@ -251,7 +251,7 @@ if (isset($_POST['button'])) {
 
             <div class="form-group col-xl-4">
               <label>No. of Children</label>
-              <input type="text" placeholder="No. of Children" name="child_no" class="form-control" value="">
+              <input type="number" placeholder="No. of Children" name="child_no" class="form-control" value="">
             </div>
   
 

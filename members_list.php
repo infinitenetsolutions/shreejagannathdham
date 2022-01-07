@@ -1,5 +1,14 @@
 <?php
 include "header.php";
+include 'admin/connection.inc.php';
+
+  $select = "SELECT * FROM `jag_nirman_donation`";
+  $result = mysqli_query($connection, $select);
+
+$year = date('Y', strtotime($date));
+$month = date('F', strtotime($date));
+echo $month.' '.$year;
+
 ?>
   <!-- partial:partia/__subheader.html -->
   <div class="" style="">
@@ -13,8 +22,18 @@ include "header.php";
 
 <section class="section">
     <div class="container table-responsive">
-
-     <!--Table-->
+  
+  <select class="form-control w-auto" style="border: 2px solid #ff4906;color:#ff4906;font-weight:800">
+    <option>Select Month & Year</option>
+    <?php while($row = mysqli_fetch_assoc($result)) {
+       $date = $row['pdate1'];
+       
+       ?>
+    <option>oct 2021</option>
+    <option>nov 2021</option>
+    <option>dec 2021</option>
+  </select>
+  <br/><br/>
 <!--Table-->
 <table class="table table-hover table-fixed">
 
@@ -23,17 +42,17 @@ include "header.php";
     <tr>
       <th>#</th>
       <th>Name</th>
-      <th>Surname</th>
-      <th>Country</th>
-      <th>City</th>
-      <th>Position</th>
-      <th>Age</th>
+      <th>Father's Name</th>
+      <th>Residential Address</th>
+      <th>Proposed Day</th>
+      <th>Sevarathi</th>
     </tr>
   </thead>
   <!--Table head-->
 
   <!--Table body-->
   <tbody>
+
     <tr>
       <th scope="row">4</th>
       <td>Jerry</td>
@@ -41,53 +60,8 @@ include "header.php";
       <td>Italy</td>
       <td>Bari</td>
       <td>Editor-in-chief</td>
-      <td>41</td>
     </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Janis</td>
-      <td>Joplin</td>
-      <td>Poland</td>
-      <td>Warsaw</td>
-      <td>Video Maker</td>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Gary</td>
-      <td>Winogrand</td>
-      <td>Germany</td>
-      <td>Berlin</td>
-      <td>Photographer</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Angie</td>
-      <td>Smith</td>
-      <td>USA</td>
-      <td>San Francisco</td>
-      <td>Teacher</td>
-      <td>52</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>John</td>
-      <td>Mattis</td>
-      <td>France</td>
-      <td>Paris</td>
-      <td>Actor</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>Otto</td>
-      <td>Morris</td>
-      <td>Germany</td>
-      <td>Munich</td>
-      <td>Singer</td>
-      <td>35</td>
-    </tr>
+    
   </tbody>
   <!--Table body-->
 
