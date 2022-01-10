@@ -2,12 +2,8 @@
 include "header.php";
 include 'admin/connection.inc.php';
 
-  $select = "SELECT * FROM `jag_nirman_donation`";
+  $select = "SELECT DISTINCT YEAR(pdate1) AS 'Year', MONTH(pdate1) AS 'Month' FROM jag_nirman_donation";
   $result = mysqli_query($connection, $select);
-
-$year = date('Y', strtotime($date));
-$month = date('F', strtotime($date));
-echo $month.' '.$year;
 
 ?>
   <!-- partial:partia/__subheader.html -->
@@ -23,49 +19,37 @@ echo $month.' '.$year;
 <section class="section">
     <div class="container table-responsive">
   
-  <select class="form-control w-auto" style="border: 2px solid #ff4906;color:#ff4906;font-weight:800">
+  <select class="form-control" style="border: 2px solid #ff4906;color:#ff4906;font-weight:800" onchange="getData(this.value)">
     <option>Select Month & Year</option>
-    <?php while($row = mysqli_fetch_assoc($result)) {
-       $date = $row['pdate1'];
-       
-       ?>
-    <option>oct 2021</option>
-    <option>nov 2021</option>
-    <option>dec 2021</option>
+    <?php 
+      $mon='';
+      while($row = mysqli_fetch_assoc($result)) {
+      $mon = $row['Month'].' '.$row['Year'];
+      ?>
+    <option value = "<?php echo $mon; ?>"><?php echo date("F", mktime(null, null, null, $row['Month'])).' '.$row['Year'];?></option>
+      <?php } ?>
+    <!-- <option>nov 2021</option>s
+    <option>dec 2021</option> -->
   </select>
   <br/><br/>
 <!--Table-->
+<div id="tbl_seva">
 <table class="table table-hover table-fixed">
 
   <!--Table head-->
   <thead>
     <tr>
       <th>#</th>
-      <th>Name</th>
+      <th>Sevarathi Name</th>
       <th>Father's Name</th>
       <th>Residential Address</th>
       <th>Proposed Day</th>
-      <th>Sevarathi</th>
     </tr>
   </thead>
   <!--Table head-->
-
-  <!--Table body-->
-  <tbody>
-
-    <tr>
-      <th scope="row">4</th>
-      <td>Jerry</td>
-      <td>Horwitz</td>
-      <td>Italy</td>
-      <td>Bari</td>
-      <td>Editor-in-chief</td>
-    </tr>
-    
-  </tbody>
-  <!--Table body-->
-
-</table>
+  
+  </table>
+  </div>
 <!--Table-->
 
     </div>
@@ -75,3 +59,18 @@ echo $month.' '.$year;
   <?php
 include "footer.php";
   ?>
+
+   <script>
+         function getData(datee) {
+          //make the ajax call
+           $.ajax({
+             url: './getData.php',
+             type: 'POST',
+             data: {datee : datee},
+             success: function(result) {
+             $("#tbl_seva").html(result);
+
+             }
+           });
+          }
+         </script>
