@@ -300,7 +300,7 @@ include 'admin/connection.inc.php';
                                  $select = "SELECT * FROM `jag_yearly_puja` WHERE 1";
                                  $result = mysqli_query($connection, $select);
                             ?>
-                            <marquee direction="up" scrolldelay="150">
+                            <!-- <marquee direction="up" scrolldelay="150"> -->
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
 
                            <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
@@ -308,7 +308,7 @@ include 'admin/connection.inc.php';
                            <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
                            <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
                            <?php } ?>
-                           </marquee>
+                           <!-- </marquee> -->
                            
                             </ul>
                         </div>
@@ -328,7 +328,7 @@ include 'admin/connection.inc.php';
                                  $select = "SELECT * FROM `jag_daily_puja` WHERE 1";
                                  $result = mysqli_query($connection, $select);
                             ?>
-                            <marquee direction="up" scrolldelay="150">
+                            <!-- <marquee direction="up" scrolldelay="150"> -->
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
 
                            <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
@@ -336,7 +336,7 @@ include 'admin/connection.inc.php';
                            <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
                            <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
                            <?php } ?>
-                           </marquee>
+                           <!-- </marquee> -->
                             </ul>
                         </div>
                         <!-- <span class="text-white btn-link">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
