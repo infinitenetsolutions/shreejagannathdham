@@ -4,6 +4,11 @@ include 'admin/connection.inc.php';
 
   $select = "SELECT * FROM `jag_seva_booking` WHERE 1";
   $result = mysqli_query($connection, $select);
+
+
+  /*modal submission start*/
+  
+ 
   ?>
 <link rel="stylesheet" href="assets/css/style1.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel='stylesheet' type='text/css'>
@@ -98,7 +103,7 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                          <input type="email" class="form-control" id="email" placeholder="Enter Email" >
                         </div>
                     </div>
                     
@@ -142,17 +147,17 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="name">Select Seva From</label>
-                          <input type="date" class="form-control" id="start">
+                          <input type="date" class="form-control" id="start" >
                         </div>
                     </div>
                      
                     <div class="col-6">
                         <div class="form-group">
                           <label for="email">Select Seva To</label>
-                          <input type="date" class="form-control" id="end">
+                          <input type="date" class="form-control" id="end" onChange="test()">
                         </div>
                     </div>
-                    
+                    <div id="new"></div>
              </div>
          
         </div>
@@ -176,7 +181,7 @@ color:white;
 <?php
 include "footer.php";
 ?>
-
+<!-- Previous date disabled code start -->
 <script>
 $(function(){
     var dtToday = new Date();
@@ -195,7 +200,9 @@ $(function(){
     $('#end').attr('min', minDate);
 });
 </script>
+<!-- Previous date disabled code end -->
 
+<!-- show data on modal code start -->
 <script>
     $('.addAttr').click(function() {
     var seva = $(this).data('seva');  
@@ -205,3 +212,21 @@ $(function(){
     $('#amount').val(amount);  
     } );
  </script>
+ <!-- show data on modal code end -->
+
+ <!-- calculate date difference code start -->
+ <script>
+function test(){
+var dd1 = document.getElementById('start');
+var dd2 = document.getElementById('end');
+var date1 = new Date(dd1);
+var date2 = new Date(dd2);
+var diffTime = Math.abs(date2 - date1);
+var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+document.getElementById('new').value(diffDays);
+//alert(diffDays);
+//  alert(diffDays + " days");
+}
+
+</script>
+<!-- calculate date difference code end -->
