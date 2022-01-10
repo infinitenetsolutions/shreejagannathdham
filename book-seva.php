@@ -60,7 +60,7 @@ color:white;
           </h3>
           <p class="product-text price">Rs <?php echo $row['amount']; ?>/-</p>
           <!--<p class="product-text genre">DVD Rental</p>-->
-          <button type="button" data-toggle="modal" data-target="#myModal" class="sigma_btn-custom">Book Seva</button>
+          <button type="button" data-toggle="modal" data-target="#myModal" data-seva="<?php echo $row['name']; ?>" data-amount="<?php echo $row['amount']; ?>" class="sigma_btn-custom addAttr">Book Seva</button>
        </div>
       </div>
     </div>
@@ -123,7 +123,7 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="seva">Seva</label>
-                          <input type="text" class="form-control" id="seva" placeholder="Seva" readonly>
+                          <input type="text" class="form-control" id="seva" name="seva" placeholder="Seva" readonly>
                         </div>
                     </div>
                     <div class="col-6">
@@ -136,7 +136,7 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="amount">Amount</label>
-                          <input type="text" class="form-control" id="amount" placeholder="Enter Amount" readonly>
+                          <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter Amount" readonly>
                         </div>
                     </div>
                     <div class="col-6">
@@ -177,3 +177,31 @@ color:white;
 include "footer.php";
 ?>
 
+<script>
+$(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var minDate= year + '-' + month + '-' + day;
+    
+    $('#start').attr('min', minDate);
+    $('#end').attr('min', minDate);
+});
+</script>
+
+<script>
+    $('.addAttr').click(function() {
+    var seva = $(this).data('seva');  
+    var amount = $(this).data('amount');     
+   
+    $('#seva').val(seva);  
+    $('#amount').val(amount);  
+    } );
+ </script>
