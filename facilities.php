@@ -7,7 +7,16 @@ include 'admin/connection.inc.php';
  
 
 ?>
-
+<style>
+  .zoom:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    transition: transform .2s;
+}
+</style>
   <!-- partial:partia/__subheader.html -->
   <div class="" style="">
     <div class="">
@@ -27,7 +36,7 @@ include 'admin/connection.inc.php';
         while($row = mysqli_fetch_assoc($result))
         {
         ?>
-        <div class="col-lg-4">
+        <div class="col-lg-4 zoom">
           <div class="sigma_sermon-box">
             <div class="sigma_sermon-image">
             <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 200px !important;padding: 0 35px;}"/>
