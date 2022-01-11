@@ -39,8 +39,6 @@ include 'admin/connection.inc.php';
         .secondary-overlay::before{
         background-color: rgb(255 73 6 / 25%);
         }
-         .dis
-        {list-style-type:disclosure-closed;}
     </style>
 
 
@@ -86,7 +84,7 @@ include 'admin/connection.inc.php';
 
 
  <!-- About Start -->
-  <section class="section section-md light-bg" style="padding: 50px 0 60px !important;">
+  <section class="section section-md light-bg">
     <div class="container">
 
       <div class="row align-items-center">
@@ -134,101 +132,13 @@ include 'admin/connection.inc.php';
     </div>
   </section>
   <!-- About End -->
-
-    <!-- holi Start -->
-    <div class="section section-padding bg-cover portfolio-section secondary-overlay" style="background-image: url(assets/img/bg2.jpg)">
-        <div class="container">
-
-            
-                
-                 <div class="section-title text-center">
-        <p class="subtitle text-white">Volunteers</p>
-        <h4 class="title text-white">Puja Schedules</h4>
-      </div>
-
-           
-
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6">
-                    <a href="services.php" class="sigma_service style-1 primary-bg" style="height: 350px;">
-                        <div class="sigma_service-thumb">
-                            <!--<i class="text-white flaticon-temple"></i>-->
-                        </div>
-                        <div class="sigma_service-body">
-                            <h5 class="text-white">Yearly Puja Schedules</h5>
-                            <!--<p class="text-white">Temple is place where hindu worship consectetur adipisicing elit, sed do </p>-->
-                            <ul>
-                            <?php
-                                 $select = "SELECT * FROM `jag_yearly_puja` WHERE 1";
-                                 $result = mysqli_query($connection, $select);
-                            ?>
-                            <!-- <marquee direction="up" scrolldelay="150"> -->
-                            <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <!-- <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/></li> -->
-                                        <li class="text-white dis" ><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
-                                    </div>
-                                </div>
-                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
-                           <?php } ?>
-                           <!-- </marquee> -->
-                           
-                            </ul>
-                        </div>
-                        <!-- <span class="btn-link text-white">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
-                    </a>
-                </div>
-
-                <div class="col-lg-6 col-md-6 mt-negative-sm">
-                    <a href="services.php" class="sigma_service style-1 secondary-bg" style="height: 350px;">
-                        <div class="sigma_service-thumb">
-                            <!--<i class="custom-primary flaticon-hindu-1"></i>-->
-                        </div>
-                        <div class="sigma_service-body">
-                            <h5 class="text-white">Daily Puja Schedules</h5>
-                             <ul>
-                             <?php
-                                 $select = "SELECT * FROM `jag_daily_puja` WHERE 1";
-                                 $result = mysqli_query($connection, $select);
-                            ?>
-                            <!-- <marquee direction="up" scrolldelay="150"> -->
-                            <?php while($row = mysqli_fetch_assoc($result)) { ?>
-
-                           <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
-                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
-                           <?php } ?>
-                           <!-- </marquee> -->
-                            </ul>
-                        </div>
-                        <!-- <span class="text-white btn-link">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
-                    </a>
-                </div>
-
-                
-
-            </div>
-
-            <!-- <div class="text-end">
-                <a href="services.php" class="btn-link text-white"> Get Started Now <i class="custom-primary far fa-arrow-right"></i> </a>
-            </div> -->
-
-        </div>
-    </div>
-    <!-- holi End -->
-
-  <!--another section -->
+  
   <section class="section pt-0 mt-5">
     <div class="container">
       <div class="row">
 		<div class="col-lg-12">
           <div class="me-lg-30">
-            <div class="section-title mb-0 text-start" style="max-width:100% !important;">
+            <div class="section-title mb-0 text-start">
               <p class="subtitle">Education for all rural children</p>
               <h4 class="title">We Are A Hindu That Believes In Rama.</h4>
             </div>
@@ -323,10 +233,91 @@ include 'admin/connection.inc.php';
   </section>
 
  
-    
+    <!-- holi Start -->
+    <div class="section section-padding bg-cover portfolio-section secondary-overlay" style="background-image: url(assets/img/bg2.jpg)">
+        <div class="container">
+
+            
+                
+                 <div class="section-title text-center">
+        <p class="subtitle text-white">Volunteers</p>
+        <h4 class="title text-white">Puja Schedules</h4>
+      </div>
+
+           
+
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6">
+                    <a href="services.php" class="sigma_service style-1 primary-bg" style="height: 350px;">
+                        <div class="sigma_service-thumb">
+                            <!--<i class="text-white flaticon-temple"></i>-->
+                        </div>
+                        <div class="sigma_service-body">
+                            <h5 class="text-white">Yearly Puja Schedules</h5>
+                            <!--<p class="text-white">Temple is place where hindu worship consectetur adipisicing elit, sed do </p>-->
+                            <ul>
+                            <?php
+                                 $select = "SELECT * FROM `jag_yearly_puja` WHERE 1";
+                                 $result = mysqli_query($connection, $select);
+                            ?>
+                            <!-- <marquee direction="up" scrolldelay="150"> -->
+                            <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
+                           <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
+                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
+                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
+                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
+                           <?php } ?>
+                           <!-- </marquee> -->
+                           
+                            </ul>
+                        </div>
+                        <!-- <span class="btn-link text-white">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 mt-negative-sm">
+                    <a href="services.php" class="sigma_service style-1 secondary-bg" style="height: 350px;">
+                        <div class="sigma_service-thumb">
+                            <!--<i class="custom-primary flaticon-hindu-1"></i>-->
+                        </div>
+                        <div class="sigma_service-body">
+                            <h5 class="text-white">Daily Puja Schedules</h5>
+                             <ul>
+                             <?php
+                                 $select = "SELECT * FROM `jag_daily_puja` WHERE 1";
+                                 $result = mysqli_query($connection, $select);
+                            ?>
+                            <!-- <marquee direction="up" scrolldelay="150"> -->
+                            <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
+                           <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
+                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
+                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
+                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
+                           <?php } ?>
+                           <!-- </marquee> -->
+                            </ul>
+                        </div>
+                        <!-- <span class="text-white btn-link">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
+                    </a>
+                </div>
+
+                
+
+            </div>
+
+            <!-- <div class="text-end">
+                <a href="services.php" class="btn-link text-white"> Get Started Now <i class="custom-primary far fa-arrow-right"></i> </a>
+            </div> -->
+
+        </div>
+    </div>
+    <!-- holi End -->
 
     <!-- Progress bar Start -->
-    <!-- <div class="section">
+    <div class="section">
         <div class="container">
             <div class="row align-items-center">
 
@@ -354,7 +345,7 @@ include 'admin/connection.inc.php';
 
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Progress bar End -->
 
     <!-- volunteers Start -->
@@ -462,7 +453,7 @@ include 'admin/connection.inc.php';
   <!-- volunteers End -->
     
     <!-- Donation Start -->
-    <!-- <div class="section section-padding pt-0">
+    <div class="section section-padding pt-0">
         <div class="container">
             <div class="section-title text-center">
                 <p class="subtitle">Make a Donation</p>
@@ -550,17 +541,166 @@ include 'admin/connection.inc.php';
                                     </div>
                                 </div>
                             </div>
-                            <a href="donation.php" class="sigma_btn-custom">Donate </a>
+                            <a href="donation.php" class="sigma_btn-custom">
+                Donate
+              </a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div> -->
+    </div>
     <!-- Donation End -->
 
-    
+    <!-- volunteers Start -->
+    <section class="section section-padding light-bg">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mb-lg-30">
+                    <div class="section-title mb-0 text-start">
+                        <p class="subtitle">volunteers</p>
+                        <h4 class="title">Our Volunteers Achievments</h4>
+                    </div>
+                    <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
+                    <div class="basic-dot-slider light-dots">
+                        <div class="slide-item">
+                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
+                                believe in Ram</p>
+                        </div>
+                        <div class="slide-item">
+                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
+                                believe in Ram</p>
+                        </div>
+                        <div class="slide-item">
+                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
+                                believe in Ram</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="me-lg-30">
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="sigma_volunteers volunteers-5">
+                                    <div class="sigma_volunteers-thumb">
+                                        <img src="assets/img/volunteers/1.jpg" alt="volunteers">
+                                        <ul class="sigma_sm">
+                                            <li>
+                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sigma_volunteers-body">
+                                        <div class="sigma_volunteers-info">
+                                            <p>Temple Memember</p>
+                                            <h5>
+                                                <a href="volunteer-detail.php">Yesh Chopra</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="sigma_volunteers volunteers-5">
+                                    <div class="sigma_volunteers-thumb">
+                                        <img src="assets/img/volunteers/2.jpg" alt="volunteers">
+                                        <ul class="sigma_sm">
+                                            <li>
+                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sigma_volunteers-body">
+                                        <div class="sigma_volunteers-info">
+                                            <p>Temple Memember</p>
+                                            <h5>
+                                                <a href="volunteer-detail.php">Mukesh Singh</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- volunteers End -->
+
+    <!-- Portfolio Start -->
+    <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat" style="background-image: url(assets/img/textures/abstract.png)">
+        <div class="container">
+
+            <div class="section-title section-title-2 flex-title">
+                <div>
+                    <a href="packages.php" class="text-light subtitle light">View Packages</a>
+                    <h4 class="text-white title mb-lg-0">Our Packages</h4>
+                </div>
+                <div class="sigma_arrows">
+                    <i class="far fa-chevron-left slick-arrow slider-prev"></i>
+                    <i class="far fa-chevron-right slick-arrow slider-next"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-slider">
+                <?php 
+         	$select = "SELECT * FROM `jag_member_type` WHERE 1";
+  			$result = mysqli_query($connection, $select);
+  			while($row=mysqli_fetch_assoc($result)){
+        ?>
+                <div class="sigma_portfolio-item style-3">
+                    <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'image']) . '"' ?> alt="portfolio" style="width:500px;height:300px;"/>
+                    <!--<img src="assets/img/puja/style-3/1.jpg" alt="portfolio">-->
+                    <div class="sigma_portfolio-item-content">
+                        <div class="sigma_portfolio-item-content-inner">
+                            <!-- <a href="#">Temple</a> -->
+                            <h5 class="text-center">
+                                <?php echo $row['name']; ?>
+                            </h5>
+                            <?php echo $row['description']; ?>
+                         
+                            <h5 class="" style="color:#fff;text-align: center;background: red;padding: 10px;border-radius: 20px;">Donation amount <b style="color:#fff;">Rs. <?php echo $row['donation_amount']; ?>/</b></h5>
+                        </div>
+
+                    </div>
+                </div>
+                <?php } ?>
+
+                
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Portfolio End -->
 
 
     <!-- Testimonials Start -->
@@ -668,110 +808,10 @@ include 'admin/connection.inc.php';
     </section>
     <!-- Testimonials End -->
 
-   <!-- volunteers Start -->
-   <!-- <section class="section section-padding light-bg">
-        <div class="container">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 mb-lg-30">
-                    <div class="section-title mb-0 text-start">
-                        <p class="subtitle">volunteers</p>
-                        <h4 class="title">Our Volunteers Achievments</h4>
-                    </div>
-                    <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
-                    <div class="basic-dot-slider light-dots">
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="me-lg-30">
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sigma_volunteers volunteers-5">
-                                    <div class="sigma_volunteers-thumb">
-                                        <img src="assets/img/volunteers/1.jpg" alt="volunteers">
-                                        <ul class="sigma_sm">
-                                            <li>
-                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="sigma_volunteers-body">
-                                        <div class="sigma_volunteers-info">
-                                            <p>Temple Memember</p>
-                                            <h5>
-                                                <a href="volunteer-detail.php">Yesh Chopra</a>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sigma_volunteers volunteers-5">
-                                    <div class="sigma_volunteers-thumb">
-                                        <img src="assets/img/volunteers/2.jpg" alt="volunteers">
-                                        <ul class="sigma_sm">
-                                            <li>
-                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="sigma_volunteers-body">
-                                        <div class="sigma_volunteers-info">
-                                            <p>Temple Memember</p>
-                                            <h5>
-                                                <a href="volunteer-detail.php">Mukesh Singh</a>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section> -->
-    <!-- volunteers End -->
+   
 
     <!-- Form Start -->
-    <!-- <div class="section dark-overlay dark-overlay-3 bg-cover bg-center bg-norepeat" style="background-image: url(assets/img/bg1.jpg)">
+    <div class="section dark-overlay dark-overlay-3 bg-cover bg-center bg-norepeat" style="background-image: url(assets/img/bg1.jpg)">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-lg-30">
@@ -848,55 +888,8 @@ include 'admin/connection.inc.php';
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Form End -->
-
-    <!-- Portfolio Start -->
-    <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat" style="background-image: url(assets/img/textures/abstract.png)">
-        <div class="container">
-
-            <div class="section-title section-title-2 flex-title">
-                <div>
-                    <a href="packages.php" class="text-light subtitle light">View Packages</a>
-                    <h4 class="text-white title mb-lg-0">Our Packages</h4>
-                </div>
-                <div class="sigma_arrows">
-                    <i class="far fa-chevron-left slick-arrow slider-prev"></i>
-                    <i class="far fa-chevron-right slick-arrow slider-next"></i>
-                </div>
-            </div>
-
-            <div class="portfolio-slider">
-                <?php 
-         	$select = "SELECT * FROM `jag_member_type` WHERE 1";
-  			$result = mysqli_query($connection, $select);
-  			while($row=mysqli_fetch_assoc($result)){
-        ?>
-                <div class="sigma_portfolio-item style-3">
-                    <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'image']) . '"' ?> alt="portfolio" style="width:500px;height:300px;"/>
-                    <!--<img src="assets/img/puja/style-3/1.jpg" alt="portfolio">-->
-                    <div class="sigma_portfolio-item-content">
-                        <div class="sigma_portfolio-item-content-inner">
-                            <!-- <a href="#">Temple</a> -->
-                            <h5 class="text-center">
-                                <?php echo $row['name']; ?>
-                            </h5>
-                            <?php echo $row['description']; ?>
-                         
-                            <h5 class="" style="color:#fff;text-align: center;background: red;padding: 10px;border-radius: 20px;">Donation amount <b style="color:#fff;">Rs. <?php echo $row['donation_amount']; ?>/</b></h5>
-                        </div>
-
-                    </div>
-                </div>
-                <?php } ?>
-
-                
-
-            </div>
-
-        </div>
     </div>
-    <!-- Portfolio End -->
+    <!-- Form End -->
 
     <!-- Blog Start -->
     <div class="section section-padding">

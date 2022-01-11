@@ -1639,7 +1639,7 @@ blockquote::before {
 
 .section {
     position: relative;
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .section .container {
@@ -1647,7 +1647,7 @@ blockquote::before {
 }
 
 .section.section-padding {
-    padding: 110px 0 80px;
+    padding: 50px 0 50px;
 }
 
 .section.section-lg {
@@ -1655,7 +1655,7 @@ blockquote::before {
 }
 
 .section.section-md {
-    padding: 110px 0 160px;
+    padding: 110px 0 60px;
 }
 
 .sigma_section-fw {

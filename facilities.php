@@ -15,6 +15,7 @@ include 'admin/connection.inc.php';
     /* Safari 3-8 */
     transform: scale(1.1);
     transition: transform .2s;
+    box-sizing: border-box;
 }
 </style>
   <!-- partial:partia/__subheader.html -->

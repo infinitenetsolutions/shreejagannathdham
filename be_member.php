@@ -167,14 +167,14 @@ include "header.php";
           </span>
         </div>
 
-          <div class="col-lg-4 col-md-6">
-          <span href="" class="sigma_service border text-center style-1 bg-white">
+          <!-- <div class="col-lg-4 col-md-6">
+          <span href="" class="sigma_service border text-center style-1 bg-white"> -->
             <!-- <div class="sigma_service-thumb">
              <img src="assets/img/patron.jpg" style="border-radius: 50%; width: 100px; height: 100px;">
               <span></span>
               <span></span>
             </div> -->
-            <div class="sigma_service-body">
+            <!-- <div class="sigma_service-body">
             <img src="assets/img/patron.jpg" style="border-radius: 50%; width: 100px; height: 100px;">
             <h5 class="">PATRON MEMBER</h5>
               <ol style="list-style: upper-latin;" class="packages">
@@ -201,7 +201,7 @@ include "header.php";
           </span>
           
           
-        </div>
+        </div> -->
 
       </div>
 
