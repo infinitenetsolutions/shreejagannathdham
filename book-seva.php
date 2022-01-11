@@ -217,13 +217,24 @@ $(function(){
  <!-- calculate date difference code start -->
  <script>
 function test(){
-var dd1 = document.getElementById('start');
-var dd2 = document.getElementById('end');
-var date1 = new Date(dd1);
-var date2 = new Date(dd2);
-var diffTime = Math.abs(date2 - date1);
-var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-document.getElementById('new').value(diffDays);
+  var v = document.getElementById('amount').value;
+  var dd1 = document.getElementById('start').value;
+  if(!Date.parse(dd1))
+ {
+    alert('Please First Select the Seva From Date!!');
+    $('#end').val(''); 
+ }
+ 
+ else
+ { var dd2 = document.getElementById('end').value;
+  var date1 = new Date(dd1);
+  var date2 = new Date(dd2);
+  var diffTime = Math.abs(date2 - date1);
+  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+  var res = v*(diffDays+1);
+  $('#amount').val(res); 
+ }
+// document.getElementById('new').value(diffDays);
 //alert(diffDays);
 //  alert(diffDays + " days");
 }
