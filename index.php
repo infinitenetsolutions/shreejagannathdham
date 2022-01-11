@@ -166,7 +166,6 @@ include 'admin/connection.inc.php';
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <!-- <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/></li> -->
                                         <li class="text-white dis" ><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
                                     </div>
                                 </div>
@@ -193,7 +192,7 @@ include 'admin/connection.inc.php';
                             ?>
                             <!-- <marquee direction="up" scrolldelay="150"> -->
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                                <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
+                                <li class="text-white"><?php echo $row['name']; ?> - <span><?php echo $row['s_timing']; ?> to <?php echo $row['e_timing']; ?></span></li>
                             <?php } ?>
                            <!-- </marquee> -->
                             </ul>

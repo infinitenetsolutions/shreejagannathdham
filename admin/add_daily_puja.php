@@ -38,9 +38,9 @@ if (isset($_POST['insert'])) {
                   </div>';
                 }
             }
-        }
-    }
-}
+        
+    
+
 
 $select1 = "SELECT * FROM `jag_daily_puja`";
 $result2 = mysqli_query($connection, $select1);
