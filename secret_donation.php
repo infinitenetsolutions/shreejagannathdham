@@ -42,7 +42,7 @@ if($result1){
  <div class="" style="">
     <div class="">
       <div class="sigma_subheader-inner">       
-       <img src="https://shreejagannathdham.com/temp/shreejagannatha/assets/img/subheader.jpg" style="width:100%;">
+       <img src="./assets/img/Secret Donation.jpg" style="width:100%;">
       </div>
     </div>
   </div>

@@ -2,14 +2,39 @@
 include "header.php";
 include 'admin/connection.inc.php';
 
+  /*modal submission start*/  
+  if (isset($_POST['button'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $seva = $_POST['seva'];
+    $pincode = $_POST['pincode'];
+    $amount = $_POST['amount'];
+
+
+        $sql = "INSERT INTO `jag_booked_seva`(`name`,`email`,`mobile`,`city`,`address`,`seva`,`pincode`,`amount`) VALUES ('$name','$email','$mobile','$city','$address','$seva','$pincode','$amount')";
+
+        $current_id = mysqli_query($connection, $sql); 
+        if ($current_id) {
+
+            echo "<script>
+                alert('Your Selected Seva is Booked. Thank You!!!');
+                window.location.replace('book-seva.php');
+                </script>";
+                 }
+                 else {
+            echo "<script>alert('Some Error Occurred. Please try again!!');</script>";
+        }
+    } 
+  /*modal submission end*/  
+
   $select = "SELECT * FROM `jag_seva_booking` WHERE 1";
   $result = mysqli_query($connection, $select);
-
-
-  /*modal submission start*/
-  
- 
   ?>
+
+
 <link rel="stylesheet" href="assets/css/style1.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -90,39 +115,39 @@ color:white;
           <h4 class="modal-title" aria-describedby="emailHelp" style="color: #db4242;font-size: 30px;font-weight: 700;">Book Your Seva Here!!</h4>
          <br><p class="form-text text-muted">Your information is safe with us.</p>
         </div>
-        <form>
+        <form  method="POST">
         <div class="modal-body" style="padding:20px 50px;">
                	<div class="row">
             		<div class="col-6">
                         <div class="form-group">
                           <label for="name">Full Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Full Name">
+                          <input type="text" class="form-control" id="name" placeholder="Full Name" name="name">
                         </div>
                     </div>
                      
                     <div class="col-6">
                         <div class="form-group">
                           <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="Enter Email" >
+                          <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                         </div>
                     </div>
                     
                     <div class="col-6">
                         <div class="form-group">
                           <label for="mobile">Mobile</label>
-                          <input type="mobile" class="form-control" id="mobile" placeholder="Enter Mobile">
+                          <input type="mobile" class="form-control" id="mobile" placeholder="Enter Mobile" name="mobile">
                         </div>
                  	</div>
                     <div class="col-6">
                         <div class="form-group">
                           <label for="city">City</label>
-                          <input type="city" class="form-control" id="city" placeholder="Enter City">
+                          <input type="city" class="form-control" id="city" placeholder="Enter City" name="city">
                         </div>
                  	</div>
                     <div class="col-6">
                         <div class="form-group">
                           <label for="address">Postal Address</label>
-                          <textarea class="form-control" id="address" placeholder="Enter Addres"></textarea>
+                          <textarea class="form-control" id="address" placeholder="Enter Addres" name="address"></textarea>
                         </div>
                  	</div>
                     <div class="col-6">
@@ -134,7 +159,7 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="pin">Pincode</label>
-                          <input type="text" class="form-control" id="pin" placeholder="Enter Pincode">
+                          <input type="text" class="form-control" id="pin" placeholder="Enter Pincode" name="pincode">
                         </div>
                     </div>
                      
@@ -147,14 +172,14 @@ color:white;
                     <div class="col-6">
                         <div class="form-group">
                           <label for="name">Select Seva From</label>
-                          <input type="date" class="form-control" id="start" >
+                          <input type="date" class="form-control" id="start" name="start">
                         </div>
                     </div>
                      
                     <div class="col-6">
                         <div class="form-group">
                           <label for="email">Select Seva To</label>
-                          <input type="date" class="form-control" id="end" onChange="test()">
+                          <input type="date" class="form-control" id="end" onChange="test()" name="end">
                         </div>
                     </div>
                     <div id="new"></div>
@@ -162,7 +187,7 @@ color:white;
          
         </div>
         <div class="modal-footer border-top-0 d-flex justify-content-center" style="padding: 5px 15px">
-          <button type="submit" class="btn orange">Submit</button>
+          <button type="submit" class="btn orange" name="button">Submit</button>
         </div>
       </form>
         <div class="modal-footer">
