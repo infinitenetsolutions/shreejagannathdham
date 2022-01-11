@@ -300,7 +300,7 @@ include 'admin/connection.inc.php';
                                 <a href="#">Mandir Nirman</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="members.php">Members</a></li>
-                                    <li class="menu-item"> <a href="donors.php">Donars</a></li>
+                                    <li class="menu-item"> <a href="donors.php">Donors</a></li>
                                 </ul>
                             </li>                            
                                 </ul>
