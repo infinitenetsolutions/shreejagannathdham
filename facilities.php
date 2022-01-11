@@ -17,145 +17,319 @@ include 'admin/connection.inc.php';
     </div>
   </div>
   <!-- partial -->
+<body>
 
   <!-- Services Start -->
   <div class="section section-padding">
     <div class="container">
       <div class="row">
-		
-        <?php 
+      <?php 
         while($row = mysqli_fetch_assoc($result))
         {
         ?>
-        <div class="col-lg-4 col-md-6">
-          <span  class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 200px !important;"/>
-              <!--<i class="flaticon-temple"></i>-->
+        <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 200px !important;padding: 0 35px;}"/>
             </div>
-            <div class="sigma_service-body">
-              <h5 class="text-white"><?php echo $row['title']; ?></h5>
+            <div class="sigma_box">
+             
+              <h4 class="title mb-0">
+                <!-- <a href="holi-details.html">Holi- The Colour Festival</a> -->
+                <?php echo $row['title']; ?>
+              </h4>
+              <span >
+              <a class="subtitle" href="facilities_single.php?var=<?php echo $row['id']; ?>" class="btn-link text-white">View More <i class="far fa-arrow-right text-white"></i> </a>
+              </span>
+              <!-- <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul> -->
+              <!-- <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul> -->
+              </div>
             </div>
-            <a href="facilities_single.php?var=<?php echo $row['id']; ?>" class="btn-link text-white">View More <i class="far fa-arrow-right text-white"></i> </a>
-          </span>
         </div>
-		<?php 
+        <?php 
         }
         ?>
-        
-        <!--<div class="col-lg-4 col-md-6">
-          <a href="holi-details.html" class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <i class="flaticon-hindu-2"></i>
+
+
+       <!-- <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+              <img src="assets/img/holi/2.jpg" alt="holi">
             </div>
-            <div class="sigma_service-body">
-              <h5>Puja</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+            <div class="sigma_box">
+              <span class="subtitle">Chaar Dhaam</span>
+              <h4 class="title mb-0">
+                <a href="holi-details.html">Chaar Dhaam Yatra</a>
+              </h4>
+              <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul>
+              <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul>
+              </div>
             </div>
-            <span class="btn-link">Learn More <i class="far fa-arrow-right"></i> </span>
-          </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-          <a href="holi-details.html" class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <i class="flaticon-pooja"></i>
+
+        <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+              <img src="assets/img/holi/3.jpg" alt="holi">
             </div>
-            <div class="sigma_service-body">
-              <h5>Prashad</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+            <div class="sigma_box">
+              <span class="subtitle">Diwali</span>
+              <h4 class="title mb-0">
+                <a href="holi-details.html">Deepawali</a>
+              </h4>
+              <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul>
+              <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul>
+              </div>
             </div>
-            <span class="btn-link">Learn More <i class="far fa-arrow-right"></i> </span>
-          </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-          <a href="holi-details.html" class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <i class="flaticon-hindu-wedding-1"></i>
+
+        <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+              <img src="assets/img/holi/4.jpg" alt="holi">
             </div>
-            <div class="sigma_service-body">
-              <h5>Bhoomi Puja</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+            <div class="sigma_box">
+              <span class="subtitle">Dusseshra</span>
+              <h4 class="title mb-0">
+                <a href="holi-details.html">Durga Puja</a>
+              </h4>
+              <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul>
+              <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul>
+              </div>
             </div>
-            <span class="btn-link">Learn More <i class="far fa-arrow-right"></i> </span>
-          </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-          <a href="holi-details.html" class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <i class="flaticon-hindu-wedding"></i>
+
+        <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+              <img src="assets/img/holi/5.jpg" alt="holi">
             </div>
-            <div class="sigma_service-body">
-              <h5>Car Puja</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+            <div class="sigma_box">
+              <span class="subtitle">RamNavmi</span>
+              <h4 class="title mb-0">
+                <a href="holi-details.html">Janmashtami</a>
+              </h4>
+              <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul>
+              <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul>
+              </div>
             </div>
-            <span class="btn-link">Learn More <i class="far fa-arrow-right"></i> </span>
-          </a>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-          <a href="holi-details.html" class="sigma_service style-1">
-            <div class="sigma_service-thumb">
-              <i class="flaticon-arti"></i>
-            </div>
-            <div class="sigma_service-body">
-              <h5>Marriage</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
-            </div>
-            <span class="btn-link">Learn More <i class="far fa-arrow-right"></i> </span>
-          </a>
-        </div>-->
 
-      </div>
+        <div class="col-lg-4">
+          <div class="sigma_sermon-box">
+            <div class="sigma_sermon-image">
+              <img src="assets/img/holi/6.jpg" alt="holi">
+            </div>
+            <div class="sigma_box">
+              <span class="subtitle">Basaant Panchami</span>
+              <h4 class="title mb-0">
+                <a href="holi-details.html">Basaant Panchami</a>
+              </h4>
+              <ul class="sigma_sermon-info mb-0">
+                <li>
+                  <i class="far fa-user"></i>
+                  Message From
+                  <a href="#" class="ms-2"><u>Yeshvant Parsad</u></a>
+                </li>
+                <li  class="mt-0 ms-4">
+                  <i class="far fa-calendar-check"></i>
+                  Aug 12, 2022
+                </li>
+              </ul>
+              <ul class="sigma_sm square">
+                <li>
+                  <a href="#">
+                    <i class="fas fa-music"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="far fa-file-pdf"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                </li>
+              </ul>
+              </div>
+            </div>
+        </div>
+      </div> -->
+     
     </div>
   </div>
   <!-- Services End -->
 
-  <!-- Clients Start -->
- <!-- <div class="section section-padding primary-bg pattern-map">
-    <div class="container-fluid">
-      <div class="row">
+  
 
-        <div class="col-lg-7">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="sigma_client">
-                <img src="assets/img/clients/1.png" alt="client">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="sigma_client">
-                <img src="assets/img/clients/2.png" alt="client">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="sigma_client">
-                <img src="assets/img/clients/3.png" alt="client">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="sigma_client">
-                <img src="assets/img/clients/4.png" alt="client">
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="sigma_client">
-                <img src="assets/img/clients/5.png" alt="client">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>-->
-  <!-- Clients End -->
+</body>
+</html>
 <?php
 
 include "footer.php";

@@ -84,7 +84,7 @@ $var = $_GET['var'];
             <div class="col-md-6">
               <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" />
             </div>
-            <div class="col-md-6" >
+            <div class="col-md-6" style="padding-left:100px">
             <h5><?php echo $row['title']; ?></h5>
         	  <p><?php echo $row['description']; ?></p><br/><br/>
           </div>
