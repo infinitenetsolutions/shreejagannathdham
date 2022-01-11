@@ -233,45 +233,6 @@ include 'admin/connection.inc.php';
   </section>
 
  
-
-    <!-- About Start -->
-    <!--<section class="section">
-        <div class="container">
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-lg-30">
-                    <div class="img-group">
-                        <div class="img-group-inner">
-                            <img src="assets/img/about-group1/1.jpg" alt="about">
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <img src="assets/img/about-group1/2.jpg" alt="about">
-                        <img src="assets/img/about-group1/3.jpg" alt="about">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="me-lg-30">
-                        <div class="section-title mb-0 text-start">
-                            <p class="subtitle">EDUCATION FOR ALL RURAL CHILDREN</p>
-                            <h4 class="title">We are a Hindu that believe in Ram</h4>
-                        </div>
-                        <ul class="sigma_list list-2 mb-0">
-                            <li>Peace of Mind</li>
-                            <li>Set For Pastor</li>
-                            <li>100% Satisfaction</li>
-                            <li>Trusted Company</li>
-                        </ul>
-                        <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
-                        <a href="about-us.php" class="sigma_btn-custom light">Learn More <i class="far fa-arrow-right"></i> </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>-->
-    <!-- About End -->
-
     <!-- holi Start -->
     <div class="section section-padding bg-cover portfolio-section secondary-overlay" style="background-image: url(assets/img/bg2.jpg)">
         <div class="container">

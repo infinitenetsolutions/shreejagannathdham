@@ -80,10 +80,15 @@ $var = $_GET['var'];
       <div class="entry-content">
 
         <div class="sigma_post-single-thumb">
-          <!--<img src="assets/img/service/details/1.jpg" alt="post">-->
-           <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" />
-         
-        	<p><?php echo $row['description']; ?></p><br/><br/>
+          <div class="row">
+            <div class="col-md-6">
+              <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" />
+            </div>
+            <div class="col-md-6" style="margin-top: 150px;">
+            <h5><?php echo $row['title']; ?></h5>
+        	  <p><?php echo $row['description']; ?></p><br/><br/>
+          </div>
+          </div>
 		 </div>
 
     </div>
