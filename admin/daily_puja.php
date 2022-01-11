@@ -92,9 +92,8 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                         <tr>
                           <th>ID</th>
                           <th>Title</th>
-                          <th>Images</th>
-                          <th>Timing</th>
-                          <th>Description</th>
+                          <th>Start Timing</th>
+                          <th>End Timing</th>
                           <th>Update</th>
                           <th>Delete</th>
                          </tr>
@@ -112,21 +111,21 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                             <tr>
                               <td><?php echo $cnt; ?></td>
                               <td><?php echo $rowimage['name']; ?></td>
-                              <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['image']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
-                              <td><?php echo $rowimage['timing']; ?></td>
-                              <td><?php echo $rowimage['description']; ?></td>
+                              <td><?php echo $rowimage['s_timing']; ?></td>
+                              <td><?php echo $rowimage['e_timing']; ?></td>
                               <td><a href="update_doc.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_daily_puja.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
-                        <?php }  ?>
+                        <?php 
+                          $cnt++; 
+                          }  ?>
                       </tbody>
                       <tfoot>
                       <tr>
                           <th>ID</th>
                           <th>Title</th>
-                          <th>Images</th>
-                          <th>Timing</th>
-                          <th>Description</th>
+                          <th>Start Timing</th>
+                          <th>End Timing</th>
                           <th>Update</th>
                           <th>Delete</th>
                         </tr>

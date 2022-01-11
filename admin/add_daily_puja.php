@@ -7,19 +7,11 @@ include 'function.inc.php';
 
 if (isset($_POST['insert'])) {
   $title = simplename($_POST['title']);
-  $description = simplename($_POST['description']);
-  $timing = simplename($_POST['timing']);
-      if ($cat != null) {
-
-        if (count($_FILES) > 0) {
-            if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
-
-                $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
-                //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
-
-                $sql = "INSERT INTO `jag_daily_puja`(`name`,`timing`,`description`,`image`) VALUES ('$title','$timing','$description','$imgData')";
-
-                $current_id = mysqli_query($connection, $sql); 
+  $s_timing = simplename($_POST['s_timing']);
+  $e_timing = simplename($_POST['e_timing']);
+      
+        $sql = "INSERT INTO `jag_daily_puja`(`name`,`s_timing`,`e_timing`) VALUES ('$title','$s_timing','$e_timing')";
+        $current_id = mysqli_query($connection, $sql); 
                 
                 if ($current_id) {
 
@@ -73,22 +65,14 @@ $result2 = mysqli_query($connection, $select1);
                         <input name="title" type="text" class="form-control" id="exampleFormControlSelect1">
                     </div>
                     <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Enter Puja Timing</label>
-                        <input name="timing" type="time" class="form-control" id="timing">
+                        <label class="a-color" for="exampleFormControlSelect1">Enter Puja Start Timing</label>
+                        <input name="s_timing" type="time" class="form-control" id="timing">
                     </div>
                     <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Upload Puja Image</label>
-                        <input name="Image" type="file" class="form-control" id="Image">
-
-
+                        <label class="a-color" for="exampleFormControlSelect1">Enter Puja End Timing</label>
+                        <input name="e_timing" type="time" class="form-control" id="timing">
                     </div>
-                    <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Enter Puja Description</label>
-                        <textarea name="description" class="form-control" id="description" aria-describedby="emailHelp"></textarea>
-
-
-                    </div>
-                    </div>
+                </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add New Daily Puja Schedule</button>
                 </div>

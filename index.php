@@ -151,13 +151,12 @@ include 'admin/connection.inc.php';
             <div class="row">
 
                 <div class="col-lg-6 col-md-6">
-                    <a href="services.php" class="sigma_service style-1 primary-bg" style="height: 350px;">
+                    <a href="" class="sigma_service style-1 primary-bg" style="height: 350px;">
                         <div class="sigma_service-thumb">
                             <!--<i class="text-white flaticon-temple"></i>-->
                         </div>
                         <div class="sigma_service-body">
                             <h5 class="text-white">Yearly Puja Schedules</h5>
-                            <!--<p class="text-white">Temple is place where hindu worship consectetur adipisicing elit, sed do </p>-->
                             <ul>
                             <?php
                                  $select = "SELECT * FROM `jag_yearly_puja` WHERE 1";
@@ -171,20 +170,17 @@ include 'admin/connection.inc.php';
                                         <li class="text-white dis" ><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
                                     </div>
                                 </div>
-                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
+                          
                            <?php } ?>
                            <!-- </marquee> -->
                            
                             </ul>
                         </div>
-                        <!-- <span class="btn-link text-white">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
                     </a>
                 </div>
 
                 <div class="col-lg-6 col-md-6 mt-negative-sm">
-                    <a href="services.php" class="sigma_service style-1 secondary-bg" style="height: 350px;">
+                    <a href="" class="sigma_service style-1 secondary-bg" style="height: 350px;">
                         <div class="sigma_service-thumb">
                             <!--<i class="custom-primary flaticon-hindu-1"></i>-->
                         </div>
@@ -197,27 +193,18 @@ include 'admin/connection.inc.php';
                             ?>
                             <!-- <marquee direction="up" scrolldelay="150"> -->
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
-
-                           <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
-                           <!--<li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>
-                           <li class="text-white">Akshay Trutiya <span>05/07/2017</span></li>-->
-                           <?php } ?>
+                                <li class="text-white"><img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 50px;"/><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
+                            <?php } ?>
                            <!-- </marquee> -->
                             </ul>
                         </div>
-                        <!-- <span class="text-white btn-link">Learn More <i class="text-white far fa-arrow-right"></i> </span> -->
+                       
                     </a>
                 </div>
 
                 
 
             </div>
-
-            <!-- <div class="text-end">
-                <a href="services.php" class="btn-link text-white"> Get Started Now <i class="custom-primary far fa-arrow-right"></i> </a>
-            </div> -->
-
         </div>
     </div>
     <!-- holi End -->
@@ -321,41 +308,6 @@ include 'admin/connection.inc.php';
 
     </div>
   </section>
-
- 
-    
-
-    <!-- Progress bar Start -->
-    <!-- <div class="section">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-4">
-                    <img src="assets/img/progress-bar/1.jpg" alt="img">
-                </div>
-                <div class="col-lg-4 p-3 p-lg-0">
-                    <div class="sigma_box sigma_box-absolute sigma_box-lg m-0 sigma_box-progress">
-                        <i class="flaticon-hindu"></i>
-                        <div class="sigma_round-button mb-4">
-                            <span> <b class="counter" data-from="0" data-to="75">0</b> <span class="custom-primary">%</span> </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197 197" enable-background="new 0 0 197 197" xml:space="preserve">
-                <circle class="sigma_round-button-stroke" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-                <circle class="sigma_progress-round sigma_round-button-circle" data-to="290" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-              </svg>
-                        </div>
-
-                        <h6>Donnation Success Rate</h6>
-                        <p class="m-0 blockquote bg-transparent"> Design better websites and spend less time without restricting </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 z-index-3">
-                    <img src="assets/img/progress-bar/2.jpg" alt="img">
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-    <!-- Progress bar End -->
 
     <!-- volunteers Start -->
   <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat" style="background-image: url(assets/img/bg2.jpg)">
@@ -461,110 +413,8 @@ include 'admin/connection.inc.php';
   </div>
   <!-- volunteers End -->
     
-    <!-- Donation Start -->
-    <!-- <div class="section section-padding pt-0">
-        <div class="container">
-            <div class="section-title text-center">
-                <p class="subtitle">Make a Donation</p>
-                <h4 class="title">Donate Us To Help</h4>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="sigma_service style-2">
-                        <div class="sigma_service-thumb">
-                            <img src="assets/img/donation/5.jpg" alt="img">
-                        </div>
-                        <div class="sigma_service-body">
-                            <h5>
-                                <a href="donation.php">Protecting Children</a>
-                            </h5>
-                            <p>Temple is place where hindu worship consectetur adipisicing elit, sed do </p>
-                            <div class="sigma_service-progress">
-                                <div class="progress-content">
-                                    <p>Raised: $52,384</p>
-                                    <p>Goal: $85,000</p>
-                                </div>
-                                <div class="sigma_progress">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="donation.php" class="sigma_btn-custom">
-                Donate
-              </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="sigma_service style-2">
-                        <div class="sigma_service-thumb">
-                            <img src="assets/img/donation/6.jpg" alt="img">
-                        </div>
-                        <div class="sigma_service-body">
-                            <h5>
-                                <a href="donation.php">Donate Ngos</a>
-                            </h5>
-                            <p>Temple is place where hindu worship consectetur adipisicing elit, sed do </p>
-                            <div class="sigma_service-progress">
-                                <div class="progress-content">
-                                    <p>Raised: $49,444</p>
-                                    <p>Goal: $78,000</p>
-                                </div>
-                                <div class="sigma_progress">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="donation.php" class="sigma_btn-custom">
-                Donate
-              </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="sigma_service style-2">
-                        <div class="sigma_service-thumb">
-                            <img src="assets/img/donation/7.jpg" alt="img">
-                        </div>
-                        <div class="sigma_service-body">
-                            <h5>
-                                <a href="donation.php">Feed Poors</a>
-                            </h5>
-                            <p>Temple is place where hindu worship consectetur adipisicing elit, sed do </p>
-                            <div class="sigma_service-progress">
-                                <div class="progress-content">
-                                    <p>Raised: $78,334</p>
-                                    <p>Goal: $96,400</p>
-                                </div>
-                                <div class="sigma_progress">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="donation.php" class="sigma_btn-custom">Donate </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-    <!-- Donation End -->
-
-    
-
-
-    <!-- Testimonials Start -->
-    <section class="section pt-0">
+  <!-- Testimonials Start -->
+    <section class="section pt-0" style="margin-top: 60px;">
 
         <div class="container testimonial-section bg-contain bg-norepeat bg-center" style="background-image: url(assets/img/textures/map-2.png)">
 
@@ -667,189 +517,6 @@ include 'admin/connection.inc.php';
         </div>
     </section>
     <!-- Testimonials End -->
-
-   <!-- volunteers Start -->
-   <!-- <section class="section section-padding light-bg">
-        <div class="container">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 mb-lg-30">
-                    <div class="section-title mb-0 text-start">
-                        <p class="subtitle">volunteers</p>
-                        <h4 class="title">Our Volunteers Achievments</h4>
-                    </div>
-                    <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
-                    <div class="basic-dot-slider light-dots">
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                        <div class="slide-item">
-                            <p class="mb-0">You need to be sure there isn’t anything embarrassing hidden in the middle of text. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; generators on the Internet tend We are a Hindu that
-                                believe in Ram</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="me-lg-30">
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sigma_volunteers volunteers-5">
-                                    <div class="sigma_volunteers-thumb">
-                                        <img src="assets/img/volunteers/1.jpg" alt="volunteers">
-                                        <ul class="sigma_sm">
-                                            <li>
-                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="sigma_volunteers-body">
-                                        <div class="sigma_volunteers-info">
-                                            <p>Temple Memember</p>
-                                            <h5>
-                                                <a href="volunteer-detail.php">Yesh Chopra</a>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="sigma_volunteers volunteers-5">
-                                    <div class="sigma_volunteers-thumb">
-                                        <img src="assets/img/volunteers/2.jpg" alt="volunteers">
-                                        <ul class="sigma_sm">
-                                            <li>
-                                                <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-twitter"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="sigma_volunteers-body">
-                                        <div class="sigma_volunteers-info">
-                                            <p>Temple Memember</p>
-                                            <h5>
-                                                <a href="volunteer-detail.php">Mukesh Singh</a>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section> -->
-    <!-- volunteers End -->
-
-    <!-- Form Start -->
-    <!-- <div class="section dark-overlay dark-overlay-3 bg-cover bg-center bg-norepeat" style="background-image: url(assets/img/bg1.jpg)">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-lg-30">
-                    <form method="post">
-                        <div class="form-row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <i class="far fa-user"></i>
-                                    <input type="text" class="form-control transparent" placeholder="First Name" name="fname" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <i class="far fa-user"></i>
-                                    <input type="text" class="form-control transparent" placeholder="Last Name" name="lname" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <i class="far fa-pencil"></i>
-                                    <input type="text" class="form-control transparent" placeholder="Subject" name="subject" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <i class="far fa-envelope"></i>
-                                    <input type="text" class="form-control transparent" placeholder="Email Address" name="email" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <textarea name="message" class="form-control transparent" placeholder="Enter Message" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <button type="submit" class="sigma_btn-custom d-block w-100" name="button"> Get a Quote <i class="far fa-arrow-right"></i> </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/1.png" alt="client">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/2.png" alt="client">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/3.png" alt="client">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/4.png" alt="client">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/5.png" alt="client">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="sigma_client">
-                                <img src="assets/img/clients/6.png" alt="client">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Form End -->
 
     <!-- Portfolio Start -->
     <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat" style="background-image: url(assets/img/textures/abstract.png)">

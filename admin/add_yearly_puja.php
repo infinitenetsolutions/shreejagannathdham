@@ -8,20 +8,12 @@ include 'function.inc.php';
 if (isset($_POST['insert'])) {
   $title = simplename($_POST['title']);
   $timing = simplename($_POST['timing']);
-  $description = simplename($_POST['description']);
-      if ($cat != null) {
+  
+     
+        $sql = "INSERT INTO `jag_yearly_puja`(`name`,`timing`) VALUES ('$title','$timing')";
 
-        if (count($_FILES) > 0) {
-            if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
-
-                $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
-                //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
-
-                $sql = "INSERT INTO `jag_yearly_puja`(`name`,`description`,`image`,`timing`) VALUES ('$title','$description','$imgData','$timing')";
-
-                $current_id = mysqli_query($connection, $sql); 
-                
-                if ($current_id) {
+        $current_id = mysqli_query($connection, $sql); 
+        if ($current_id) {
 
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                       <strong>Success</strong> Yearly Puja Schedule inserted successfully!!
@@ -46,9 +38,6 @@ if (isset($_POST['insert'])) {
                   </div>';
                 }
             }
-        }
-    }
-}
 
 $select1 = "SELECT * FROM `jag_yearly_puja`";
 $result2 = mysqli_query($connection, $select1);
@@ -75,14 +64,6 @@ $result2 = mysqli_query($connection, $select1);
                     <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Enter Puja Timing</label>
                         <input name="timing" type="date" class="form-control" id="exampleFormControlSelect1">
-                    </div>
-                    <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Upload Puja Image</label>
-                        <input name="Image" type="file" class="form-control" id="exampleFormControlSelect1">
-                    </div>
-                    <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Enter Puja Description</label>
-                        <textarea name="description" class="form-control" id="description" aria-describedby="emailHelp"></textarea>
                     </div>
                     </div>
                 <div class="modal-footer d-flex justify-content-center">
