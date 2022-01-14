@@ -7,7 +7,7 @@ include 'connection.inc.php';
 if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
     $id = $_GET['edit'];
 
-    $select_single_data = "SELECT * FROM `jag_facilities` WHERE id=$id";
+    $select_single_data = "SELECT * FROM `jag_legal_doc` WHERE id=$id";
     $result = mysqli_query($connection, $select_single_data);
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result);
@@ -55,12 +55,12 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Update Temple Facilities</h1>
+                                <h1>Update Legal Document</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item active">Temple Facilities</li>
+                                    <li class="breadcrumb-item active">Legal Document</li>
                                 </ol>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
                                         </div>
                                         <div class="md-form col-sm-12">
                                             <label data-error="wrong" data-success="right" for="defaultForm-email">Existing Image</label><br>
-                                            <img name="img" height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> class="img-fluid mb-2" alt="facility" />
+                                            <img name="img" height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['images']) . '"' ?> class="img-fluid mb-2" alt="facility" />
                                             <!-- <input  type="file" id="defaultForm-email" class="form-control validate" placeholder="Enter Caregorie Name"> -->
 
                                         </div>
@@ -88,10 +88,6 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
                                             <label data-error="wrong" data-success="right" for="defaultForm-email">Image</label>
                                             <input name="img1" type="file" id="defaultForm-email" class="form-control validate" placeholder="Enter Caregorie Name">
 
-                                        </div>
-                                        <div class="form-group col-sm-12">
-                                            <label for="exampleFormControlSelect1">Description</label>
-                                            <textarea name="description" class="form-control"><?php echo $row['description']; ?></textarea>
                                         </div>
                                         <div class="form-group col-sm-7">
                                         <button type="submit" name="Submit" class="btn btn-primary centre">Submit</button>
