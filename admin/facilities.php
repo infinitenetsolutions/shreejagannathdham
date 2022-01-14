@@ -112,7 +112,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><?php echo $rowimage['title']; ?></td>
                               <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['image']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
                               <td><?php echo $rowimage['description']; ?></td>
-                              <td><a href="update_doc.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
+                              <td><a href="update_facilities.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_facilities.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
                         <?php }  ?>
