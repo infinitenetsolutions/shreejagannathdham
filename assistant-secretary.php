@@ -22,22 +22,12 @@ max-width: 1000px;
 }
 </style>
   <!-- partial:partia/__subheader.html -->
-  <div class="sigma_subheader dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.jpg)">
-
-    <div class="container">
-      <div class="sigma_subheader-inner">
-        <div class="sigma_subheader-text">
-          <h1>Assistant Secretary</h1>
-        </div>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Assistant Secretary</li>
-          </ol>
-        </nav>
+  <div class="" style="">
+    <div class="">
+      <div class="sigma_subheader-inner">       
+       <img src="./assets/img/Assistant-min.jpg" style="width:100%;">
       </div>
     </div>
-
   </div>
   <!-- partial -->
 

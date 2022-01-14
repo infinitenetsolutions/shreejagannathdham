@@ -139,7 +139,7 @@ if (isset($_POST['Submit'])) {
 
             echo "<script>
             setTimeout(function() {
-                window.location.replace('categories.php')
+                window.location.replace('about.php')
               }, 1000);
 
         </script>";

@@ -138,18 +138,13 @@ include 'admin/connection.inc.php';
     <!-- holi Start -->
     <div class="section section-padding bg-cover portfolio-section secondary-overlay" style="background-image: url(assets/img/bg2.jpg)">
         <div class="container">
-
-            
-                
-                 <div class="section-title text-center">
+                            
+         <div class="section-title text-center">
         <p class="subtitle text-white">Volunteers</p>
         <h4 class="title text-white">Puja Schedules</h4>
       </div>
-
            
-
             <div class="row">
-
                 <div class="col-lg-6 col-md-6">
                     <a href="" class="sigma_service style-1 primary-bg" style="height: 350px;">
                         <div class="sigma_service-thumb">
@@ -168,11 +163,9 @@ include 'admin/connection.inc.php';
                                     <div class="col-md-12">
                                         <li class="text-white dis" ><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
                                     </div>
-                                </div>
-                          
+                                </div>                          
                            <?php } ?>
-                           <!-- </marquee> -->
-                           
+                           <!-- </marquee> -->                           
                             </ul>
                         </div>
                     </a>
@@ -196,13 +189,9 @@ include 'admin/connection.inc.php';
                             <?php } ?>
                            <!-- </marquee> -->
                             </ul>
-                        </div>
-                       
+                        </div>                       
                     </a>
-                </div>
-
-                
-
+                </div>            
             </div>
         </div>
     </div>
