@@ -143,7 +143,7 @@ if (isset($_POST['Submit'])) {
 
             echo "<script>
             setTimeout(function() {
-                window.location.replace('about.php')
+                window.location.replace('chairman.php')
               }, 1000);
 
         </script>";

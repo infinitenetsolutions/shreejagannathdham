@@ -80,7 +80,7 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
                                         </div>
                                         <div class="md-form col-sm-12">
                                             <label data-error="wrong" data-success="right" for="defaultForm-email">Existing Image</label><br>
-                                            <img name="img" height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['images']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" />
+                                            <img name="img" height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> class="img-fluid mb-2" alt="assistant secretary" />
                                             <!-- <input  type="file" id="defaultForm-email" class="form-control validate" placeholder="Enter Caregorie Name"> -->
 
                                         </div>

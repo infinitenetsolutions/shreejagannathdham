@@ -111,7 +111,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><?php echo $cnt; ?></td>
                               <td><?php echo $rowimage['title']; ?></td>
                               <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['images']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
-                              <td><a href="update_doc.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
+                              <td><a href="update_legal.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_doc.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
                         <?php }  ?>

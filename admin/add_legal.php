@@ -7,20 +7,15 @@ include 'function.inc.php';
 
 if (isset($_POST['add'])) {
   $title = simplename($_POST['title']);
-      if ($cat != null) {
-
+      
         if (count($_FILES) > 0) {
             if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
 
                 $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
-                //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
-
                 $sql = "INSERT INTO `jag_legal_doc`(`title`,`images`) VALUES ('$title','$imgData')";
 
                 $current_id = mysqli_query($connection, $sql); 
-                if (isset($current_id)) {
-                    // header("Location: listImages.php");
-                }
+                
                 if ($current_id) {
 
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -47,7 +42,6 @@ if (isset($_POST['add'])) {
                 }
             }
         }
-    }
 }
 // $selectid="SELECT * FROM `catagries_images` WHERE 1";
 
@@ -91,13 +85,13 @@ $result2 = mysqli_query($connection, $select1);
 
                  <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Enter Title</label>
-                        <input name="title" type="text" class="form-control" id="exampleFormControlSelect1">
+                        <input name="title" type="text" class="form-control" id="title">
 
 
                     </div>
                     <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Upload Image</label>
-                        <input name="Image" type="file" class="form-control" id="exampleFormControlSelect1">
+                        <input name="Image" type="file" class="form-control" id="image">
 
 
                     </div>
