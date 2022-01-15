@@ -4,7 +4,7 @@ use function PHPSTORM_META\elementType;
 
 $msg = "";
 $row = "";
-//include 'function.inc.php';
+include 'function.inc.php';
 include 'connection.inc.php';
 
 
