@@ -7,7 +7,7 @@ background: linear-gradient(90deg, rgba(255,7,7,1) 1%, rgba(245,246,0,1) 20%, rg
   <ul class="navbar-nav ml-auto">
     <!-- Messages Dropdown Menu -->
     <li class="nav-item ">
-    <a class="nav-link"  href="./AdminLogin/Logout.php" style="font-size:21px;color:black">Logout&nbsp;&nbsp;<i class="fa fa-power-off" style="font-size:21px;color:red"></i></a>
+    <a class="nav-link"  href="logout.php" style="font-size:21px;color:black">Logout&nbsp;&nbsp;<i class="fa fa-power-off" style="font-size:21px;color:red"></i></a>
 </li>
   </ul>
 </nav>

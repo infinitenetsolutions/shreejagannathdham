@@ -3,6 +3,7 @@ $msg = "";
 $cat = " ";
 $status = " ";
 include 'function.inc.php';
+//include 'connection.inc.php';
 
 
 if (isset($_POST['add'])) {

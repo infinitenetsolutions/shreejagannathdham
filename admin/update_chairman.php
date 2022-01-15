@@ -1,7 +1,7 @@
 <?php
 $msg = "";
 $row = "";
-include 'function.inc.php';
+//include 'function.inc.php';
 include 'connection.inc.php';
 
 if (isset($_GET['edit']) && ($_GET['edit'] != '')) {

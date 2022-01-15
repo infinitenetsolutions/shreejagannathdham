@@ -66,7 +66,7 @@ if (isset($_POST['done'])) {
 
             <div class="card" style="background-color: #fff0;">
                 <div class="text-center mt-3">
-                    <img width="400" class="img-fluid" src="../dist/img/AdminLTELogo.png" alt="">
+                    <img width="400" class="img-fluid" src="./dist/img/AdminLTELogo.png" alt="">
                 </div>
                 <div class="login-box">
                 
