@@ -66,7 +66,7 @@ if (isset($_POST['done'])) {
 
             <div class="card" style="background-color: #fff0;">
                 <div class="text-center mt-3">
-                    <img width="400" class="img-fluid" src="./dist/img/AdminLTELogo.png" alt="">
+                    <!--<img width="400" class="img-fluid" src="./dist/img/AdminLTELogo.png" alt="">-->
                 </div>
                 <div class="login-box">
                 
@@ -83,8 +83,9 @@ if (isset($_POST['done'])) {
     padding: 10px;
     line-height: 26px;
     font-family: serif;
+    border-radius:45px;
     ">
-    <img src="admin_logo.png" style="width:100%;"/>
+    <img src="./dist/img/AdminLTELogo.png" style="width:100%;"/>
     Shree Jagannathdham <br>Admin Login</span>
                         
                         
