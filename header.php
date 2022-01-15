@@ -217,6 +217,7 @@ include 'admin/connection.inc.php';
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="facilities.php">Donation for Nirman</a></li>
                     <li class="menu-item"><a href="secret_donation.php">Secret Donation</a> </li>
+                    <li class="menu-item"><a href="material_donation.php">Donation for Nirman</a> </li>
                 </ul>
             </li>      
             <li class="menu-item">
@@ -320,6 +321,7 @@ include 'admin/connection.inc.php';
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="donation.php">Donation for Nirman</a></li>
                                     <li class="menu-item"><a href="secret_donation.php">Secret Donation</a> </li>
+                                    <li class="menu-item"><a href="material_donation.php">Donation for Nirman</a> </li>
                                 </ul>
                             </li>
                             <li class="menu-item"> <a href="news.php">Our News</a> </li>

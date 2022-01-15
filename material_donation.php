@@ -1,0 +1,301 @@
+<style>
+.sigma_box{
+background-color: #ff4906!important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section
+    {
+      padding: 1px 0px 100px 0px !important;
+    }
+body {
+  background-color: #6a9ac4;
+}
+
+#contact {
+  background-color: #ff4906;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+.contact-links {
+  background-image: url('assets/img/mandir.jpg');
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  background-size: 100% 100%;
+  /* background-image: url('https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'); */
+ 
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 576px)
+{
+  .contact-links 
+  {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #fd917e;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  .img {
+    width: 38px;
+    height: 38px;
+  }
+}
+</style>
+
+<?php
+include "header.php";
+include 'admin/connection.inc.php';
+
+
+if(isset($_POST['submit1']))
+{
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$pan = $_POST['pan'];
+$address = $_POST['address'];
+$amount = $_POST['amount'];
+
+$_SESSION["name"] = $name ;
+//$_SESSION["promoted_class"] = $promoted_class;
+// $_SESSION["course_session"] = $course_session;
+// $_SESSION["name"] = $name;
+$_SESSION["phone_no"] = $phone;
+$_SESSION["email"] = $email;
+$_SESSION["amount"] = $amount;
+
+$_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
+$_SESSION["surl"] = "https://shreejagannathdham.com/response.php";    
+
+echo $query = "INSERT INTO `jag_secret`(`name`, `email`, `phone`, `pan`, `address`) 
+                            VALUES('$name', '$email', '$phone', '$pan', '$address')";
+$result1 = mysqli_query($connection , $query);
+if($result1){    
+   echo '<script> window.location.replace("easebuzz.php") </script>';
+}
+} 
+?>
+
+  <!-- partial:partia/__subheader.html -->
+ <div class="" style="">
+    <div class="">
+      <div class="sigma_subheader-inner">       
+       <img src="./assets/img/Secret Donation.jpg" style="width:100%;">
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+
+  
+  <!-- Contact form Start -->
+  <div class="section section-padding">
+  <section id="contact">
+  <div class="contact-box">
+    <div class="contact-links">
+      <!-- <h1>MATERIAL DONATION FOR MANDIR</h1> -->
+    </div>
+    <div class="contact-form-wrapper">
+     <h5>Donation For Mandir Nirman</h5>
+      <form>
+        <div class="form-item">
+          <input type="text" name="sender" required>
+          <label>Name:</label>
+        </div>
+        <div class="form-item">
+          <input type="number" name="email" required>
+          <label>Mobile:</label>
+        </div>
+        <div class="form-item">
+          <input type="text" name="email" required>
+          <label>Email:</label>
+        </div>
+        <div class="form-item">
+          <textarea class="" name="message" required></textarea>
+          <label>Address:</label>
+        </div>
+        <div class="form-item">
+          <input type="radio" value="">Material
+          <input type="radio" value="">Amount
+          
+        </div>
+        <button class="submit-btn">Send</button>  
+      </form>
+    </div>
+  </div>
+</section>
+  </div>
+  <!-- Contact form End -->
+
+  
+<?php 
+include "footer.php";
+?>
