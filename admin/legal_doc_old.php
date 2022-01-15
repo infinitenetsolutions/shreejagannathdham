@@ -59,7 +59,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Legal Documents</li>
+                  <li class="breadcrumb-item active">Legal documents</li>
                 </ol>
               </div>
             </div>
@@ -76,7 +76,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
 
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Legal Documents</h3>
+                    <h3 class="card-title">All Legal Documents</h3>
                   </div>
                   <!-- /.card-header -->
                   <?php include 'add_legal.php';
@@ -85,13 +85,14 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                   ?> 
                
                   <div class="card-body">
-                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_legal" style="background:#e10d0d">Add New Legal Document</a>
+                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_legal">Add New Legal Doc</a>
                   <div class="table-responsive ">
                     <table id="example1" class="table table-bordered table-striped">
 
                       <thead>
                         <tr>
                           <th>ID</th>
+                          <!-- <th>Cat Name</th> -->
                           <th>Title</th>
                           <th>Images</th>
                           <th>Update</th>
@@ -110,16 +111,15 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><?php echo $cnt; ?></td>
                               <td><?php echo $rowimage['title']; ?></td>
                               <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['images']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
-                              <td><a href="update_legal_doc.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
+                              <td><a href="update_legal.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_doc.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
-                        <?php 
-                        $cnt++;
-                        }  ?>
+                        <?php }  ?>
                       </tbody>
                       <tfoot>
                       <tr>
-                          <th>ID</th>
+                      <th>ID</th>
+                          <!-- <th>Cat Name</th> -->
                           <th>Title</th>
                           <th>Images</th>
                           <th>Update</th>

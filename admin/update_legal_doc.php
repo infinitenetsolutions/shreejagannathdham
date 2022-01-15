@@ -140,7 +140,7 @@ if (isset($_POST['Submit'])) {
 
             echo "<script>
             setTimeout(function() {
-                window.location.replace('legal_new.php')
+                window.location.replace('legal_doc.php')
               }, 1000);
 
         </script>";
