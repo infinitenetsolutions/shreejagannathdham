@@ -16,7 +16,7 @@ if (isset($_POST['insert'])) {
                 $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
                 //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
 
-                $sql = "INSERT INTO `jag_about_us`(`title`,`description`,`images`) VALUES ('$title','$description','$imgData')";
+                $sql = "INSERT INTO `jag_about_us`(`title`,`description`,`image`) VALUES ('$title','$description','$imgData')";
 
                 $current_id = mysqli_query($connection, $sql); 
                 if (isset($current_id)) {
