@@ -85,7 +85,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                   ?> 
                
                   <div class="card-body">
-                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_about" style="background:#e10d0d">Add New About</a>
+                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_about_us" style="background:#e10d0d">Add New About</a>
                   <div class="table-responsive ">
                     <table id="example1" class="table table-bordered table-striped">
 

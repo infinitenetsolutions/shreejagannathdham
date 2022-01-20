@@ -98,7 +98,12 @@ include 'admin/connection.inc.php';
         <div class="col-lg-6 mb-lg-30">
           <div class="section-title section-title-2 text-start">
             <p class="subtitle">About Us</p>
-            <h4 class="title">We are a Hindu that believe in Ram.</h4>
+                <?php 
+                $select = "SELECT * FROM `jag_about_us`";
+                $result = mysqli_query($connection, $select);
+                $row12 = mysqli_fetch_assoc($result);
+                ?>
+            <h4 class="title"><?php echo $row12['title']; ?></h4>
             <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
             On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
             On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
