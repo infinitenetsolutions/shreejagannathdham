@@ -193,20 +193,21 @@ include "header.php";
     <div class="container">
 
     <section>
-    <div class="container">
+    <div class="container" style="width:1000px!important">
       <div class="user signinBx">
         <!-- <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg" alt="" /></div> -->
         <div class="imgBx"><img src="assets/img/volunteering.jpg" alt="" width="400px" height="500px"/></div>
         <div class="formBx">
           <form action="" onsubmit="return false;">
-            <h2>Sign In</h2>
-            <input type="text" name="" placeholder="Username" />
-            <input type="password" name="" placeholder="Password" />
+            <h2>Volunteer Registration</h2>
+            <div class="row">
+            <input type="text" name="" placeholder="Full Name" class="col-6"/>
+            <input type="text" name="" placeholder="Designation" />
+            <input type="number" name="" placeholder="Phone" />
+            <input type="email" name="" placeholder="Email" />
+            <textarea name="address" placeholder="Enter Address" cols="45" rows="3" class="form-control dark"></textarea>
             <input type="submit" name="" value="Login" />
-            <p class="signup">
-              Don't have an account ?
-              <a href="#" onclick="toggleForm();">Sign Up.</a>
-            </p>
+            </div>
           </form>
         </div>
       </div>
