@@ -136,7 +136,7 @@ include 'admin/connection.inc.php';
         <div class="container">
                             
          <div class="section-title text-center">
-        <p class="subtitle text-white">Volunteers</p>
+        <p class="subtitle text-white">Shree Jagannath</p>
         <h4 class="title text-white">Puja Schedules</h4>
       </div>
            
@@ -317,7 +317,8 @@ include 'admin/connection.inc.php';
               <div class="sigma_volunteers-info">
                 <p class="text-white"><?php echo $row['desig']; ?></p>
                 <h5 class="text-white">
-                  <a href="volunteer.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h5>
+                  <a href=""><?php echo $row['name']; ?></a></h5>
+                  <a href="volunteer.php?id=<?php echo $row['id']; ?>" class="sigma_btn-custom secondary">Know More <i class="far fa-arrow-right"></i> </a>
               </div>
             </div>
           </div>
