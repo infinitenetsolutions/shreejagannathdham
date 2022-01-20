@@ -3,11 +3,11 @@
 if(isset($_GET['delete'])){
     include 'connection.inc.php';
 $id=$_GET['delete'];
-$delete="delete from jag_about where id=$id";
+$delete="delete from jag_about_us where id=$id";
 $result=mysqli_query($connection,$delete);
 if($result)
     {
-    header('location:about.php');
+    header('location:about_us.php');
     }
 else
     {

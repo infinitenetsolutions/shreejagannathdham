@@ -16,7 +16,7 @@ if (isset($_POST['insert'])) {
                 $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
                 //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
 
-                $sql = "INSERT INTO `jag_about`(`title`,`description`,`images`) VALUES ('$title','$description','$imgData')";
+                $sql = "INSERT INTO `jag_about_us`(`title`,`description`,`images`) VALUES ('$title','$description','$imgData')";
 
                 $current_id = mysqli_query($connection, $sql); 
                 if (isset($current_id)) {
@@ -25,7 +25,7 @@ if (isset($_POST['insert'])) {
                 if ($current_id) {
 
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                      <strong>Success</strong> Features Info is successfully inserted!!
+                      <strong>Success</strong> About Info is successfully inserted!!
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -33,7 +33,7 @@ if (isset($_POST['insert'])) {
         
                     echo "<script>
                     setTimeout(function() {
-                        window.location.replace('about.php');
+                        window.location.replace('about_us.php');
         
                       }, 1000);
         
@@ -54,18 +54,18 @@ if (isset($_POST['insert'])) {
 
 
 
-$select1 = "SELECT * FROM `jag_about`";
+$select1 = "SELECT * FROM `jag_about_us`";
 $result2 = mysqli_query($connection, $select1);
 
 
 ?>
 
-<div class="modal fade" id="add_about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="add_about_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content" style="background: #e7cb44;">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add Temple Features</u></h4>
+                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add About Temple</u></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -110,7 +110,7 @@ $result2 = mysqli_query($connection, $select1);
                     </div>
                     </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add temple Features</button>
+                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add About temple</button>
                 </div>
             </form>
         </div>

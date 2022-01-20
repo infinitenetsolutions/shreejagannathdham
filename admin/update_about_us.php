@@ -7,7 +7,7 @@ include 'connection.inc.php';
 if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
     $id = $_GET['edit'];
 
-    $select_single_data = "SELECT * FROM `jag_about` WHERE id=$id";
+    $select_single_data = "SELECT * FROM `jag_about_us` WHERE id=$id";
     $result = mysqli_query($connection, $select_single_data);
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result);
@@ -114,10 +114,10 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
 <?php
 
     } else {
-        header('location: about.php');
+        header('location: about_us.php');
     }
 } else {
-    header('location: about.php');
+    header('location: about_us.php');
 }
 if (isset($_POST['Submit'])) {
     $name = simplename($_POST['name']);
@@ -126,12 +126,12 @@ if (isset($_POST['Submit'])) {
 // print_r($_FILES);
     if (!empty($_FILES['img1']['tmp_name'])) {
         $images = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-        $update_img = "UPDATE `jag_about` SET `title`='$name',`description`='$description',`images`='$images' WHERE `id`='$id'";
+        $update_img = "UPDATE `jag_about_us` SET `title`='$name',`description`='$description',`image`='$images' WHERE `id`='$id'";
         $result = mysqli_query($connection, $update_img);
     }
     else {
         // $images = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-        $update_img = "UPDATE `jag_about` SET `title`='$name',`description`='$description' WHERE `id`='$id'";
+        $update_img = "UPDATE `jag_about_us` SET `title`='$name',`description`='$description' WHERE `id`='$id'";
         $result = mysqli_query($connection, $update_img);
     }
    
@@ -145,7 +145,7 @@ if (isset($_POST['Submit'])) {
 
             echo "<script>
             setTimeout(function() {
-                window.location.replace('about.php')
+                window.location.replace('about_us.php')
               }, 1000);
 
         </script>";
