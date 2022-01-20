@@ -79,7 +79,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                     <h3 class="card-title">About Us Temple</h3>
                   </div>
                   <!-- /.card-header -->
-                  <?php include 'add_about.php';
+                  <?php include 'add_about_us.php';
                         include 'update_legal.php';
                   // include 'update.php';
                   ?> 
