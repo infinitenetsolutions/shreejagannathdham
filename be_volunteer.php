@@ -2,30 +2,32 @@
 include 'admin/connection.inc.php';
 
 
-  $select = "SELECT * FROM `jag_site_info` WHERE 1";
-  $result = mysqli_query($connection, $select);
-  $row = mysqli_fetch_assoc($result);
-  
-  		if (isset($_POST['button'])) {
+  		if (isset($_POST['submit'])) {
             $name = $_POST['name'];
-            $email = $_POST['email'];
+            $desig = $_POST['desig'];
             $phone = $_POST['phone'];
-            $message = $_POST['message'];
+            $imgData = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+            $email = $_POST['email'];
+            $address = $_POST['address'];
+            $description = $_POST['description'];
      
-                $sql = "INSERT INTO `jag_contact`(`con_name`,`con_mobile`,`con_email`,`con_query`) VALUES ('$name','$phone','$email','$message')";
+            // if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+              $sql = "INSERT INTO `jag_volunteer`(`name`, `desig`, `phone`,`image`, `email`, `address`, `description`) 
+                                        VALUES ('$name','$desig','$phone','$imgData','$email','$address','$description')";
 
                 $current_id = mysqli_query($connection, $sql); 
                 if ($current_id) {
 
                     echo "<script>
                         alert('Your Details are sent to us. We\'ll get back to you soon!!!');
-                        window.location.replace('contact.php');
+                        window.location.replace('index.php');
                         </script>";
                          }
                          else {
                     echo "<script>alert('Your data is not submitted. Please try again!!');</script>";
                 }
-            } 
+            }
+          // } 
 ?>
 
 <style>
@@ -207,7 +209,7 @@ include "header.php";
             <input type="text" name="name" placeholder="Full Name"  class="vol-1" required/>
             <input type="text" name="desig" placeholder="Designation" class="vol-1" required/>
             <input type="number" name="phone" placeholder="Phone" class="vol-1" required/>
-            <input type="file" name="photo" class="vol-1" required/>
+            <input type="file" name="image" class="vol-1" required/>
             <input type="email" name="email" placeholder="Email" required/>
             <textarea name="address" placeholder="Enter Address" cols="45" rows="3" class="vol-2"style="margin:10px 0px" required></textarea>
             <textarea name="description" placeholder="Enter description" cols="45" rows="3" class="vol-2" required></textarea>
