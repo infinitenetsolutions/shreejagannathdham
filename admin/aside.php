@@ -217,6 +217,18 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
+                    <a href="testimonials.php" class="nav-link">
+                    <i class="nav-icon fas fa-user"></i>
+                        <p>Testimonials</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="volunteer.php" class="nav-link">
+                    <i class="nav-icon fas fa-user"></i>
+                        <p>Volunteers</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
                     <a href="site_info.php" class="nav-link">
                     <i class="nav-icon fa fa-info-circle" aria-hidden="true"></i>
                         <p>Site Info</p>

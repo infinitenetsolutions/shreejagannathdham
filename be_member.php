@@ -66,7 +66,7 @@ include "header.php";
 ?>
 
   <!-- partial:partia/__subheader.html -->
-  <div class="" style="">a
+  <div class="" style="">
     <div class="">
       <div class="sigma_subheader-inner">       
        <img src="./assets/img/Be a member.jpg" style="width:100%;">

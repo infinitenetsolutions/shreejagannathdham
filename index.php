@@ -40,7 +40,11 @@ include 'admin/connection.inc.php';
         background-color: rgb(255 73 6 / 25%);
         }
          .dis
-        {list-style-type:disclosure-closed;}
+        {
+        	list-style-type:disclosure-closed;
+        	color:yellow;
+            font-weight:500;
+         }
     </style>
 
 
@@ -90,39 +94,29 @@ include 'admin/connection.inc.php';
     <div class="container">
 
       <div class="row align-items-center">
+      
         <div class="col-lg-6 mb-lg-30">
           <div class="section-title section-title-2 text-start">
             <p class="subtitle">About Us</p>
             <h4 class="title">We are a Hindu that believe in Ram.</h4>
-            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
+            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
+            </p>
+            <a href="about-us.php" class="sigma_btn-custom secondary">Read More <i class="far fa-arrow-right"></i> </a>
           </div>
+          
           <div class="d-flex align-items-center mt-5">
             <div class="sigma_round-button me-4 sm">
-              <span> <b class="counter" data-to="75" data-from="0">0</b> <span class="custom-primary">%</span> </span>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197 197" enable-background="new 0 0 197 197" xml:space="preserve">
-                <circle class="sigma_round-button-stroke" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-                <circle data-to="290" class="sigma_progress-round sigma_round-button-circle" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-              </svg>
+              
+              
             </div>
-            <div>
-              <h5 class="mb-2">Hindu Community</h5>
-              <p class="mb-0">If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner</p>
-            </div>
-          </div>
-          <div class="d-flex align-items-center mt-5">
-            <div class="sigma_round-button me-4 sm">
-              <span> <b class="counter" data-to="50" data-from="0">0</b> <span class="custom-secondary">%</span> </span>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197 197" enable-background="new 0 0 197 197" xml:space="preserve">
-                <circle class="sigma_round-button-stroke" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-                <circle data-to="400" class="sigma_progress-round sigma_round-button-circle secondary" stroke-linecap="round" cx="98.5" cy="98.6" r="97.5"></circle>
-              </svg>
-            </div>
-            <div>
-              <h5 class="mb-2">Active Members</h5>
-              <p class="mb-0">If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner</p>
-            </div>
+            
           </div>
         </div>
+        
+        
         <div class="col-lg-6 d-none d-lg-block">
           <div class="me-lg-30 img-group-2">
             <img src="assets/img/homepage.png" alt="about" style="height:417px;width:340px;">
@@ -146,11 +140,8 @@ include 'admin/connection.inc.php';
            
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <a href="" class="sigma_service style-1 primary-bg" style="height: 350px;">
-                        <div class="sigma_service-thumb">
-                            <!--<i class="text-white flaticon-temple"></i>-->
-                        </div>
-                        <div class="sigma_service-body">
+                    <a href="" class="sigma_service style-1 primary-bg" style="height: 300px;">
+                       <div class="sigma_service-body">
                             <h5 class="text-white">Yearly Puja Schedules</h5>
                             <ul>
                             <?php
@@ -161,7 +152,7 @@ include 'admin/connection.inc.php';
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <li class="text-white dis" ><?php echo $row['name']; ?> - <span><?php echo $row['timing']; ?></span></li>
+                                        <li class="dis" ><?php echo $row['name']; ?> - <span  class="text-white"><?php echo $row['timing']; ?></span></li>
                                     </div>
                                 </div>                          
                            <?php } ?>
@@ -172,10 +163,7 @@ include 'admin/connection.inc.php';
                 </div>
 
                 <div class="col-lg-6 col-md-6 mt-negative-sm">
-                    <a href="" class="sigma_service style-1 secondary-bg" style="height: 350px;">
-                        <div class="sigma_service-thumb">
-                            <!--<i class="custom-primary flaticon-hindu-1"></i>-->
-                        </div>
+                    <a href="" class="sigma_service style-1 secondary-bg" style="height: 300px;">
                         <div class="sigma_service-body">
                             <h5 class="text-white">Daily Puja Schedules</h5>
                              <ul>
@@ -185,7 +173,7 @@ include 'admin/connection.inc.php';
                             ?>
                             <!-- <marquee direction="up" scrolldelay="150"> -->
                             <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                                <li class="text-white"><?php echo $row['name']; ?> - <span><?php echo $row['s_timing']; ?> to <?php echo $row['e_timing']; ?></span></li>
+                                <li class="dis"><?php echo $row['name']; ?> - <span class="text-white"><?php echo $row['s_timing']; ?> to <?php echo $row['e_timing']; ?></span></li>
                             <?php } ?>
                            <!-- </marquee> -->
                             </ul>
@@ -307,29 +295,34 @@ include 'admin/connection.inc.php';
       </div>
 
       <div class="row">
-
+		<?php 
+        	 $select = "SELECT * FROM `jag_volunteer`";
+             $result = mysqli_query($connection, $select);
+             while($row = mysqli_fetch_assoc($result)) { 
+        ?>
         <div class="col-lg-3 col-md-6">
           <div class="sigma_volunteers volunteers-4">
             <div class="sigma_volunteers-thumb">
-              <img src="assets/img/volunteers/4.jpg" alt="volunteers">
-              <ul class="sigma_sm">
+                <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'image']) . '"' ?> alt="portfolio"/>
+             <!-- <ul class="sigma_sm">
                 <li> <a href="#" class="trigger-volunteers-socials"> <i class="fal fa-plus"></i> </a> </li>
                 <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
                 <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
                 <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
-              </ul>
+              </ul> -->
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p class="text-white">Temple Pandit</p>
+                <p class="text-white"><?php echo $row['desig']; ?></p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">Rakesh K Pandey</a></h5>
+                  <a href="volunteer.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h5>
               </div>
             </div>
           </div>
         </div>
+        <?php } ?>
 
-        <div class="col-lg-3 col-md-6">
+       <!-- <div class="col-lg-3 col-md-6">
           <div class="sigma_volunteers volunteers-4">
             <div class="sigma_volunteers-thumb">
               <img src="assets/img/volunteers/6.jpg" alt="volunteers">
@@ -344,7 +337,7 @@ include 'admin/connection.inc.php';
               <div class="sigma_volunteers-info">
                 <p class="text-white">Temple Memember</p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">Yesh Chopra</a>
+                  <a href="volunteer.php">Yesh Chopra</a>
                 </h5>
               </div>
             </div>
@@ -393,7 +386,7 @@ include 'admin/connection.inc.php';
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -413,34 +406,29 @@ include 'admin/connection.inc.php';
 
             <div class="sigma_testimonial style-2">
                 <div class="sigma_testimonial-slider">
-
+					<?php
+                                 $select = "SELECT * FROM `jag_testimonial` WHERE status='Approved'";
+                                 $result = mysqli_query($connection, $select);
+                                 while($row = mysqli_fetch_assoc($result)) { 
+                     ?>
                     <div class="sigma_testimonial-inner">
                         <div class="sigma_testimonial-thumb">
-                            <img src="assets/img/testimonials/1.jpg" alt="testimonial">
+                            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'image']) . '"' ?> alt="portfolio"/>
                         </div>
                         <div>
                             <div class="sigma_testimonial-body">
-                                <div class="sigma_rating-wrapper">
-                                    <div class="sigma_rating">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                                <p>If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
+                                <p><?php echo $row['message']; ?></p>
                             </div>
                             <div class="sigma_testimonial-footer">
                                 <div class="sigma_testimonial-author">
-                                    <cite>Mukesh Singh</cite>
-                                    <span>Pandit</span>
+                                    <cite><?php echo $row['name']; ?></cite>
+                                    <span><?php echo $row['desig']; ?></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="sigma_testimonial-inner">
+					<?php } ?>
+                    <!--<div class="sigma_testimonial-inner">
                         <div class="sigma_testimonial-thumb">
                             <img src="assets/img/testimonials/2.jpg" alt="testimonial">
                         </div>
@@ -490,7 +478,7 @@ include 'admin/connection.inc.php';
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>
             </div>

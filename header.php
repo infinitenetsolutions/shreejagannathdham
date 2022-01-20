@@ -34,6 +34,13 @@ include 'admin/connection.inc.php';
 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
+<style>
+@media(max-width:576px){
+.justify-content-lg-between{
+box-shadow: 0px 1px 8px 3px #ff4906!important;
+}
+}
+</style>
 </head>
 <body>
 
@@ -209,13 +216,17 @@ include 'admin/connection.inc.php';
              <li class="menu-item">
                 <a href="rath-jatra.php">Rath Jatra</a>
             </li>                        
-              <li class="menu-item">
-                <a href="be_member.php">Be a member</a>
-            </li>      
+            <li class="menu-item menu-item-has-children">
+                <a href="#">Be a Member</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="be_member.php">Membership types</a></li>
+                    <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
+                </ul>
+            </li> 
             <li class="menu-item menu-item-has-children">
                 <a href="#">Donation</a>
                 <ul class="sub-menu">
-                    <li class="menu-item"><a href="facilities.php">Donation for Nirman</a></li>
+                    <li class="menu-item"><a href="facilities.php">Membership Registration</a></li>
                     <li class="menu-item"><a href="secret_donation.php">Secret Donation</a> </li>
                     <li class="menu-item"><a href="material_donation.php">Donation for Nirman</a> </li>
                 </ul>
@@ -315,11 +326,17 @@ include 'admin/connection.inc.php';
                             </li>
                             <li class="menu-item"> <a href="rath-jatra.php">Rath Jatra</a> </li>
                             
-                            <li class="menu-item"> <a href="be_member.php">Be a Member</a> </li>
+                            <li class="menu-item menu-item-has-children">
+                				<a href="#">Be a Member</a>
+                					<ul class="sub-menu">
+                                      <li class="menu-item"><a href="be_member.php">Membership types</a></li>
+                                      <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
+                					</ul>
+            				</li> 
                             <li class="menu-item menu-item-has-children">
                                 <a href="#">Donation</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="donation.php">Donation for Nirman</a></li>
+                                    <li class="menu-item"><a href="donation.php">Membership Registration</a></li>
                                     <li class="menu-item"><a href="secret_donation.php">Secret Donation</a> </li>
                                     <li class="menu-item"><a href="material_donation.php">Donation for Nirman</a> </li>
                                 </ul>

@@ -54,7 +54,7 @@ if (isset($_POST['button'])) {
 <div class="" style="">
   <div class="">
     <div class="sigma_subheader-inner">
-      <img src="./assets/img/Donation for Nirman.jpg" style="width:100%;">
+      <img src="./assets/img/Membership registration.jpg" style="width:100%;">
     </div>
   </div>
 </div>
@@ -212,37 +212,66 @@ if (isset($_POST['button'])) {
               <input type="date" name="pdate1" id="date-1" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-1" name="pro_date" class="form-control" value="" readonly>
+            </div>
+
+            <div class="form-group col-xl-4">
               <label>Option - 2 </label>
               <input type="date" name="pdate2" id="date-2" class="form-control" value="" readonly>
             </div>
+            <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-2" name="pro_date" class="form-control" value="" readonly>
+            </div>
+
             <div class="form-group col-xl-4">
               <label>Option - 3 </label>
               <input type="date" name="pdate3" id="date-3" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-3" name="pro_date" class="form-control" value="" readonly>
+            </div>
+           
+            <div class="form-group col-xl-4">
               <label>Option - 4 </label>
               <input type="date" name="pdate4" id="date-4" class="form-control" value="" readonly>
             </div>
+            <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-4" name="pro_date" class="form-control" value="" readonly>
+            </div>
+
             <div class="form-group col-xl-4">
               <label>Option - 5 </label>
               <input type="date" name="pdate5" id="date-5" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-5" name="pro_date" class="form-control" value="" readonly>
+            </div>
+
+            <div class="form-group col-xl-4">
               <label>Option - 6 </label>
               <input type="date" name="pdate6" id="date-6" class="form-control" value="" readonly>
             </div>
             <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-6" name="pro_date" class="form-control" value="" readonly>
+            </div>
+
+            <div class="form-group col-xl-4">
               <label>Option - 7 </label>
               <input type="date" name="pdate7" id="date-7" class="form-control" value="" readonly>
+            </div>
+            <div class="form-group col-xl-4">
+              <label>Proposed Date Name</label>
+              <input type="text" placeholder="Proposed Date" id="pd-7" name="pro_date" class="form-control" value="" readonly>
             </div>
 
 
             <br>
-
-            <div class="form-group col-xl-4">
-              <label>Importance of Proposed Dates</label>
-              <input type="date" placeholder="Proposed Date" name="pro_date" class="form-control" value="">
-            </div>
 
             <div class="form-group col-xl-4">
               <label>If Married (Name of Spouse)</label>
@@ -346,53 +375,87 @@ function show1()
 {
   // var amt = document.getElementById('amount').value;
   document.getElementById("date-1").readOnly = false;
-  document.getElementById('date-1').readOnly = false;
+  document.getElementById("pd-1").readOnly = false;
   document.getElementById('date-2').readOnly = false;
+  document.getElementById("pd-2").readOnly = false;
   document.getElementById('date-3').readOnly = false;
+  document.getElementById("pd-3").readOnly = false;
   document.getElementById('date-4').readOnly = false;
+  document.getElementById("pd-4").readOnly = false;
   document.getElementById('date-5').readOnly = false;
+  document.getElementById("pd-5").readOnly = false;
   document.getElementById('date-6').readOnly = false;
+  document.getElementById("pd-6").readOnly = false;
   document.getElementById('date-7').readOnly = false;
+  document.getElementById("pd-7").readOnly = false;
 }
 function show2()
 {
   document.getElementById('date-1').readOnly = false;
+  document.getElementById("pd-1").readOnly = false;
   document.getElementById('date-2').readOnly = false;
+  document.getElementById("pd-2").readOnly = false;
   document.getElementById('date-3').readOnly = false;
+  document.getElementById("pd-3").readOnly = false;
   document.getElementById('date-4').readOnly = false;
+  document.getElementById("pd-4").readOnly = false;
   document.getElementById('date-5').readOnly = false;
+  document.getElementById("pd-5").readOnly = false;
   document.getElementById('date-6').readOnly = true;
+  document.getElementById("pd-6").readOnly = true;
   document.getElementById('date-7').readOnly = true;
+  document.getElementById("pd-7").readOnly = true;
  }
 function show3()
 {
   document.getElementById('date-1').readOnly = false;
+  document.getElementById("pd-1").readOnly = false;
   document.getElementById('date-2').readOnly = false;
+  document.getElementById("pd-2").readOnly = false;
   document.getElementById('date-3').readOnly = false;
+  document.getElementById("pd-3").readOnly = false;
   document.getElementById('date-4').readOnly = true;
+  document.getElementById("pd-4").readOnly = true;
   document.getElementById('date-5').readOnly = true;
+  document.getElementById("pd-5").readOnly = true;
   document.getElementById('date-6').readOnly = true;
+  document.getElementById("pd-6").readOnly = true;
   document.getElementById('date-7').readOnly = true;
+  document.getElementById("pd-7").readOnly = true;
 }
 function show4()
 {
   document.getElementById('date-1').readOnly = false;
+  document.getElementById("pd-1").readOnly = false;
   document.getElementById('date-2').readOnly = false;
+  document.getElementById("pd-2").readOnly = false;
   document.getElementById('date-3').readOnly = true;
+  document.getElementById("pd-3").readOnly = true;
   document.getElementById('date-4').readOnly = true;
+  document.getElementById("pd-4").readOnly = true;
   document.getElementById('date-5').readOnly = true;
+  document.getElementById("pd-5").readOnly = true;
   document.getElementById('date-6').readOnly = true;
+  document.getElementById("pd-6").readOnly = true;
   document.getElementById('date-7').readOnly = true;
+  document.getElementById("pd-7").readOnly = true;
 }
 function show5()
 {
   document.getElementById('date-1').readOnly = false;
+  document.getElementById("pd-1").readOnly = false;
   document.getElementById('date-2').readOnly = true;
+  document.getElementById("pd-2").readOnly = true;
   document.getElementById('date-3').readOnly = true;
+  document.getElementById("pd-3").readOnly = true;
   document.getElementById('date-4').readOnly = true;
+  document.getElementById("pd-4").readOnly = true;
   document.getElementById('date-5').readOnly = true;
+  document.getElementById("pd-5").readOnly = true;
   document.getElementById('date-6').readOnly = true;
+  document.getElementById("pd-6").readOnly = true;
   document.getElementById('date-7').readOnlys = true;
+  document.getElementById("pd-7").readOnly = true;
 }
 
 

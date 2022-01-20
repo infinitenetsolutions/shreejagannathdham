@@ -1,27 +1,14 @@
-<style>
-.sigma_box{
-background-color: #ff4906!important;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.section
-    {
-      padding: 1px 0px 100px 0px !important;
-    }
-body {
-  background-color: #6a9ac4;
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+  .section.section-padding {
+    padding: 1px 0 100px !important;
 }
 
 #contact {
-  background-color: #ff4906;;
+  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,12 +28,9 @@ body {
 
 
 .contact-links {
-  background-image: url('assets/img/mandir.jpg');
-  background-repeat: no-repeat;
-  /* background-size: auto; */
+  /*background-image: url('https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg');*/
+ background-image: url('assets/img/mandir.jpg');
   background-size: 100% 100%;
-  /* background-image: url('https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'); */
- 
 }
 
 .contact-form-wrapper {
@@ -68,13 +52,6 @@ body {
   }
 }
 
-@media (max-width: 576px)
-{
-  .contact-links 
-  {
-    display: none;
-  }
-}
 @media only screen and (max-width: 400px) {
   .contact-box {
     width: 95%;
@@ -82,112 +59,7 @@ body {
   }
 }
 
-h2 {
-  font-family: 'Arimo', sans-serif;
-  color: #fff;
-  font-size: clamp(30px, 6vw, 60px);
-  letter-spacing: 2px;
-  text-align: center;
-  transform: scale(.95, 1);
-}
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 50px;
-}
-
-.link {
-  margin: 10px;
-  cursor: pointer;
-}
-
-.img {
-  width: 45px;
-  height: 45px;
-  filter: 
-    hue-rotate(220deg)
-    drop-shadow(2px 4px 4px #0006);
-  transition: 0.2s;
-  user-select: none;
-}
-
-.img:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.img:active {
-  transform: scale(1.1, 1.1);
-  filter: 
-    hue-rotate(220deg)
-    drop-shadow(2px 4px 4px #222)
-    sepia(0.3);
-}
-
-.form-item {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-label, input, textarea {
-  font-family: 'Poppins', sans-serif;
-}
-
-label {
-  position: absolute;
-  top: 10px;
-  left: 2%;
-  color: #999;
-  font-size: clamp(14px, 1.5vw, 18px);
-  pointer-events: none;
-  user-select: none;
-}
-
-input, textarea {
-  width: 100%;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  padding: 12px;
-  font-size: clamp(15px, 1.5vw, 18px);
-}
-
-input:focus+label, 
-input:valid+label, 
-textarea:focus+label, 
-textarea:valid+label {
-  font-size: clamp(13px, 1.3vw, 16px);
-  color: #777;
-  top: -20px;
-  transition: all .225s ease;
-}
-
-.submit-btn {
-  background-color: #fd917e;
-  filter: drop-shadow(2px 2px 3px #0003);
-  color: #fff;
-  font-family: "Poppins",sans-serif;
-  font-size: clamp(16px, 1.6vw, 18px);
-  display: block;
-  padding: 12px 20px;
-  margin: 2px auto;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  user-select: none;
-  transition: 0.2s;
-}
-
-.submit-btn:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.submit-btn:active {
-  transform: scale(1.1, 1.1);
-  filter: sepia(0.5);
-}
 
 @media only screen and (max-width: 800px) {
   h2 {
@@ -200,15 +72,12 @@ textarea:valid+label {
     font-size: clamp(30px, 12vw, 60px);
   }
   
-  .links {
-    padding-top: 30px;
-  }
-  
-  .img {
+ img {
     width: 38px;
     height: 38px;
   }
 }
+
 </style>
 
 <?php
@@ -216,14 +85,16 @@ include "header.php";
 include 'admin/connection.inc.php';
 
 
-if(isset($_POST['submit1']))
-{
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$pan = $_POST['pan'];
-$address = $_POST['address'];
-$amount = $_POST['amount'];
+  if(isset($_POST['submit']))
+  {
+      $name = $_POST['name'];
+      $phone = $_POST['phone'];
+      $address = $_POST['address'];
+      $email = $_POST['email'];
+      $type = $_POST['type'];      
+      $material = $_POST['material'];      
+      $qty = $_POST['quantity'];      
+      $amount = $_POST['amount'];
 
 $_SESSION["name"] = $name ;
 //$_SESSION["promoted_class"] = $promoted_class;
@@ -236,8 +107,9 @@ $_SESSION["amount"] = $amount;
 $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
 $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";    
 
-echo $query = "INSERT INTO `jag_secret`(`name`, `email`, `phone`, `pan`, `address`) 
-                            VALUES('$name', '$email', '$phone', '$pan', '$address')";
+$query = "INSERT INTO `jag_nirman`(`name`, `phone`, `address`, `email`, `donation_type`, `material`, `qty`, `amount`) 
+							VALUES ('$name','$phone','$address','$email','$type','material','$qty','$amount')";
+                            //var_dump($query); exit();
 $result1 = mysqli_query($connection , $query);
 if($result1){    
    echo '<script> window.location.replace("easebuzz.php") </script>';
@@ -249,7 +121,7 @@ if($result1){
  <div class="" style="">
     <div class="">
       <div class="sigma_subheader-inner">       
-       <img src="./assets/img/Secret Donation.jpg" style="width:100%;">
+       <img src="./assets/img/Donation for Nirman.jpg" style="width:100%;">
       </div>
     </div>
   </div>
@@ -265,30 +137,104 @@ if($result1){
     </div>
     <div class="contact-form-wrapper">
      <h5>Donation For Mandir Nirman</h5>
-      <form>
-        <div class="form-item">
-          <input type="text" name="sender" required>
-          <label>Name:</label>
-        </div>
-        <div class="form-item">
-          <input type="number" name="email" required>
-          <label>Mobile:</label>
-        </div>
-        <div class="form-item">
-          <input type="text" name="email" required>
-          <label>Email:</label>
-        </div>
-        <div class="form-item">
-          <textarea class="" name="message" required></textarea>
-          <label>Address:</label>
-        </div>
-        <div class="form-item">
-          <input type="radio" value="">Material
-          <input type="radio" value="">Amount
-          
-        </div>
-        <button class="submit-btn">Send</button>  
-      </form>
+       <form action="" method="POST">
+    
+    <div class="row">
+    
+    <div class="col-md-6">
+    <div class="form-group">
+      <!--<label for="name">Name:</label>-->
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" style="height: 40px!important;">
+    </div>
+    </div>
+    
+    <div class="col-md-6">
+    <div class="form-group">
+      <!--<label for="email">Email:</label>-->
+      <input type="number" class="form-control" id="phone" placeholder="Enter phone" name="phone" style="height: 40px!important;">
+    </div>
+    </div>
+        
+   
+    <div class="form-group">
+      <!--<label for="address">Address:</label>-->
+      <!--<input type="number" class="form-control" id="phone" placeholder="Enter Phone" name="phone" style="height: 40px!important;">-->
+      <textarea class="form-control" id="address" placeholder="Enter Address" name="address"></textarea>
+    </div>
+   
+    
+    <div class="col-md-12">
+    <div class="form-group">
+     <!-- <label for="pwd">Phone:</label>-->
+     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="height: 40px!important;">
+    </div>
+    </div>
+    
+    <div class="col-md-12">
+    <div class="form-group">
+       <select class="form-control" id="type" name="type" style="height: 40px!important;" onchange='checkvalue(this.value)'>
+        <option value="#" selected disabled>Select Donation Type</option>
+        <option value="amount">Amount</option>
+        <option value="material">Material</option>
+       </select>
+     </div>
+   </div>
+   
+   <div class="col-md-12" style="display:none;" id="amt">
+    <div class="form-group">
+     	<input type="number" class="form-control" id="amount" placeholder="Enter Amount" name="amount" style="height: 40px!important;">
+    </div>
+    </div>
+    
+     <div class="col-md-12" style="display:none;" id="mat">
+    	
+     	<div class="col-md-12">
+        	<div class="form-group">
+              <select class="form-control" id="material" name="material" style="height: 40px!important;" onchange='checkmaterial(this.value)'>
+              <option value="#" selected disabled>Select Material</option>
+              <option value="bricks">Bricks</option>
+              <option value="rods">Rods</option>
+              <option value="cement">Cement</option>
+              <option value="sand">Sand</option>
+             </select>
+       		</div>
+       	</div>
+        
+	   <div class="col-md-6">
+       	<div class="form-group">
+       		<input type="number" class="form-control" id="qnty" placeholder="Enter Quantity" name="quantity" style="height: 40px!important;" onchange='cal(this.value)'>
+    	</div>
+   		</div>
+        
+        <div class="col-md-6" style="display:none;" id="pkt">
+       	<div class="form-group">
+         	<label >Packets</label>
+       		<!--<input type="text" class="form-control" value="Packets" style="height: 40px!important;" readonly>-->
+    	</div>
+   		</div>
+        
+        <div class="col-md-6" style="display:none;" id="pcs">
+       	<div class="form-group">
+       		<input type="text" class="form-control" value="Pieces" style="height: 40px!important;" readonly>
+    	</div>
+   		</div>
+        
+        <div class="col-md-6" style="display:none;" id="trk">
+       	<div class="form-group">
+       		<input type="text" class="form-control" value="Truck" style="height: 40px!important;" readonly>
+    	</div>
+   		</div>
+        
+        <div class="col-md-12">
+       	<div class="form-group">
+       		<input type="number" class="form-control" id="amtt" placeholder="Enter Amount" name="amount" style="height: 40px!important;" readonly>
+    	</div>
+   		</div>
+    </div>
+   
+   
+    <button type="submit" name="submit" class="btn btn-danger">Donate</button>
+  </form>
     </div>
   </div>
 </section>
@@ -299,3 +245,83 @@ if($result1){
 <?php 
 include "footer.php";
 ?>
+
+<script>
+function checkvalue(val)
+{
+    if(val=="amount")
+       {
+       document.getElementById('amt').style.display='block';
+       document.getElementById('mat').style.display='none';
+       }
+    if(val=="material")
+      { document.getElementById('mat').style.display='block'; 
+       document.getElementById('amt').style.display='none';
+       }
+}
+function checkmaterial(val)
+{
+    if(val=="bricks")
+       {
+         document.getElementById('pcs').style.display='block';
+         document.getElementById('pkt').style.display='none';
+         document.getElementById('trk').style.display='none';
+         document.getElementById('amtt').value = '';
+         document.getElementById('qnty').value = '';
+       }
+     if(val=="rods")
+       {
+         document.getElementById('pcs').style.display='block';
+         document.getElementById('pkt').style.display='none';
+         document.getElementById('trk').style.display='none';
+         document.getElementById('amtt').value = '';
+         document.getElementById('qnty').value = '';
+       }
+     if(val=="sand")
+       {
+         document.getElementById('pcs').style.display='none';
+         document.getElementById('pkt').style.display='none';
+         document.getElementById('trk').style.display='block';
+         document.getElementById('amtt').value = '';
+         document.getElementById('qnty').value = '';
+       }
+     if(val=="cement")
+       {
+         document.getElementById('pcs').style.display='none';
+         document.getElementById('trk').style.display='none';
+         document.getElementById('pkt').style.display='block';
+         document.getElementById('amtt').value = '';
+         document.getElementById('qnty').value = '';
+       }
+    
+}
+function cal(val)
+{
+	var type = document.getElementById('material').value;
+    if(type=="bricks")
+       {
+       var qty = document.getElementById('qnty').value;
+       var am = qty * 5;
+       document.getElementById('amtt').value = am;
+       }
+     if(type=="rods")
+       {
+       var qty = document.getElementById('qnty').value;
+       var am = qty * 200;
+       document.getElementById('amtt').value = am;
+       }
+     if(type=="sand")
+       {
+       var qty = document.getElementById('qnty').value;
+       var am = qty * 1000;
+       document.getElementById('amtt').value = am;
+       }
+     if(type=="cement")
+       {
+       var qty = document.getElementById('qnty').value;
+       var am = qty * 500;
+       document.getElementById('amtt').value = am;
+       }
+    
+}
+</script>

@@ -37,17 +37,17 @@ include 'admin/connection.inc.php';
         while($row = mysqli_fetch_assoc($result))
         {
         ?>
-        <div class="col-lg-4 zoom">
+        <div class="col-lg-3 zoom">
           <div class="sigma_sermon-box">
             <div class="sigma_sermon-image">
-            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 200px !important;padding: 0 35px;}"/>
+            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row['image']) . '"' ?> alt="portfolio" style="height: 180px !important;padding: 0 35px;}"/>
             </div>
             <div class="sigma_box">
              
-              <h4 class="title mb-0">
+              <h6 class="title mb-0">
                 <!-- <a href="holi-details.html">Holi- The Colour Festival</a> -->
                 <?php echo $row['title']; ?>
-              </h4>
+              </h6>
               <span >
               <a class="subtitle" href="facilities_single.php?var=<?php echo $row['id']; ?>" class="btn-link text-white">View More <i class="far fa-arrow-right text-white"></i> </a>
               </span>

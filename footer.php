@@ -16,30 +16,15 @@ include 'admin/connection.inc.php';
     <div class="container">
 
       <div class="row position-relative">
-        <div class="col-lg-7 col-md-6">
+        <div class="col-lg-12 col-md-6">
           <div class="sigma_cta lg primary-bg">
             <img class="d-none d-lg-block" src="./././admin/dist/img/jagannath-top.png" alt="cta" style="width: 355px;height: 200px;">
             <div class="sigma_cta-content">
-              <span class="fw-600 custom-secondary text-white">Need Help, Call us!</span>
-              <h4 class="text-white"><?php echo $row['phone1']; ?></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-6 position-relative">
-
-          <div class="sigma_cta primary-bg">
-            <div class="sigma_cta-content">
-              <form method="post">
-                <label class="mb-0 text-white">Temple Newsletter</label>
-                <div class="sigma_search-adv-input">
-                  <input type="text" class="form-control" placeholder="Enter email address" name="search" value="">
-                  <button type="submit" name="button"><i class="fa fa-search"></i></button>
-                </div>
-              </form>
+              <span class="fw-600 custom-secondary text-white"></span>
+              <h4 class="text-white">Need Help, Call us! <?php echo $row['phone1']; ?></h4>
             </div>
             <img class="d-none d-lg-block" src="assets/img/cta/2.png" alt="cta" >
           </div>
-
         </div>
       </div>
 

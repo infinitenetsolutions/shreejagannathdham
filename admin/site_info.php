@@ -88,7 +88,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                   <?php
 
                   include 'insert.php';
-                  // include 'update.php';
+                  include 'update_site_info.php';
                   ?>
 
                   <div class="card-body">
@@ -102,6 +102,10 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                             <th>Phone no</th>
                             <th>Ohter Phone No</th>
                             <th>Email</th>
+                            <th>Facebook</th>
+                            <th>Linkedin</th>
+                            <th>Twitter</th>
+                            <th>Youtube</th>
                             <th>Update</th>
                           </tr>
                         </thead>
@@ -120,6 +124,10 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                                 <td><?php echo $rows['phone1']; ?></td>
                                 <td><?php echo $rows['phone2']; ?></td>
                                 <td><?php echo $rows['email']; ?></td>
+                                <td><?php echo $rows['facebook']; ?></td>
+                                <td><?php echo $rows['linkedin']; ?></td>
+                                <td><?php echo $rows['twitter']; ?></td>
+                                <td><?php echo $rows['youtube']; ?></td>
                                 <td><a href="update_site_info.php?edit=<?php echo $rows['id']; ?>" class="btn btn-warning">Update</a></td>
                                 </tr>
                           <?php }
@@ -133,6 +141,10 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                             <th>Phone no</th>
                             <th>Ohter Phone No</th>
                             <th>Email</th>
+                            <th>Facebook</th>
+                            <th>Linkedin</th>
+                            <th>Twitter</th>
+                            <th>Youtube</th>
                             <th>Update</th>
                           </tr>
                         </tfoot>
