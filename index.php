@@ -318,8 +318,8 @@ include 'admin/connection.inc.php';
                 <p class="text-white"><?php echo $row['desig']; ?></p>
                 <h5 class="text-white">
                   <a href=""><?php echo $row['name']; ?></a></h5>
-                  <a href="volunteer.php?id=<?php echo $row['id']; ?>" class="sigma_btn-custom secondary">Know More <i class="far fa-arrow-right"></i> </a>
               </div>
+              <a href="volunteer.php?id=<?php echo $row['id']; ?>" class="sigma_btn-custom secondary" style="padding: 10px 20px">Know More <i class="far fa-arrow-right"></i> </a>
             </div>
           </div>
         </div>
