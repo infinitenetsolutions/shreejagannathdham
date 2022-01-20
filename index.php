@@ -104,12 +104,8 @@ include 'admin/connection.inc.php';
                 $row12 = mysqli_fetch_assoc($result);
                 ?>
             <h4 class="title"><?php echo $row12['title']; ?></h4>
-            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
-            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
-            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
-            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
-            </p>
-            <a href="about-us.php" class="sigma_btn-custom secondary">Read More <i class="far fa-arrow-right"></i> </a>
+            <p><?php echo $row12['description'];?></p>
+            <!-- <a href="about-us.php" class="sigma_btn-custom secondary">Read More <i class="far fa-arrow-right"></i> </a> -->
           </div>
           
           <div class="d-flex align-items-center mt-5">
