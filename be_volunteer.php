@@ -1,3 +1,33 @@
+<?php
+include 'admin/connection.inc.php';
+
+
+  $select = "SELECT * FROM `jag_site_info` WHERE 1";
+  $result = mysqli_query($connection, $select);
+  $row = mysqli_fetch_assoc($result);
+  
+  		if (isset($_POST['button'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $message = $_POST['message'];
+     
+                $sql = "INSERT INTO `jag_contact`(`con_name`,`con_mobile`,`con_email`,`con_query`) VALUES ('$name','$phone','$email','$message')";
+
+                $current_id = mysqli_query($connection, $sql); 
+                if ($current_id) {
+
+                    echo "<script>
+                        alert('Your Details are sent to us. We\'ll get back to you soon!!!');
+                        window.location.replace('contact.php');
+                        </script>";
+                         }
+                         else {
+                    echo "<script>alert('Your data is not submitted. Please try again!!');</script>";
+                }
+            } 
+?>
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
 
@@ -16,6 +46,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-bottom:60px!important;
 }
 
 section .container {
@@ -176,7 +207,7 @@ include "header.php";
             <input type="text" name="name" placeholder="Full Name"  class="vol-1" required/>
             <input type="text" name="desig" placeholder="Designation" class="vol-1" required/>
             <input type="number" name="phone" placeholder="Phone" class="vol-1" required/>
-            <input type="file" name="phone" placeholder="Phone" class="vol-1" required/>
+            <input type="file" name="photo" class="vol-1" required/>
             <input type="email" name="email" placeholder="Email" required/>
             <textarea name="address" placeholder="Enter Address" cols="45" rows="3" class="vol-2"style="margin:10px 0px" required></textarea>
             <textarea name="description" placeholder="Enter description" cols="45" rows="3" class="vol-2" required></textarea>
