@@ -73,7 +73,7 @@ section .container .user .formBx form h2 {
   text-align: center;
   width: 100%;
   margin-bottom: 10px;
-  color: #555;
+  color: #dc3545;
 }
 
 section .container .user .formBx form input {
@@ -93,7 +93,7 @@ section .container .user .formBx form input {
 
 section .container .user .formBx form input[type='submit'] {
   max-width: 100px;
-  background: #677eff;
+  background: #dc3545;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
@@ -102,45 +102,6 @@ section .container .user .formBx form input[type='submit'] {
   transition: 0.5s;
 }
 
-section .container .user .formBx form .signup {
-  position: relative;
-  margin-top: 20px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #555;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-section .container .user .formBx form .signup a {
-  font-weight: 600;
-  text-decoration: none;
-  color: #677eff;
-}
-
-section .container .signupBx {
-  pointer-events: none;
-}
-
-section .container.active .signupBx {
-  pointer-events: initial;
-}
-
-section .container .signupBx .formBx {
-  left: 100%;
-}
-
-section .container.active .signupBx .formBx {
-  left: 0;
-}
-
-section .container .signupBx .imgBx {
-  left: -100%;
-}
-
-section .container.active .signupBx .imgBx {
-  left: 0%;
-}
 
 section .container .signinBx .formBx {
   left: 0%;
@@ -156,6 +117,18 @@ section .container .signinBx .imgBx {
 
 section .container.active .signinBx .imgBx {
   left: -100%;
+}
+
+.vol-1
+{
+  width:49% !important;
+  margin: 8px 1px !important;
+}
+.vol-2
+{
+  background-color: #f7f7f7;
+  border: none;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -198,37 +171,20 @@ include "header.php";
         <!-- <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg" alt="" /></div> -->
         <div class="imgBx"><img src="assets/img/volunteering.jpg" alt="" width="400px" height="500px"/></div>
         <div class="formBx">
-          <form action="" onsubmit="return false;">
+          <form action="" method="POST">
             <h2>Volunteer Registration</h2>
-            <div class="row">
-            <input type="text" name="" placeholder="Full Name" class="col-6"/>
-            <input type="text" name="" placeholder="Designation" />
-            <input type="number" name="" placeholder="Phone" />
-            <input type="email" name="" placeholder="Email" />
-            <textarea name="address" placeholder="Enter Address" cols="45" rows="3" class="form-control dark"></textarea>
-            <input type="submit" name="" value="Login" />
-            </div>
+            <input type="text" name="name" placeholder="Full Name"  class="vol-1" required/>
+            <input type="text" name="desig" placeholder="Designation" class="vol-1" required/>
+            <input type="number" name="phone" placeholder="Phone" class="vol-1" required/>
+            <input type="file" name="phone" placeholder="Phone" class="vol-1" required/>
+            <input type="email" name="email" placeholder="Email" required/>
+            <textarea name="address" placeholder="Enter Address" cols="45" rows="3" class="vol-2"style="margin:10px 0px" required></textarea>
+            <textarea name="description" placeholder="Enter description" cols="45" rows="3" class="vol-2" required></textarea>
+            <input type="submit" name="submit" value="Submit" style="margin: 12px auto;"/>
           </form>
         </div>
       </div>
-      <div class="user signupBx">
-        <div class="formBx">
-          <form action="" onsubmit="return false;">
-            <h2>Create an account</h2>
-            <input type="text" name="" placeholder="Username" />
-            <input type="email" name="" placeholder="Email Address" />
-            <input type="password" name="" placeholder="Create Password" />
-            <input type="password" name="" placeholder="Confirm Password" />
-            <input type="submit" name="" value="Sign Up" />
-            <p class="signup">
-              Already have an account ?
-              <a href="#" onclick="toggleForm();">Sign in.</a>
-            </p>
-          </form>
-        </div>
-        <!-- <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg" alt="" width="400px" height="500px"/></div> -->
-        <div class="imgBx"><img src="assets.img/volunteering.jpg" alt="" width="400px" height="500px"/></div>
-      </div>
+     </div>
     </div>
   </section>
       
