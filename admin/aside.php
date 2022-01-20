@@ -31,14 +31,14 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="about.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                            <a href="about_us.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
                                 <p>About</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="about_us.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                            <a href="about.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
                                 <p>Features</p>
                             </a>
                         </li>
