@@ -3,7 +3,7 @@ include 'connection.inc.php';
 
 if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) 
 {
-  $img = "SELECT * FROM `jag_about` WHERE 1";
+  $img = "SELECT * FROM `jag_about_us` WHERE 1";
   $imageresult = mysqli_query($connection, $img);
 
 
@@ -54,12 +54,12 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Manage Temple Features</h1>
+                <h1>Manage About Temple</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Temple Features</li>
+                  <li class="breadcrumb-item active">About Us Temple</li>
                 </ol>
               </div>
             </div>
@@ -76,7 +76,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
 
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Temple Features</h3>
+                    <h3 class="card-title">About Us Temple</h3>
                   </div>
                   <!-- /.card-header -->
                   <?php include 'add_about.php';
@@ -110,10 +110,10 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                             <tr>
                               <td><?php echo $cnt; ?></td>
                               <td><?php echo $rowimage['title']; ?></td>
-                              <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['images']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
+                              <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['image']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
                               <td><?php echo $rowimage['description']; ?></td>
-                              <td><a href="update_about.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
-                              <td> <a href="delete_about.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
+                              <td><a href="update_about_us.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
+                              <td> <a href="delete_about_us.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
                         <?php 
                         $cnt++;
