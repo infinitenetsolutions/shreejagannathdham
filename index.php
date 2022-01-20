@@ -121,7 +121,8 @@ include 'admin/connection.inc.php';
         <div class="col-lg-6 d-none d-lg-block">
           <div class="me-lg-30 img-group-2">
             <img src="assets/img/homepage.png" alt="about" style="height:417px;width:340px;">
-            <img src="assets/img/about-group2/jag-17.jpg" alt="about" style="height:320px;width:350px;">
+            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'image']) . '"' ?> alt="portfolio"/>
+            <!-- <img src="assets/img/about-group2/jag-17.jpg" alt="about" style="height:320px;width:350px;"> -->
           </div>
         </div>
       </div>
