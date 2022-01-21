@@ -92,6 +92,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                           <th>ID</th>
                           <th>Trustee Title</th>
                           <th>Trustee Designation</th>
+                          <th>Trustee Type</th>
                           <th>Trustee Image</th>
                           <th>Update</th>
                           <th>Delete</th>
@@ -109,6 +110,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><?php echo $cnt; ?></td>
                               <td><?php echo $rowimage['title']; ?></td>
                               <td><?php echo $rowimage['description']; ?></td>
+                              <td><?php echo $rowimage['type']; ?></td>
                               <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['image']) . '"' ?> class="img-fluid mb-2" alt="Trustee Image" /></td>
                               <td><a href="update_trustee.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_trustee.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
@@ -120,6 +122,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                           <th>ID</th>
                           <th>Trsutee Title</th>
                           <th>Trustee Designation</th>
+                          <th>Trustee Type</th>
                           <th>Trustee Image</th>
                           <th>Update</th>
                           <th>Delete</th>

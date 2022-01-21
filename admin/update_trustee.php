@@ -121,12 +121,13 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
 }
 if (isset($_POST['Submit'])) {
     $name = simplename($_POST['name']);
-    $description = simplename($_POST['description']);
+    $description = simplename($_POST['desig']);
+    $type = simplename($_POST['type']);
 //     echo "<pre>";
 // print_r($_FILES);
     if (!empty($_FILES['img1']['tmp_name'])) {
         $images = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-        $update_img = "UPDATE `jag_trustee` SET `title`='$name',`description`='$description',`image`='$images' WHERE `id`='$id'";
+        $update_img = "UPDATE `jag_trustee` SET `title`='$name',`description`='$description',`type`='$type',`image`='$images' WHERE `id`='$id'";
         $result = mysqli_query($connection, $update_img);
     }
     else {

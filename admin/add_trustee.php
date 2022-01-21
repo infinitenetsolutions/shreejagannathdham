@@ -6,8 +6,9 @@ include 'function.inc.php';
 
 
 if (isset($_POST['insert'])) {
-  $description = simplename($_POST['description']);
+  $desig = simplename($_POST['desig']);
   $title = simplename($_POST['title']);
+  $type = simplename($_POST['type']);
      if ($cat != null) {
 
         if (count($_FILES) > 0) {
@@ -16,7 +17,7 @@ if (isset($_POST['insert'])) {
                 $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
                 //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
 
-                $sql = "INSERT INTO `jag_trustee`(`title`,`description`,`image`) VALUES ('$title','$description','$imgData')";
+                $sql = "INSERT INTO `jag_trustee`(`title`,`description`,`type`,`image`) VALUES ('$title','$desig','$type','$imgData')";
 
                 $current_id = mysqli_query($connection, $sql); 
                 if (isset($current_id)) {
@@ -75,13 +76,17 @@ $result2 = mysqli_query($connection, $select1);
                     
                  	 <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Enter Designation</label>
-                        <select class="form-control" name="description" id="description">
+                        <select class="form-control" name="type" id="type">
                             <option value="" selected disabled>Select Designation</option>
                             <option value="committee member">committee member</option>
                             <option value="trustee">trustee</option>
                         </select>
                         <!-- <textarea  aria-describedby="emailHelp"></textarea> -->
 		            </div>
+                    <div class="form-group">
+                        <label class="a-color" for="exampleFormControlSelect1">Enter Designation</label>
+                        <input type="text" name="desig" class="form-control" id="desig" >
+                    </div>
                     <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Upload Trustee Image</label>
                         <input name="Image" type="file" class="form-control" id="exampleFormControlSelect1">

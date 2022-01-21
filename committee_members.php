@@ -26,7 +26,7 @@ include 'admin/connection.inc.php';
       
       <div class="row">
 		<?php 
-         	$select = "SELECT * FROM `jag_trustee` WHERE description= 'committee member'";
+         	$select = "SELECT * FROM `jag_trustee` WHERE type= 'committee member'";
             print_r($selec);
   			$result = mysqli_query($connection, $select);
   			while($row = mysqli_fetch_assoc($result))
@@ -39,6 +39,7 @@ include 'admin/connection.inc.php';
               </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
+                <h4><?php echo $row['name']; ?></h4>
                 <p><?php echo $row['description']; ?></p>
                 <h5>
                   <a href="volunteer-detail.html"><?php echo $row['name']; ?></a>
@@ -56,7 +57,7 @@ include 'admin/connection.inc.php';
       
       <div class="row">
 		<?php 
-         	$select = "SELECT * FROM `jag_trustee` WHERE description='trustee'";
+         	$select = "SELECT * FROM `jag_trustee` WHERE type='trustee'";
             print_r($selec);
   			$result = mysqli_query($connection, $select);
   			while($row = mysqli_fetch_assoc($result))
@@ -69,6 +70,7 @@ include 'admin/connection.inc.php';
               </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
+              <h4><?php echo $row['name']; ?></h4>
                 <p><?php echo $row['description']; ?></p>
                 <h5>
                   <a href="volunteer-detail.html"><?php echo $row['name']; ?></a>
