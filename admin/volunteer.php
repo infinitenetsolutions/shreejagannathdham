@@ -96,6 +96,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                         <th>Mobile</th>
                         <th>DOB</th>
                         <th>Address</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -137,11 +138,12 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                             <td><?php echo $rows['phone']; ?></td>
                             <td><?php echo $rows['dob']; ?></td>
                             <td><?php echo $rows['address']; ?></td>
+                            <td><a href="approve_volunteer.php?id=<?php echo $rows['id']; ?>&status=<?php echo $rows['status']; ?>" class="btn btn-success"><?php echo $rows['status']; ?></button></td>
                             <td> <a href="delete_volun.php?delete=<?php echo $rows['id']; ?>" class="btn btn-danger">Delete</a>
                           </tr>
-                      <?php }
+                      <?php $cnt++;}
                       } 
-                      $cnt++; ?>
+                       ?>
                     </tbody>
                     <tfoot>
                       <tr>
@@ -154,6 +156,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                         <th>Mobile</th>
                         <th>DOB</th>
                         <th>Address</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                       </tr>

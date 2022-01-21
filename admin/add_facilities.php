@@ -10,8 +10,8 @@ if (isset($_POST['insert'])) {
   $description = simplename($_POST['description']);
       if ($cat != null) {
 
-        if (count($_FILES) > 0) {
-            if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
+        // if (count($_FILES) > 0) {
+        //     if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
 
                 $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
                 //$imageProperties = getimageSize($_FILES['Image']['tmp_name']);
@@ -47,8 +47,8 @@ if (isset($_POST['insert'])) {
                   </div>';
                 }
             }
-        }
-    }
+       // }
+    //}
 }
 // $selectid="SELECT * FROM `catagries_images` WHERE 1";
 

@@ -12,8 +12,8 @@ include 'admin/connection.inc.php';
             $description = $_POST['description'];
      
             // if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-              $sql = "INSERT INTO `jag_volunteer`(`name`, `desig`, `phone`,`image`, `email`, `address`, `description`) 
-                                        VALUES ('$name','$desig','$phone','$imgData','$email','$address','$description')";
+              $sql = "INSERT INTO `jag_volunteer`(`name`, `desig`, `phone`,`image`, `email`, `address`, `description`,`status`) 
+                                        VALUES ('$name','$desig','$phone','$imgData','$email','$address','$description','Pending')";
 
                 $current_id = mysqli_query($connection, $sql); 
                 if ($current_id) {
@@ -204,7 +204,7 @@ include "header.php";
         <!-- <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg" alt="" /></div> -->
         <div class="imgBx"><img src="assets/img/volunteering.jpg" alt="" width="400px" height="500px"/></div>
         <div class="formBx">
-          <form action="" method="POST">
+          <form action="" method="POST" enctype= multipart/form-data>
             <h2>Volunteer Registration</h2>
             <input type="text" name="name" placeholder="Full Name"  class="vol-1" required/>
             <input type="text" name="desig" placeholder="Designation" class="vol-1" required/>

@@ -132,7 +132,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) {
                             <var> <td><?php echo $rows['desig']; ?></td>
                             <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rows['image']) . '"' ?> class="img-fluid mb-2" alt="Testimonial Image" /></td>
                             <td><?php echo $rows['message']; ?></td>
-                            <td><a href="update_status.php?id=<?php echo $rows['id']; ?>&status=<?php echo $rows['status']; ?>" class="btn btn-success"><?php echo $rows['status']; ?></button></td>
+                            <td><a href="approve_testimonial.php?id=<?php echo $rows['id']; ?>&status=<?php echo $rows['status']; ?>" class="btn btn-success"><?php echo $rows['status']; ?></button></td>
                             <td> <a href="delete_testimonial.php?delete=<?php echo $rows['id']; ?>" class="btn btn-danger">Delete</a>
                           
 

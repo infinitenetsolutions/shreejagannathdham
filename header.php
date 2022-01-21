@@ -4,6 +4,31 @@ include 'admin/connection.inc.php';
   $select = "SELECT * FROM `jag_site_info` WHERE 1";
   $result = mysqli_query($connection, $select);
   $row = mysqli_fetch_assoc($result);
+
+
+  if (isset($_POST['submit12'])) {
+    $name = $_POST['name'];
+    $desig = $_POST['desig'];
+    $message = $_POST['message'];
+    $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
+    // print_r($imgData);exit();
+    
+    // if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+      $sql = "INSERT INTO `jag_testimonial`(`name`, `desig`,`image`, `message`,`status`) 
+                                VALUES ('$name','$desig','$imgData','$message','Pending')";
+
+        $current_id = mysqli_query($connection, $sql); 
+        if ($current_id) {
+
+            echo "<script>
+                alert('We got Your Message. Thank You for your feedback !!!');
+                window.location.replace('index.php');
+                </script>";
+                 }
+                 else {
+            echo "<script>alert('Your message is not submitted successfully. Please try again!!');</script>";
+        }
+    }
  
 ?>
 
@@ -439,14 +464,14 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
           
         </div>
         <div class="modal-body">
-           <form method="POST" class="popup-form">
+           <form method="POST" class="popup-form" enctype= multipart/form-data> 
                
                
                 <input type="text" class="form-control modal-input" placeholder="Enter Full Name" name="name" required>
                 <input type="text" class="form-control modal-input" placeholder="Enter Your Designation" name="desig" required>
-                <input type="file" class="form-control modal-input" name="image" required>
-                <textarea class="form-control modal-input" placeholder="Enter Your Message" name="email" rows="4" col="45" required></textarea>
-                <div class="text-center" ><input type="submit" style="background: #ff4906; border:#ff4906; font-weight: bold;" class="btn btn-dark mt-2"  name="submit" value="Submit"></div>
+                <input type="file" class="form-control modal-input" name="Image" required>
+                <textarea class="form-control modal-input" placeholder="Enter Your Message" name="message" rows="4" col="45" required></textarea>
+                <div class="text-center" ><input type="submit" style="background: #ff4906; border:#ff4906; font-weight: bold;" class="btn btn-dark mt-2"  name="submit12" value="Submit"></div>
         </div>
         
       <!--<input type="submit" class="btn btn-primary" name="submit" value="Submit">-->
