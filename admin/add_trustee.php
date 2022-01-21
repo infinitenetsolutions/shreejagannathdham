@@ -74,8 +74,13 @@ $result2 = mysqli_query($connection, $select1);
                     </div> 
                     
                  	 <div class="form-group">
-                        <label class="a-color" for="exampleFormControlSelect1">Enter Description</label>
-                        <textarea name="description" class="form-control" id="description" aria-describedby="emailHelp"></textarea>
+                        <label class="a-color" for="exampleFormControlSelect1">Enter Designation</label>
+                        <select class="form-control" name="description" id="description">
+                            <option value="" selected disabled>Select Designation</option>
+                            <option value="committee member">committee member</option>
+                            <option value="trustee">trustee</option>
+                        </select>
+                        <!-- <textarea  aria-describedby="emailHelp"></textarea> -->
 		            </div>
                     <div class="form-group">
                         <label class="a-color" for="exampleFormControlSelect1">Upload Trustee Image</label>
@@ -91,15 +96,3 @@ $result2 = mysqli_query($connection, $select1);
     </div>
 </div>
 
-<script src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript">
-    // Initialize CKEditor
-    //CKEDITOR.inline( 'short_desc' );
-
-    CKEDITOR.replace('description', {
-
-        width: "100%",
-        height: "200px"
-
-    });
-</script>

@@ -52,12 +52,12 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Manage Trustee</h1>
+                <h1>Manage Trustee & Committee Members</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Trustee</li>
+                  <li class="breadcrumb-item active">Trustee & Committee Members</li>
                 </ol>
               </div>
             </div>
@@ -74,7 +74,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
 
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Trustee</h3>
+                    <h3 class="card-title">Trustee & Committee Members</h3>
                   </div>
                   <!-- /.card-header -->
                   <?php include 'add_trustee.php';
@@ -83,7 +83,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                   ?> 
                
                   <div class="card-body">
-                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_trustee">Add New Trustee</a>
+                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_trustee">Add New Member</a>
                   <div class="table-responsive ">
                     <table id="example1" class="table table-bordered table-striped">
 
@@ -91,7 +91,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                         <tr>
                           <th>ID</th>
                           <th>Trustee Title</th>
-                          <th>Trustee Description</th>
+                          <th>Trustee Designation</th>
                           <th>Trustee Image</th>
                           <th>Update</th>
                           <th>Delete</th>
@@ -119,7 +119,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                       <tr>
                           <th>ID</th>
                           <th>Trsutee Title</th>
-                          <th>Trustee Description</th>
+                          <th>Trustee Designation</th>
                           <th>Trustee Image</th>
                           <th>Update</th>
                           <th>Delete</th>

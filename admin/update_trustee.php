@@ -90,7 +90,7 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
 
                                         </div>
                                         <div class="form-group col-sm-12">
-                                            <label for="exampleFormControlSelect1">Description</label>
+                                            <label for="exampleFormControlSelect1">Designation</label>
                                             <textarea name="description" class="form-control"><?php echo $row['description']; ?></textarea>
                                         </div>
                                         <div class="form-group col-sm-7">

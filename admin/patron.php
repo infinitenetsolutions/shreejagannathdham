@@ -3,7 +3,7 @@ include 'connection.inc.php';
 
 if (isset($_SESSION['username']) && ($_SESSION['username'] != '')) 
 {
-  $img = "SELECT * FROM `jag_vice_chair` WHERE 1";
+  $img = "SELECT * FROM `jag_patron` WHERE 1";
   $imageresult = mysqli_query($connection, $img);
 
 
@@ -54,12 +54,12 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Manage Vice Chairman</h1>
+                <h1>Manage Patron</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Vice Chairman</li>
+                  <li class="breadcrumb-item active">Patron</li>
                 </ol>
               </div>
             </div>
@@ -76,16 +76,16 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
 
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Vice Chairman</h3>
+                    <h3 class="card-title">Patron</h3>
                   </div>
                   <!-- /.card-header -->
-                  <?php include 'add_vice_chair.php';
+                  <?php include 'add_patron.php';
                         include 'update_legal.php';
                   // include 'update.php';
                   ?> 
                
                   <div class="card-body">
-                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_vice_chair" style="background:#e10d0d">Add New Vice Chairman</a>
+                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_patron" style="background:#e10d0d">Add New Patron</a>
                   <div class="table-responsive ">
                     <table id="example1" class="table table-bordered table-striped">
 
@@ -112,8 +112,8 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><?php echo $rowimage['title']; ?></td>
                               <td><img height="100px" width="100px" <?php echo ' src="data:image/jpeg;base64,' . base64_encode($rowimage['image']) . '"' ?> class="img-fluid mb-2" alt="Legal Doc" /></td>
                               <td><?php echo $rowimage['description']; ?></td>
-                              <td><a href="update_vice_chair.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
-                              <td> <a href="delete_vice_chair.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
+                              <td><a href="update_patron.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
+                              <td> <a href="delete_patron.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
                         <?php 
                         $cnt++;

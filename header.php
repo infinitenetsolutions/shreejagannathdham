@@ -252,11 +252,12 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                      <li class="menu-item menu-item-has-children">
                 <a href="#">Seva Trust</a>
                 <ul class="sub-menu">
-                    <li class="menu-item"> <a href="about-us.php">Chairman</a> </li>
-                    <li class="menu-item"> <a href="trustee.php">Trustee</a> </li>
-                    <li class="menu-item"> <a href="secretary.php">Secretary</a> </li>
+                    <li class="menu-item"> <a href="patron.php">Patron</a> </li>
+                    <li class="menu-item"> <a href="chairman.php">Chairman</a> </li>
+                    <li class="menu-item"> <a href="secretary.php">Gen. Secretary</a> </li>
+                    <li class="menu-item"> <a href="committee_members.php">Trustees & Committee Members</a></li>
                 </ul>
-            </li>                                    
+            </li>                                       
                    <li class="menu-item menu-item-has-children">
                 <a href="#">Mandir Nirman</a>
                 <ul class="sub-menu">
@@ -361,11 +362,11 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                                 <li class="menu-item menu-item-has-children">
                                 <a href="#">Our Seva Trust</a>
                                 <ul class="sub-menu">
+                                    <li class="menu-item"> <a href="patron.php">Patron</a></li>
                                     <li class="menu-item"><a href="chairman.php">Chairman</a></li>
-                                    <li class="menu-item"> <a href="trustee.php">Trustee</a></li>
-                                    <li class="menu-item"> <a href="secretary.php">Secretary</a></li>
-                                    <li class="menu-item"> <a href="vice-chairman.php">Vice Chairman</a></li>
-                                    <li class="menu-item"> <a href="assistant-secretary.php">Assistant Secretary</a></li>                                    
+                                    <li class="menu-item"> <a href="secretary.php">Gen. Secretary</a></li>
+                                    <li class="menu-item"> <a href="committee_members.php">Trustees & Committee Members</a></li>
+                                    <!-- <li class="menu-item"> <a href="assistant-secretary.php">Assistant Secretary</a></li>                                     -->
                                 </ul>
                             </li>                            
                             <li class="menu-item menu-item-has-children">

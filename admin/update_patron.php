@@ -7,7 +7,7 @@ include 'connection.inc.php';
 if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
     $id = $_GET['edit'];
 
-    $select_single_data = "SELECT * FROM `jag_vice_chair` WHERE id=$id";
+    $select_single_data = "SELECT * FROM `jag_patron` WHERE id=$id";
     $result = mysqli_query($connection, $select_single_data);
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result);
@@ -55,12 +55,12 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Update Vice Chairman</h1>
+                                <h1>Update Patron</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item active">Vice Chairman</li>
+                                    <li class="breadcrumb-item active">Patron</li>
                                 </ol>
                             </div>
                         </div>
@@ -114,10 +114,10 @@ if (isset($_GET['edit']) && ($_GET['edit'] != '')) {
 <?php
 
     } else {
-        header('location: vice_chairman.php');
+        header('location: patron.php');
     }
 } else {
-    header('location: vice_chairman.php');
+    header('location: patron.php');
 }
 if (isset($_POST['Submit'])) {
     $name = simplename($_POST['name']);
@@ -126,12 +126,12 @@ if (isset($_POST['Submit'])) {
 // print_r($_FILES);
     if (!empty($_FILES['img1']['tmp_name'])) {
         $images = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-        $update_img = "UPDATE `jag_vice_chair` SET `title`='$name',`description`='$description',`image`='$images' WHERE `id`='$id'";
+        $update_img = "UPDATE `jag_patron` SET `title`='$name',`description`='$description',`image`='$images' WHERE `id`='$id'";
         $result = mysqli_query($connection, $update_img);
     }
     else {
         // $images = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-        $update_img = "UPDATE `jag_vice_chair` SET `title`='$name',`description`='$description' WHERE `id`='$id'";
+        $update_img = "UPDATE `jag_patron` SET `title`='$name',`description`='$description' WHERE `id`='$id'";
         $result = mysqli_query($connection, $update_img);
     }
    
@@ -145,7 +145,7 @@ if (isset($_POST['Submit'])) {
 
             echo "<script>
             setTimeout(function() {
-                window.location.replace('vice_chairman.php')
+                window.location.replace('patron.php')
               }, 1000);
 
         </script>";

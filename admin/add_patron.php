@@ -13,7 +13,7 @@ if (isset($_POST['insert'])) {
             if (is_uploaded_file($_FILES['Image']['tmp_name'])) {
 
                  $imgData = addslashes(file_get_contents($_FILES['Image']['tmp_name']));
-                $sql = "INSERT INTO `jag_vice_chair`(`title`,`image`,`description`) VALUES ('$title','$imgData','$description')";
+                $sql = "INSERT INTO `jag_patron`(`title`,`image`,`description`) VALUES ('$title','$imgData','$description')";
 				$current_id = mysqli_query($connection, $sql); 
                 if (isset($current_id)) {
                     // header("Location: listImages.php");
@@ -21,7 +21,7 @@ if (isset($_POST['insert'])) {
                 if ($current_id) {
 
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                      <strong>Success</strong>Vice Chairman Info is successfully inserted!!
+                      <strong>Success</strong>Patron Info is successfully inserted!!
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -29,7 +29,7 @@ if (isset($_POST['insert'])) {
         
                     echo "<script>
                     setTimeout(function() {
-                        window.location.replace('vice_chairman.php');
+                        window.location.replace('patron.php');
         
                       }, 1000);
         
@@ -50,17 +50,17 @@ if (isset($_POST['insert'])) {
 
 
 
-$select1 = "SELECT * FROM `jag_vice_chair`";
+$select1 = "SELECT * FROM `jag_patron`";
 $result2 = mysqli_query($connection, $select1);
 
 ?>
 
-<div class="modal fade" id="add_vice_chair" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="add_patron" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content" style="background: #e7cb44;">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add Vice Chairman</u></h4>
+                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add Patron</u></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -84,7 +84,7 @@ $result2 = mysqli_query($connection, $select1);
                     
                     </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add Vice Chairman</button>
+                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add Patron</button>
                 </div>
             </form>
         </div>

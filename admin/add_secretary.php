@@ -25,7 +25,7 @@ if (isset($_POST['insert'])) {
                 if ($current_id) {
 
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                      <strong>Success</strong> Secretary inserted successfully!!
+                      <strong>Success</strong> Gen. Secretary inserted successfully!!
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -61,7 +61,7 @@ $result2 = mysqli_query($connection, $select1);
         <div class="modal-content" style="background: #e7cb44;">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add Secretary Details</u></h4>
+                    <h4 class="modal-title w-100 font-weight-bold" style="color: #f72000;"><u>Add Gen. Secretary Details</u></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -84,7 +84,7 @@ $result2 = mysqli_query($connection, $select1);
 		            </div>
                     </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add Secretary Details</button>
+                    <button name="insert" class="btn btn-default" style="background:#f75b00;color:black;font-weight:700;">Add Gen. Secretary Details</button>
                 </div>
             </form>
         </div>

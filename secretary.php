@@ -38,7 +38,7 @@ max-width: 1000px;
         <div class="col-lg-8 mb-lg-30">
           <div class="section-title section-title-2 text-start">
             
-            <h4 class="title">Secretary Message</h4>
+            <h4 class="title">Gen. Secretary Message</h4>
             <p><?php echo $row['description']; ?></p>
             <h6 class="mb-2"><?php echo $row['title']; ?></h6>
            <!-- <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>

@@ -54,12 +54,12 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Manage Secretary</h1>
+                <h1>Manage Gen. Secretary</h1>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Secretary</li>
+                  <li class="breadcrumb-item active">Gen. Secretary</li>
                 </ol>
               </div>
             </div>
@@ -76,7 +76,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
 
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Secretary</h3>
+                    <h3 class="card-title">Gen. Secretary</h3>
                   </div>
                   <!-- /.card-header -->
                   <?php include 'add_secretary.php';
@@ -85,7 +85,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                   ?> 
                
                   <div class="card-body">
-                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_secretary" style="background:#e10d0d">Add New Secretary</a>
+                  <a href="" class="btn btn-primary text-center" data-toggle="modal" data-target="#add_secretary" style="background:#e10d0d">Add New Gen. Secretary</a>
                   <div class="table-responsive ">
                     <table id="example1" class="table table-bordered table-striped">
 

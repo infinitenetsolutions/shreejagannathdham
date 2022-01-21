@@ -51,18 +51,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="chairman.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-                                <p>Chairman</p>
-                            </a>
-                        </li>
-                         <li class="nav-item">
-                            <a href="vice_chairman.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-                                <p>Vice Chairman</p>
+                            <a href="patron.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                                <p>Patron</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="trustee.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-                                <p>Trustee</p>
+                            <a href="chairman.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                                <p>Chairman</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -70,6 +65,12 @@
                                 <p>Secretary</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="trustee.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                                <p>Trustee & Committee Members</p>
+                            </a>
+                        </li>
+                        
                         <li class="nav-item">
                             <a href="assistant_secretary.php" class="nav-link"> <i class="far fa-circle nav-icon"></i>
                                 <p>Assistant Secretary</p>
