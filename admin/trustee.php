@@ -113,7 +113,7 @@ if (isset($_SESSION['username']) && ($_SESSION['username'] != ''))
                               <td><a href="update_trustee.php?edit=<?php echo $rowimage['id']; ?>" class="btn btn-warning">Update</a>
                               <td> <a href="delete_trustee.php?delete=<?php echo $rowimage['id']; ?>" class="btn btn-danger">Delete</a>
                             </tr>
-                        <?php }  ?>
+                        <?php $cnt++; }  ?>
                       </tbody>
                       <tfoot>
                       <tr>
