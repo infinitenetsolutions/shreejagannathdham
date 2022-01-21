@@ -26,7 +26,7 @@ include 'admin/connection.inc.php';
       
       <div class="row">
 		<?php 
-         	$select = "SELECT * FROM `jag_trustee` WHERE type= 'committee member'";
+         	$select = "SELECT * FROM `jag_trustee` WHERE description= 'committee member'";
             print_r($selec);
   			$result = mysqli_query($connection, $select);
   			while($row = mysqli_fetch_assoc($result))
@@ -56,7 +56,7 @@ include 'admin/connection.inc.php';
       
       <div class="row">
 		<?php 
-         	$select = "SELECT * FROM `jag_trustee` WHERE type='trustee'";
+         	$select = "SELECT * FROM `jag_trustee` WHERE description='trustee'";
             print_r($selec);
   			$result = mysqli_query($connection, $select);
   			while($row = mysqli_fetch_assoc($result))
