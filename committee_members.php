@@ -27,7 +27,7 @@ include 'admin/connection.inc.php';
       <div class="row">
 		<?php 
          	$select = "SELECT * FROM `jag_trustee` WHERE type= 'committee member'";
-            print_r($selec);
+            print_r($select);
   			$result = mysqli_query($connection, $select);
   			while($row = mysqli_fetch_assoc($result))
             {
