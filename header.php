@@ -30,6 +30,9 @@ include 'admin/connection.inc.php';
     <!-- Template Style sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- partial -->
 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -39,6 +42,38 @@ include 'admin/connection.inc.php';
 .justify-content-lg-between{
 box-shadow: 0px 1px 8px 3px #ff4906!important;
 }
+}
+
+.modal-input
+{
+    border-radius: 20px!important;
+    background: #ffff005c!important;
+    margin-bottom: 15px;
+}
+.d-load
+{
+    
+    position: fixed;
+    bottom: 8%;
+    right: 0px;
+    z-index: 9999;
+}
+.d-load span {
+    font-size: 15px;
+    position: relative;
+    transform: rotate( 
+90deg
+ );
+    transform-origin: right top;
+    color: #e6ad25;
+    display: block;
+    background: #fff400;
+    border: 4px solid #ff4906;
+    padding: 6px 15px;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-weight: 600;
 }
 </style>
 </head>
@@ -220,7 +255,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                 <a href="#">Be a Member</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="be_member.php">Membership types</a></li>
-                    <li class="menu-item"><a href="be_volunteer.php">Be Volunteer</a> </li>
+                    <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
                 </ul>
             </li> 
             <li class="menu-item menu-item-has-children">
@@ -242,7 +277,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
             </li>
             <li class="menu-item">
                 <a href="contact.php">Contact</a>
-            </li>                                                                                                       
+            </li>                                                                                                    
         </ul>
         
 <!--// Mobile Menu-->
@@ -330,7 +365,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                 				<a href="#">Be a Member</a>
                 					<ul class="sub-menu">
                                       <li class="menu-item"><a href="be_member.php">Membership types</a></li>
-                                      <li class="menu-item"><a href="be_volunteer.php">Be Volunteer</a> </li>
+                                      <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
                 					</ul>
             				</li> 
                             <li class="menu-item menu-item-has-children">
@@ -380,3 +415,48 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
 
     </header>
     <!-- partial -->
+
+    <!-- right sticky start -->
+    <div class="stick-right">
+            <div class="d-load"><span><a href="#" data-toggle="modal" data-target="#myModal">Share Your Thoughts</a></span></div>
+        </div>
+    <!-- right sticky end -->
+
+    <!-- modal start -->
+     <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content modal-md" style="border: 15px solid #ff4906;">
+     	<div style="float:right;margin: 5px 14px;">
+   			 <button type="button" class="close" data-dismiss="modal">×</button>
+		</div>
+        <img src="assets/img/header1.png" style="width: 430px; margin:0 auto;margin-top: -22px;">
+        
+        <div class="modal-header" style="height: 55px;background:#ff4906;width:100%;">
+         <h4 class="offer-title" style="font-weight:800;color:#fff;margin:0 auto;margin-top: -2px; text-shadow: 1px 1px #FF0000;">Share Your Thoughts</h4>
+          
+        </div>
+        <div class="modal-body">
+           <form method="POST" class="popup-form">
+               
+               
+                <input type="text" class="form-control modal-input" placeholder="Enter Full Name" name="name" required>
+                <input type="text" class="form-control modal-input" placeholder="Enter Your Designation" name="desig" required>
+                <input type="file" class="form-control modal-input" name="image" required>
+                <textarea class="form-control modal-input" placeholder="Enter Your Message" name="email" rows="4" col="45" required></textarea>
+                <div class="text-center" ><input type="submit" style="background: #ff4906; border:#ff4906; font-weight: bold;" class="btn btn-dark mt-2"  name="submit" value="Submit"></div>
+        </div>
+        
+      <!--<input type="submit" class="btn btn-primary" name="submit" value="Submit">-->
+    
+   
+  </form><br>
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+    <!-- modal end -->
