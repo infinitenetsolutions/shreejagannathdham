@@ -261,8 +261,8 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                    <li class="menu-item menu-item-has-children">
                 <a href="#">Mandir Nirman</a>
                 <ul class="sub-menu">
-                    <li class="menu-item"> <a href="member.php">Member</a> </li>
-                    <li class="menu-item"> <a href="doner.php">Donar</a> </li>                    
+                    <li class="menu-item"> <a href="booked_seva.php">Booked Seva</a> </li>
+                    <li class="menu-item">  <a href="donors.php">Donors</a> </li>                    
                 </ul>
             </li>  
                 </ul>
@@ -372,7 +372,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                             <li class="menu-item menu-item-has-children">
                                 <a href="#">Mandir Nirman</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="members.php">Members</a></li>
+                                    <li class="menu-item"><a href="booked_seva.php">Booked Seva</a></li>
                                     <li class="menu-item"> <a href="donors.php">Donors</a></li>
                                 </ul>
                             </li>                            
