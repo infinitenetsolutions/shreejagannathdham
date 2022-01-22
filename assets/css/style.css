@@ -598,7 +598,7 @@
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    transition: .3s;
+    transition: -0.7s;
 }
 
 .sigma_preloader.hidden {
@@ -1321,6 +1321,11 @@ p {
     line-height: 1.9;
     margin-bottom: 15px;
     color: #777;
+    text-align: justify;
+}
+
+.p-nornal {
+    margin-bottom: 0px!important;
 }
 
 a {
@@ -1639,7 +1644,7 @@ blockquote::before {
 
 .section {
     position: relative;
-    padding: 50px 0;
+    padding: 50px 0px 100px;
 }
 
 .section .container {
@@ -1647,7 +1652,7 @@ blockquote::before {
 }
 
 .section.section-padding {
-    padding: 50px 0 50px;
+    padding: 50px 0 100px;
 }
 
 .section.section-lg {

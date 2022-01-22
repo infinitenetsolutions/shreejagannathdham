@@ -2,10 +2,7 @@
 include "header.php";
 include 'admin/connection.inc.php';
 ?>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  
     <style>
         .portfolio-slider li {
             list-style-type: upper-latin;
@@ -21,6 +18,10 @@ include 'admin/connection.inc.php';
             position: absolute;
             width: 100%;
             height: 100%;
+        }
+        .sigma_portfolio-item.style-3 .sigma_portfolio-item-content 
+        {
+ 		   height: 310px;
         }
         
         .carousel-inner img {
@@ -194,8 +195,8 @@ include 'admin/connection.inc.php';
 		<div class="col-lg-12">
           <div class="me-lg-30">
             <div class="section-title mb-0 text-start" style="max-width:100% !important;">
-              <p class="subtitle">Education for all rural children</p>
-              <h4 class="title">We Are A Hindu That Believes In Rama.</h4>
+              <p class="subtitle">Shree Jagannath</p>
+              <h4 class="title">Attributes of Temple</h4>
             </div>
             <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
             <div class="row">
@@ -292,7 +293,7 @@ include 'admin/connection.inc.php';
     <div class="container">
 
       <div class="section-title text-center">
-        <p class="subtitle text-white">Who</p>
+        <p class="subtitle text-white">Shree Jagannath</p>
         <h4 class="title text-white">Our Volunteers</h4>
       </div>
 
@@ -549,8 +550,8 @@ include 'admin/connection.inc.php';
         <div class="container">
 
             <div class="section-title text-center">
-                <p class="subtitle">Blog</p>
-                <h4 class="title">News Feed</h4>
+                <p class="subtitle">Shree Jagannath</p>
+                <h4 class="title">Temple Sponsors</h4>
             </div>
 
             <div class="row">
@@ -559,93 +560,56 @@ include 'admin/connection.inc.php';
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
                         <div class="sigma_post-thumb">
-                            <a href="blog-details.php">
-                                <img src="assets/img/blog/2.jpg" alt="post">
+                            <a href="">
+                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post">
                             </a>
                         </div>
                         <div class="sigma_post-body">
+                            <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Infinite Net Solutions</a></h4>
                             <div class="sigma_post-meta">
-                                <div class="me-3">
-                                    <i class="fas fa-om"></i>
-                                    <a href="blog-details.php" class="sigma_post-category">Temple</a>,
-                                    <a href="blog-details.php" class="sigma_post-category">Love</a>
-                                </div>
-                                <a href="blog-details.php" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2022</a>
-                            </div>
-                            <h5> <a href="blog-details.php">Temple companies are being so transparent with their work</a> </h5>
-                            <div class="sigma_post-single-author">
-                                <img src="assets/img/people/1.jpg" alt="author">
-                                <div class="sigma_post-single-author-content">
-                                    By
-                                    <p>Miha Boukor</p>
-                                </div>
+ 								<a href="">Infinite Net Solutions is a professional IT company providing web design, web development, web hosting and search engine optimization solutions in Jamshedpur Jharkhand</a> 
                             </div>
                         </div>
                     </article>
                 </div>
                 <!-- Article End -->
-
+                
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
                         <div class="sigma_post-thumb">
-                            <a href="blog-details.php">
-                                <img src="assets/img/blog/1.jpg" alt="post">
+                            <a href="">
+                                <img src="https://shreejagannathdham.com/images/ehospito.jpg" alt="post" style="height: 230px;width: 350px;">
                             </a>
                         </div>
                         <div class="sigma_post-body">
+                            <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Ehospito</a></h4>
                             <div class="sigma_post-meta">
-                                <div class="me-3">
-                                    <i class="fas fa-om"></i>
-                                    <a href="blog-details.php" class="sigma_post-category">Temple</a>,
-                                    <a href="blog-details.php" class="sigma_post-category">Love</a>
-                                </div>
-                                <a href="blog-details.php" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2022</a>
-                            </div>
-                            <h5> <a href="blog-details.php">How to abide by Puja rules without any risks</a> </h5>
-                            <div class="sigma_post-single-author">
-                                <img src="assets/img/people/2.jpg" alt="author">
-                                <div class="sigma_post-single-author-content">
-                                    By
-                                    <p>Aime Bill</p>
-                                </div>
+ 								<a href="">Ehospito is a online web application concept marketing.</a> 
                             </div>
                         </div>
                     </article>
                 </div>
                 <!-- Article End -->
-
+                
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
                         <div class="sigma_post-thumb">
-                            <a href="blog-details.php">
-                                <img src="assets/img/blog/3.jpg" alt="post">
+                            <a href="">
+                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post">
                             </a>
                         </div>
                         <div class="sigma_post-body">
+                            <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Infinite Net Solutions</a></h4>
                             <div class="sigma_post-meta">
-                                <div class="me-3">
-                                    <i class="fas fa-om"></i>
-                                    <a href="blog-details.php" class="sigma_post-category">Temple</a>,
-                                    <a href="blog-details.php" class="sigma_post-category">Love</a>
-                                </div>
-                                <a href="blog-details.php" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2022</a>
-                            </div>
-                            <h5> <a href="blog-details.php">Education for all rural children are necessary.</a> </h5>
-                            <div class="sigma_post-single-author">
-                                <img src="assets/img/people/1.jpg" alt="author">
-                                <div class="sigma_post-single-author-content">
-                                    By
-                                    <p>Yesh Chopra</p>
-                                </div>
+ 								<a href="">Infinite Net Solutions is a professional IT company providing web design, web development, web hosting and search engine optimization solutions in Jamshedpur Jharkhand</a> 
                             </div>
                         </div>
                     </article>
                 </div>
                 <!-- Article End -->
-
-            </div>
+			</div>
 
         </div>
 

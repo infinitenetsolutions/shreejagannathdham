@@ -35,8 +35,13 @@ max-width: 1000px;
         <div class="col-lg-8 mb-lg-30">
           <div class="section-title section-title-2 text-start">
             
-            <h4 class="title">Patron</h4>
-            <p><?php echo $row['description']; ?></p>
+            <h4 class="title">Chief Patron</h4>
+			<?php
+            	$select = "SELECT * FROM `jag_patron`";
+  				$result = mysqli_query($connection, $select);
+                $row = mysqli_fetch_assoc($result);
+            ?>
+            <p class="p-normal"><?php echo $row['description']; ?></p>
             <h6 class="mb-2"><?php echo $row['title']; ?></h6>
            <!-- <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
             <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
