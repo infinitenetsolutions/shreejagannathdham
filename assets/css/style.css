@@ -1321,11 +1321,11 @@ p {
     line-height: 1.9;
     margin-bottom: 15px;
     color: #777;
-    text-align: justify;
 }
 
 .p-nornal {
     margin-bottom: 0px!important;
+    text-align: justify;
 }
 
 a {
