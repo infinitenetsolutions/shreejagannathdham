@@ -121,7 +121,7 @@ include 'admin/connection.inc.php';
         
         <div class="col-lg-6 d-none d-lg-block">
           <div class="me-lg-30 img-group-2">
-            <img src="assets/img/homepage.png" alt="about" style="height:417px;width:340px;">
+            <img src="assets/img/homepage.png" alt="about" style="height:450px;width:400px;">
             <!-- <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'images']) . '"' ?> alt="portfolio"/> -->
             <!-- <img src="assets/img/about-group2/jag-17.jpg" alt="about" style="height:320px;width:350px;"> -->
           </div>
@@ -189,7 +189,7 @@ include 'admin/connection.inc.php';
     <!-- holi End -->
 
   <!--another section -->
-  <section class="section pt-0 mt-5">
+  <section class=" pt-0 mt-5">
     <div class="container">
       <div class="row">
 		<div class="col-lg-12">
