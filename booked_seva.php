@@ -2,7 +2,7 @@
 include "header.php";
 ?>
 
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <!-- partial:partia/__subheader.html -->
   <div class="" style="">
     <div class="">
@@ -13,7 +13,7 @@ include "header.php";
   </div>
   <!-- partial -->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 

@@ -75,6 +75,10 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
     background: #ffff005c!important;
     margin-bottom: 15px;
 }
+.hgt
+{
+    height:40px!important;
+}
 .d-load
 {
     
@@ -468,9 +472,9 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
            <form method="POST" class="popup-form" enctype= multipart/form-data> 
                
                
-                <input type="text" class="form-control modal-input" placeholder="Enter Full Name" name="name" required>
-                <input type="text" class="form-control modal-input" placeholder="Enter Your Designation" name="desig" required>
-                <input type="file" class="form-control modal-input" name="Image" required>
+                <input type="text" class="form-control modal-input hgt" placeholder="Enter Full Name" name="name" required>
+                <input type="text" class="form-control modal-input hgt" placeholder="Enter Your Designation" name="desig" required>
+                <input type="file" class="form-control modal-input hgt" name="Image" required>
                 <textarea class="form-control modal-input" placeholder="Enter Your Message" name="message" rows="4" col="45" required></textarea>
                 <div class="text-center" ><input type="submit" style="background: #ff4906; border:#ff4906; font-weight: bold;" class="btn btn-dark mt-2"  name="submit12" value="Submit"></div>
         </div>
@@ -478,7 +482,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
       <!--<input type="submit" class="btn btn-primary" name="submit" value="Submit">-->
     
    
-  </form><br>
+  </form>
         </div>
        
       </div>

@@ -255,7 +255,7 @@
         if(empty($params['amount'])) 
             $empty_value = 'Amount';
             
-        if(empty($params['firstname'])) 
+        if(empty($params['name'])) 
             $empty_value = 'First Name';
 
         if(empty($params['email'])) 
@@ -318,7 +318,7 @@
         if(!is_string($params['productinfo']))
             $type_value =  "Product Information should be string";
 
-        if(!is_string($params['firstname']))
+        if(!is_string($params['name']))
             $type_value =  "First Name should be string";
         
         if(!is_string($params['phone']))
