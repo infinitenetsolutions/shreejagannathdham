@@ -88,7 +88,8 @@ include 'admin/connection.inc.php';
     <div class="sigma_footer-bottom">
       <div class="container-fluid">
         <div class="sigma_footer-copyright">
-          <p class="text-white" style="font-size: 12px;"> Copyright © Shree Jagannathdham Trust - <?php echo date('Y');?> </p>
+        <p class="text-white" style="font-size: 12px;"> Copyright © Shree Jagannathdham Trust - <?php echo date('Y');?> </p>
+        <p class="text-white" style="font-size: 12px;"> Powered By Infinite Net Solutions </p>
         </div>
         <div class="sigma_footer-logo" style="height: 108px">
           <img src="assets/img/header1.png" alt="logo">
