@@ -401,7 +401,7 @@ include 'admin/connection.inc.php';
   <!-- volunteers End -->
     
   <!-- Testimonials Start -->
-    <section class="section pt-0 spac" style="margin-top: 60px;">
+    <section class="pt-0 spac" style="margin-top: 60px;">
 
         <div class="container testimonial-section bg-contain bg-norepeat bg-center" style="background-image: url(assets/img/textures/map-2.png)">
 
