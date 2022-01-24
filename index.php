@@ -122,7 +122,7 @@ include 'admin/connection.inc.php';
         <div class="col-lg-6 d-none d-lg-block">
           <div class="me-lg-30 img-group-2">
             <img src="assets/img/homepage.png" alt="about" style="height:417px;width:340px;">
-            <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'images']) . '"' ?> alt="portfolio"/>
+            <!-- <img <?php echo ' src="data:image/jpeg;base64,' . base64_encode($row[ 'images']) . '"' ?> alt="portfolio"/> -->
             <!-- <img src="assets/img/about-group2/jag-17.jpg" alt="about" style="height:320px;width:350px;"> -->
           </div>
         </div>
@@ -504,7 +504,7 @@ include 'admin/connection.inc.php';
 
             <div class="section-title section-title-2 flex-title">
                 <div>
-                    <a href="packages.php" class="text-light subtitle light">View Packages</a>
+                    <a href="be_member.php" class="text-light subtitle light">View Packages</a>
                     <h4 class="text-white title mb-lg-0">Our Packages</h4>
                 </div>
                 <div class="sigma_arrows">
@@ -559,12 +559,12 @@ include 'admin/connection.inc.php';
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
-                        <div class="sigma_post-thumb">
+                        <div class="sigma_post-thumb" sy>
                             <a href="">
                                 <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post">
                             </a>
                         </div>
-                        <div class="sigma_post-body">
+                        <div class="sigma_post-body" style="height:280px">
                             <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Infinite Net Solutions</a></h4>
                             <div class="sigma_post-meta">
  								<a href="">Infinite Net Solutions is a professional IT company providing web design, web development, web hosting and search engine optimization solutions in Jamshedpur Jharkhand</a> 
