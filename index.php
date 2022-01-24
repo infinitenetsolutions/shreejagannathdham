@@ -291,7 +291,7 @@ include 'admin/connection.inc.php';
   </section>
 
     <!-- volunteers Start -->
-  <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat spac" style="background-image: url(assets/img/bg2.jpg)">
+  <div class="section-padding bg-cover secondary-overlay bg-center bg-norepeat spac" style="background-image: url(assets/img/bg2.jpg)">
     <div class="container">
 
       <div class="section-title text-center">
