@@ -559,9 +559,9 @@ include 'admin/connection.inc.php';
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
-                        <div class="sigma_post-thumb" sy>
+                        <div class="sigma_post-thumb" style="text-align:center; padding: 5px;">
                             <a href="">
-                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post">
+                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post"  style="margin: 0 auto; width:200px;">
                             </a>
                         </div>
                         <div class="sigma_post-body" style="height:280px">
@@ -577,12 +577,12 @@ include 'admin/connection.inc.php';
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
-                        <div class="sigma_post-thumb">
+                        <div class="sigma_post-thumb" style="text-align:center; padding: 5px;">
                             <a href="">
-                                <img src="https://shreejagannathdham.com/images/ehospito.jpg" alt="post" style="height: 230px;width: 350px;">
+                                <img src="https://shreejagannathdham.com/images/ehospito.jpg" alt="post"  style="margin: 0 auto; width:200px; height:130px; padding:10px 0;">
                             </a>
                         </div>
-                        <div class="sigma_post-body">
+                        <div class="sigma_post-body" style="height:280px">
                             <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Ehospito</a></h4>
                             <div class="sigma_post-meta">
  								<a href="">Ehospito is a online web application concept marketing.</a> 
@@ -595,12 +595,12 @@ include 'admin/connection.inc.php';
                 <!-- Article Start -->
                 <div class="col-lg-4 col-md-6">
                     <article class="sigma_post">
-                        <div class="sigma_post-thumb">
+                        <div class="sigma_post-thumb" style="text-align:center; padding: 5px;">
                             <a href="">
-                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post">
+                                <img src="https://shreejagannathdham.com/images/infinite.jpg" alt="post"  style="margin: 0 auto; width:200px;">
                             </a>
                         </div>
-                        <div class="sigma_post-body">
+                        <div class="sigma_post-body" style="height:280px">
                             <h4> <a href="" class="sigma_post-category" style="margin: 0 auto;">Infinite Net Solutions</a></h4>
                             <div class="sigma_post-meta">
  								<a href="">Infinite Net Solutions is a professional IT company providing web design, web development, web hosting and search engine optimization solutions in Jamshedpur Jharkhand</a> 
