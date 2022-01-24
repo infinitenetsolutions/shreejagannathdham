@@ -90,7 +90,7 @@ color:white;
           </h3>
           <p class="product-text price">Rs <?php echo $row['amount']; ?>/-</p>
           <!--<p class="product-text genre">DVD Rental</p>-->
-          <button type="button" data-toggle="modal" data-target="#myModal" data-seva="<?php echo $row['name']; ?>" data-amount="<?php echo $row['amount']; ?>" class="sigma_btn-custom addAttr">Book Seva</button>
+          <button type="button" data-toggle="modal" data-target="#bookModal" data-seva="<?php echo $row['name']; ?>" data-amount="<?php echo $row['amount']; ?>" class="sigma_btn-custom addAttr">Book Seva</button>
        </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ color:white;
 <div class="container">
  
  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="bookModal" role="dialog">
     <div class="modal-dialog modal-lg">
     
       <!-- Modal content-->
