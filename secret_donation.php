@@ -16,7 +16,8 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $pan = $_POST['pan'];
 $address = $_POST['address'];
-$amount = $_POST['amount'];
+$amount1 = $_POST['amount'];
+$amount = number_format((float)$amount1, 2, '.', '');
 
 $_SESSION["name"] = $name ;
 //$_SESSION["promoted_class"] = $promoted_class;
@@ -91,7 +92,7 @@ if($result1){
           <textarea name="address" placeholder="Enter Address" cols="45" rows="5" class="form-control dark"></textarea>
         </div>
         <div class="text-center">
-          <button type="submit" class="sigma_btn-custom" name="submit1">Submit Now</button>
+          <button type="submit" class="sigma_btn-custom" name="submit1">Pay Now</button>
           <div class="server_response w-100">
           </div>
         </div>

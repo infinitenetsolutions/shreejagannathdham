@@ -55,7 +55,7 @@ if (isset($_SESSION)) {
     $postData = array(
         "txnid" => "$transation_id",
         "amount" => "$amount",
-        "name" => "$name",
+        "firstname" => "$name",
         "email" => "$email",
         "phone" => "$phone_no ",
         "productinfo" => "Laptop",

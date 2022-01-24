@@ -201,7 +201,7 @@
             'key' => trim( htmlentities($params['key'], ENT_QUOTES) ),
             'txnid' => trim( htmlentities($params['txnid'], ENT_QUOTES) ),
             'amount' => trim( htmlentities($params['amount'], ENT_QUOTES) ),
-            'name' => trim( htmlentities($params['name'], ENT_QUOTES) ),
+            'firstname' => trim( htmlentities($params['firstname'], ENT_QUOTES) ),
             'email' => trim( htmlentities($params['email'], ENT_QUOTES) ),
             'phone' => trim( htmlentities($params['phone'], ENT_QUOTES) ),
             'udf1' => trim( htmlentities($params['udf1'], ENT_QUOTES) ),
@@ -255,7 +255,7 @@
         if(empty($params['amount'])) 
             $empty_value = 'Amount';
             
-        if(empty($params['name'])) 
+        if(empty($params['firstname'])) 
             $empty_value = 'First Name';
 
         if(empty($params['email'])) 
@@ -318,7 +318,7 @@
         if(!is_string($params['productinfo']))
             $type_value =  "Product Information should be string";
 
-        if(!is_string($params['name']))
+        if(!is_string($params['firstname']))
             $type_value =  "First Name should be string";
         
         if(!is_string($params['phone']))
