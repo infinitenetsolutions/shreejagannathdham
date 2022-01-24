@@ -46,6 +46,8 @@ include 'admin/connection.inc.php';
         	color:yellow;
             font-weight:500;
          }
+         .spac
+         {padding: 50px 0 25px!important;}
     </style>
 
 
@@ -91,7 +93,7 @@ include 'admin/connection.inc.php';
 
 
  <!-- About Start -->
-  <section class="section section-md light-bg" style="padding: 50px 0 60px !important;">
+  <section class="section section-md light-bg spac" style="padding: 50px 0 60px !important;">
     <div class="container">
 
       <div class="row align-items-center">
@@ -133,7 +135,7 @@ include 'admin/connection.inc.php';
   <!-- About End -->
 
     <!-- holi Start -->
-    <div class="section section-padding bg-cover portfolio-section secondary-overlay" style="background-image: url(assets/img/bg2.jpg)">
+    <div class="section section-padding bg-cover portfolio-section secondary-overlay spac" style="background-image: url(assets/img/bg2.jpg)">
         <div class="container">
                             
          <div class="section-title text-center">
@@ -194,7 +196,7 @@ include 'admin/connection.inc.php';
       <div class="row">
 		<div class="col-lg-12">
           <div class="me-lg-30">
-            <div class="section-title mb-0 text-start" style="max-width:100% !important;">
+            <div class="section-title mb-0 text-start spac" style="max-width:100% !important;">
               <p class="subtitle">Shree Jagannath</p>
               <h4 class="title">Attributes of Temple</h4>
             </div>
@@ -289,7 +291,7 @@ include 'admin/connection.inc.php';
   </section>
 
     <!-- volunteers Start -->
-  <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat" style="background-image: url(assets/img/bg2.jpg)">
+  <div class="section section-padding bg-cover secondary-overlay bg-center bg-norepeat spac" style="background-image: url(assets/img/bg2.jpg)">
     <div class="container">
 
       <div class="section-title text-center">
@@ -399,7 +401,7 @@ include 'admin/connection.inc.php';
   <!-- volunteers End -->
     
   <!-- Testimonials Start -->
-    <section class="section pt-0" style="margin-top: 60px;">
+    <section class="section pt-0 spac" style="margin-top: 60px;">
 
         <div class="container testimonial-section bg-contain bg-norepeat bg-center" style="background-image: url(assets/img/textures/map-2.png)">
 
