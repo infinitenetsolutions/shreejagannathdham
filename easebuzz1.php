@@ -31,7 +31,7 @@ include_once('easebuzz-lib/easebuzz_payment_gateway.php');
     */
 //echo "<pre>";
 //print_r($_SESSION);
-    $apiname = "initiate_payment";
+     $apiname = "initiate_payment";
     $_GET['api_name']="initiate_payment";
 //exit;
 
@@ -55,7 +55,7 @@ if (isset($_SESSION)) {
     $postData = array(
         "txnid" => "$transation_id",
         "amount" => "$amount",
-        "name" => "$name",
+        "firstname" => "$name",
         "email" => "$email",
         "phone" => "$phone_no ",
         "productinfo" => "Laptop",

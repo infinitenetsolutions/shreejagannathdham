@@ -14,15 +14,24 @@ include 'admin/connection.inc.php';
     $amount = $_POST['amount'];
 
 
+    $_SESSION["name"] = $name ;
+    $_SESSION["phone_no"] = $mobile;
+    $_SESSION["email"] = $email;
+    $_SESSION["amount"] = $amount;
+
+    $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
+    $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";  
+
         $sql = "INSERT INTO `jag_booked_seva`(`name`,`email`,`mobile`,`city`,`address`,`seva`,`pincode`,`amount`) VALUES ('$name','$email','$mobile','$city','$address','$seva','$pincode','$amount')";
 
         $current_id = mysqli_query($connection, $sql); 
         if ($current_id) {
 
-            echo "<script>
-                alert('Your Selected Seva is Booked. Thank You!!!');
-                window.location.replace('book-seva.php');
-                </script>";
+            // echo "<script>
+            //     alert('Your Selected Seva is Booked. Thank You!!!');
+            //     window.location.replace('book-seva.php');
+            //     </script>";
+            echo '<script> window.location.replace("easebuzz1.php") </script>';
                  }
                  else {
             echo "<script>alert('Some Error Occurred. Please try again!!');</script>";
@@ -242,7 +251,7 @@ $(function(){
  <!-- calculate date difference code start -->
  <script>
 function test(){
-  var v = document.getElementById('amount').value;
+  var v = parseFloat(document.getElementById('amount').value);
   var dd1 = document.getElementById('start').value;
   if(!Date.parse(dd1))
  {
@@ -256,7 +265,7 @@ function test(){
   var date2 = new Date(dd2);
   var diffTime = Math.abs(date2 - date1);
   var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-  var res = v*(diffDays+1);
+  var res = parseFloat(v*(diffDays+1));
   $('#amount').val(res); 
  }
 // document.getElementById('new').value(diffDays);

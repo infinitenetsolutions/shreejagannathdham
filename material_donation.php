@@ -94,7 +94,9 @@ include 'admin/connection.inc.php';
       $type = $_POST['type'];      
       $material = $_POST['material'];      
       $qty = $_POST['quantity'];      
-      $amount = $_POST['amount'];
+      // $amount = $_POST['amount'];
+      $amount1 = $_POST['amount'];
+      $amount = number_format((float)$amount1, 2, '.', '');
 
 $_SESSION["name"] = $name ;
 //$_SESSION["promoted_class"] = $promoted_class;
@@ -112,7 +114,7 @@ $query = "INSERT INTO `jag_nirman`(`name`, `phone`, `address`, `email`, `donatio
                             //var_dump($query); exit();
 $result1 = mysqli_query($connection , $query);
 if($result1){    
-   echo '<script> window.location.replace("easebuzz.php") </script>';
+   echo '<script> window.location.replace("easebuzz1.php") </script>';
 }
 } 
 ?>
