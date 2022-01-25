@@ -28,13 +28,34 @@ if (isset($_POST['button'])) {
   $child_no = $_POST['child_no'];
   $member = $_POST['member'];
   $member_detail = $_POST['member_detail'];
-  $amount = $_POST['amount'];
+  // $amount = $_POST['amount'];
+  $amount1 = $_POST['amount'];
+  $amount = number_format((float)$amount1, 2, '.', '');
+
+    $_SESSION["name"] = $name ;
+    $_SESSION["phone_no"] = $phone;
+    $_SESSION["email"] = $email;
+    $_SESSION["amount"] = $amount;
+
+    $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
+    $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
+
+
 // print_r($_POST);exit();
       echo $sql = "INSERT INTO `jag_nirman_donation`(`package`, `name`, `father_name`, `phone`, `email`, `nationality`, `marital_status`, `per_address`, `res_address`, `ofc_address`, `dob`, `marriage_date`, `rashi`, `gotra`, `pdate1`, `pdate2`, `pdate3`, `pdate4`, `pdate5`, `pdate6`, `pdate7`, `pro_date`, `spouse`, `child_no`, `member`, `member_detail`, `amount`) 
                                      VALUES ('$package','$name','$father_name','$phone','$email','$nationality','$marital_status','$per_address','$res_address','$ofc_address','$dob','$marriage_date','$rashi','$gotra','$pdate1','$pdate2','$pdate3','$pdate4','$pdate5','$pdate6','$pdate7','$pro_date','$spouse','$child_no','$member','$member_detail','$amount')";
 
       $current_id = mysqli_query($connection, $sql); 
-      echo '<script> window.location.replace("easebuzz.php") </script>';
+      if ($current_id) 
+        {
+          echo '<script> window.location.replace("easebuzz2.php") </script>';
+        }
+        else 
+        {
+          echo "<script>alert('Some Error Occurred. Please try again!!');</script>";
+        }
+
+      // echo '<script> window.location.replace("easebuzz.php") </script>';
       //if ($current_id) {
 
        
