@@ -92,29 +92,38 @@ include 'admin/connection.inc.php';
       $address = $_POST['address'];
       $email = $_POST['email'];
       $type = $_POST['type'];      
-      $material = $_POST['material'];      
-      $qty = $_POST['quantity'];      
+        
       // $amount = $_POST['amount'];
       $amount1 = $_POST['amount'];
       $amount = number_format((float)$amount1, 2, '.', '');
 
-$_SESSION["name"] = $name ;
-//$_SESSION["promoted_class"] = $promoted_class;
-// $_SESSION["course_session"] = $course_session;
-// $_SESSION["name"] = $name;
-$_SESSION["phone_no"] = $phone;
-$_SESSION["email"] = $email;
-$_SESSION["amount"] = $amount;
+      $_SESSION["name"] = $name ;
+      $_SESSION["phone_no"] = $phone;
+      $_SESSION["email"] = $email;
+      $_SESSION["amount"] = $amount;
 
 $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";
 $_SESSION["surl"] = "https://shreejagannathdham.com/response.php";    
 
-$query = "INSERT INTO `jag_nirman`(`name`, `phone`, `address`, `email`, `donation_type`, `material`, `qty`, `amount`) 
-							VALUES ('$name','$phone','$address','$email','$type','material','$qty','$amount')";
-                            //var_dump($query); exit();
+if($type=='amount')
+{
+  $query = "INSERT INTO `jag_nirman`(`name`, `phone`, `address`, `email`, `donation_type`, `material`, `qty`, `amount`) 
+                            VALUES ('$name','$phone','$address','$email','$type','null','null','$amount')";
+}
+else
+{
+  $material = $_POST['stuff'];      
+  $qty = $_POST['quantity'];
+  $amount1 = $_POST['amount1'];
+  $amount = number_format((float)$amount1, 2, '.', '');   
+  $query = "INSERT INTO `jag_nirman`(`name`, `phone`, `address`, `email`, `donation_type`, `material`, `qty`, `amount`) 
+            VALUES ('$name','$phone','$address','$email','$type','$material','$qty','$amount')";
+}
+                            // var_dump($query); exit();
 $result1 = mysqli_query($connection , $query);
-if($result1){    
-   echo '<script> window.location.replace("easebuzz1.php") </script>';
+if($result1)
+{    
+   echo '<script> window.location.replace("easebuzz3.php") </script>';
 }
 } 
 ?>
@@ -192,7 +201,7 @@ if($result1){
     	
      	<div class="col-md-12">
         	<div class="form-group">
-              <select class="form-control" id="material" name="material" style="height: 40px!important;" onchange='checkmaterial(this.value)'>
+              <select class="form-control" id="material" name="stuff" style="height: 40px!important;" onchange='checkmaterial(this.value)'>
               <option value="#" selected disabled>Select Material</option>
               <option value="bricks">Bricks</option>
               <option value="rods">Rods</option>
@@ -229,13 +238,14 @@ if($result1){
         
         <div class="col-md-12">
        	<div class="form-group">
-       		<input type="number" class="form-control" id="amtt" placeholder="Enter Amount" name="amount" style="height: 40px!important;" readonly>
+       		<input type="number" class="form-control" id="amtt" placeholder="Enter Amount" name="amount1" style="height: 40px!important;" readonly>
     	</div>
    		</div>
     </div>
    
    
     <button type="submit" name="submit" class="btn btn-danger">Donate</button>
+    
   </form>
     </div>
   </div>
