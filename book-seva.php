@@ -11,8 +11,10 @@ include 'admin/connection.inc.php';
     $address = $_POST['address'];
     $seva = $_POST['seva'];
     $pincode = $_POST['pincode'];
-    $amount = $_POST['amount'];
-
+    // $amount = $_POST['amount'];
+    $amount1 = $_POST['amount'];
+    $amount = number_format((float)$amount1, 2, '.', '');
+  
 
     $_SESSION["name"] = $name ;
     $_SESSION["phone_no"] = $mobile;
