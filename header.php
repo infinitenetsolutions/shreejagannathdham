@@ -285,7 +285,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                 <a href="#">Be a Member</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="be_member.php">Membership types</a></li>
-                    <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
+                    <li class="menu-item"><a href="be_volunteer.php">Be Volunteer</a> </li>
                 </ul>
             </li> 
             <li class="menu-item menu-item-has-children">
@@ -395,7 +395,7 @@ box-shadow: 0px 1px 8px 3px #ff4906!important;
                 				<a href="#">Be a Member</a>
                 					<ul class="sub-menu">
                                       <li class="menu-item"><a href="be_member.php">Membership types</a></li>
-                                      <li class="menu-item"><a href="volunteer.php">Be Volunteer</a> </li>
+                                      <li class="menu-item"><a href="be_volunteer.php">Be Volunteer</a> </li>
                 					</ul>
             				</li> 
                             <li class="menu-item menu-item-has-children">
